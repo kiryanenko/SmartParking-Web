@@ -1,3 +1,14 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#sidebar {
+  top: 40px
+}
+
+.canvas {
+  position: relative;
+  right: 0;
+  z-index: 2;
+  min-height: 100%;
+  padding: 0;
+}
