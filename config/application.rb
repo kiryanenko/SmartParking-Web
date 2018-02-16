@@ -15,5 +15,8 @@ module SmartParkingWeb
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    # [Devise] Если вы разворачиваете приложение на Heroku с использованием Rails версии 3.2, то нужно добавить следующую строку
+    config.assets.initialize_on_precompile = false
   end
 end
