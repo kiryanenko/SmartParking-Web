@@ -15,21 +15,36 @@
 
 <!-- Боковое меню -->
 <nav id="sidebar" class="navmenu navmenu-inverse navmenu-fixed-right offcanvas" role="navigation">
-  <div class="container text-light my-3 text-center">
-    <% if user_signed_in? %>
-      <span>Здравствуйте, <%= current_user.email %></span>
-      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-light'%>
-    <% else %>
-      <%= link_to 'Войти', new_user_session_path, :class => 'btn btn-info btn-sm' %>
-      <%= link_to 'Регистрация', new_user_registration_path, :class => 'btn btn-outline-info btn-sm' %>
-    <% end %>
-    <hr class="hr-sidebar">
+  <div class="container text-light py-3 text-center h-100">
+    <div class="row align-items-start">
+      <div class="col">
+        <% if user_signed_in? %>
+          <span>Здравствуйте, <%= current_user.email %></span>
+          <%= link_to t(:logout), destroy_user_session_path, :method => :delete, :class => 'btn btn-light'%>
+        <% else %>
+          <%= link_to t(:login), new_user_session_path, :class => 'btn btn-info btn-sm' %>
+          <%= link_to t(:sign_up), new_user_registration_path, :class => 'btn btn-outline-info btn-sm' %>
+        <% end %>
+        <hr class="hr-sidebar">
+      </div>
+    </div>
 
-
+    <div class="row align-items-end">
+      <div class="col">
+        <div class="btn-group dropup">
+          <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </nav>
-
-
 
 
 <div class="canvas">
