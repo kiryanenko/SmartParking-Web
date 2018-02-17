@@ -15,9 +15,10 @@
 
 <!-- Боковое меню -->
 <nav id="sidebar" class="navmenu navmenu-inverse navmenu-fixed-right offcanvas" role="navigation">
-  <div class="container text-light py-3 text-center h-100">
-    <div class="row align-items-start">
-      <div class="col">
+  <div class="container text-light py-3 h-100">
+    <table class="h-100 w-100 text-center">
+      <tr><td class="align-top">
+
         <% if user_signed_in? %>
           <span>Здравствуйте, <%= current_user.email %></span>
           <%= link_to t(:logout), destroy_user_session_path, :method => :delete, :class => 'btn btn-light'%>
@@ -26,23 +27,23 @@
           <%= link_to t(:sign_up), new_user_registration_path, :class => 'btn btn-outline-info btn-sm' %>
         <% end %>
         <hr class="hr-sidebar">
-      </div>
-    </div>
+      </td></tr>
+      <tr><td class="align-bottom">
+        <%= link_to t(:owners_parking), '#', :class => 'text-secondary btn btn-link btn-xs' %>
+        <hr class="hr-sidebar">
 
-    <div class="row align-items-end">
-      <div class="col">
         <div class="btn-group dropup">
-          <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown button
+          <button class="btn btn-dark dropdown-toggle btn-xs" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t :language %>
           </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="?locale=en">English</a>
+            <a class="dropdown-item" href="?locale=ru">Русский</a>
           </div>
         </div>
-      </div>
-    </div>
+        <div style="height: 40px"></div> <!-- FIXME: Это костыль -->
+      </td></tr>
+    </table>
   </div>
 </nav>
 
