@@ -37,3 +37,6 @@ en:
   language: "English"
   owners_parking: "Owners parking"
   parking_search: "Parking search"
+  sign_in: "Sign in"
+  password: "Password"
+  remember_me: "Remember me"

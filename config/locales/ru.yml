@@ -5,3 +5,6 @@ ru:
   language: "Русский"
   owners_parking: "Владельцам стоянок"
   parking_search: "Поиск парковки"
+  sign_in: "Авторизация"
+  password: "Пароль"
+  remember_me: "Запомнить"
