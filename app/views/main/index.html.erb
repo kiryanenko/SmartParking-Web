@@ -15,10 +15,18 @@
 
 <!-- Боковое меню -->
 <nav id="sidebar" class="navmenu navmenu-inverse navmenu-fixed-right offcanvas" role="navigation">
-  <a class="navmenu-brand" href="#">Название сайта</a>
-  <ul class="nav navmenu-nav">
-    ...
-  </ul>
+  <div class="container text-light my-3 text-center">
+    <% if user_signed_in? %>
+      <span>Здравствуйте, <%= current_user.email %></span>
+      <%= link_to 'Выйти', destroy_user_session_path, :method => :delete, :class => 'btn btn-light'%>
+    <% else %>
+      <%= link_to 'Войти', new_user_session_path, :class => 'btn btn-info btn-sm' %>
+      <%= link_to 'Регистрация', new_user_registration_path, :class => 'btn btn-outline-info btn-sm' %>
+    <% end %>
+    <hr class="hr-sidebar">
+
+
+  </div>
 </nav>
 
 
