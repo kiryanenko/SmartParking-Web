@@ -18,5 +18,8 @@ module SmartParkingWeb
 
     # [Devise] Если вы разворачиваете приложение на Heroku с использованием Rails версии 3.2, то нужно добавить следующую строку
     config.assets.initialize_on_precompile = false
+
+    # устанавливаем локаль по умолчанию на что-либо другое, чем :en
+    config.i18n.default_locale = :ru
   end
 end
