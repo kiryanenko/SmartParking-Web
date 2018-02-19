@@ -15,13 +15,18 @@
           <%= f.label t :password %>
           <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: :password %>
           <% if @minimum_password_length %>
-            <small class="form-text text-muted">(<%= @minimum_password_length %> characters minimum)</small>
+            <small class="form-text text-muted">(<%= @minimum_password_length %> <%= t :characters_minimum %>)</small>
           <% end %>
         </div>
 
         <div class="form-group">
           <%= f.label t :password_confirmation %>
           <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: :password %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label t :full_name %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: t(:full_name_example)  %>
         </div>
 
         <div class="my-4">
