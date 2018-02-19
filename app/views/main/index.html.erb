@@ -21,7 +21,9 @@
 
         <% if user_signed_in? %>
           <span>Здравствуйте, <%= current_user.email %></span>
-          <%= link_to t(:logout), destroy_user_session_path, :method => :delete, :class => 'btn btn-light'%>
+          <div class="mt-2">
+            <%= link_to t(:logout), destroy_user_session_path, :method => :delete, :class => 'btn btn-secondary btn-sm'%>
+          </div>
         <% else %>
           <%= link_to t(:login), new_user_session_path, :class => 'btn btn-info btn-sm' %>
           <%= link_to t(:sign_up), new_user_registration_path, :class => 'btn btn-outline-info btn-sm' %>
