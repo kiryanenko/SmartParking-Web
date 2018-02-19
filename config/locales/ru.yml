@@ -8,3 +8,5 @@ ru:
   sign_in: "Авторизация"
   password: "Пароль"
   remember_me: "Запомнить"
+  forgot_password: "Забыли пароль?"
+  password_confirmation: "Подтверждение пароля"

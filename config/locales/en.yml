@@ -40,3 +40,5 @@ en:
   sign_in: "Sign in"
   password: "Password"
   remember_me: "Remember me"
+  forgot_password: "Forgot your password?"
+  password_confirmation: "Password confirmation"
