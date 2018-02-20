@@ -1,0 +1,64 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+ru:
+  devise:
+    confirmations:
+      confirmed: "Ваш адрес электронной почты был успешно подтвержден."
+      send_instructions: "Через несколько минут Вы получите электронное письмо с инструкциями о том, как подтвердить свой адрес электронной почты."
+      send_paranoid_instructions: "Если ваш адрес электронной почты существует в нашей базе данных, то через несколько минут вы получите электронное письмо с инструкциями о том, как подтвердить свой адрес электронной почты."
+    failure:
+      already_authenticated: "Вы уже вошли."
+      inactive: "Ваша учетная запись еще не активирована."
+      invalid: "Недействительный %{authentication_keys} или пароль."
+      locked: "Ваша учетная запись заблокирована."
+      last_attempt: "У вас есть еще одна попытка, прежде чем ваша учетная запись будет заблокирована."
+      not_found_in_database: "Недействительный %{authentication_keys} или пароль."
+      timeout: "Срок действия вашей сессии истек. Пожалуйста, войдите снова, чтобы продолжить."
+      unauthenticated: "Вам нужно войти или зарегистрироваться, прежде чем продолжить."
+      unconfirmed: "Прежде чем продолжить, вы должны подтвердить свой адрес электронной почты."
+    mailer:
+      confirmation_instructions:
+        subject: "Инструкции по подтверждению"
+      reset_password_instructions:
+        subject: "Reset password instructions"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email Changed"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "Вы не можете получить доступ к этой странице, не прибегая к электронному письму с сбросом пароля. Если вы пришли из электронного письма с паролем, убедитесь, что вы использовали полный URL-адрес."
+      send_instructions: "Через несколько минут Вы получите электронное письмо с инструкциями о том, как сбросить пароль."
+      send_paranoid_instructions: "Если ваш адрес электронной почты существует в нашей базе данных, через несколько минут вы получите ссылку на восстановление пароля на свой адрес электронной почты."
+      updated: "Ваш пароль был успешно изменен, теперь вы вошли в систему."
+      updated_not_active: "Ваш пароль был успешно изменен."
+    registrations:
+      destroyed: "До свидания! Ваша учетная запись была успешно отменена. Мы надеемся увидеть вас в ближайшее время."
+      signed_up: "Добро пожаловать! Вы успешно зарегистрировались."
+      signed_up_but_inactive: "Вы зарегистрировались успешно. Однако мы не смогли подписать вас, потому что ваша учетная запись еще не активирована."
+      signed_up_but_locked: "Вы зарегистрировались успешно. Однако мы не смогли подписать вас, потому что ваша учетная запись заблокирована."
+      signed_up_but_unconfirmed: "На ваш адрес электронной почты отправлено сообщение с ссылкой для подтверждения. Перейдите по ссылке, чтобы активировать свою учетную запись."
+      update_needs_confirmation: "Вы успешно обновили свою учетную запись, но нам нужно подтвердить ваш новый адрес электронной почты. Пожалуйста, проверьте свою электронную почту и следуйте по ссылке подтверждения, чтобы подтвердить свой новый адрес электронной почты."
+      updated: "Ваша учетная запись успешно обновлена."
+    sessions:
+      signed_in: "Вы успешно вошли в систему."
+      signed_out: "Вы успешно вышли из системы."
+      already_signed_out: "Вы успешно вышли из системы."
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  errors:
+    messages:
+      already_confirmed: "было подтверждено, пожалуйста, попробуйте войти"
+      confirmation_period_expired: "необходимо подтвердить за %{period}"
+      expired: "истек, пожалуйста, запросите новый"
+      not_found: "не найден"
+      not_locked: "не был заблокирован"
+      not_saved:
+        one: "1 ошибка запретила сохранение этого %{resource}:"
+        other: "%{count} ошибок запретили сохранение %{resource}:"
