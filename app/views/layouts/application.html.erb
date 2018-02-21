@@ -14,20 +14,10 @@
     <div class="fixed-bottom w-100">
       <div id="alerts" class="col-8">
         <% if alert %>
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <%= alert %>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <% elsif notice %>
-            <div class="alert alert-info alert-dismissible fade show" role="alert">
-              <%= notice %>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          <% end %>
+          <%= render partial: 'components/alert', locals: { msg: alert, color: 'danger' } %>
+        <% elsif notice %>
+          <%= render partial: 'components/alert', locals: { msg: notice, color: 'info' } %>
+        <% end %>
       </div>
     </div>
   </body>
