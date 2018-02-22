@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  user: one
+  sampling_period: 
+  sending_period: 
+  day_cast: 
+  night_cast: 
+  day_start_time: 
+  night_start_time: 
+
+two:
+  id: 1
+  user: two
+  sampling_period: 
+  sending_period: 
+  day_cast: 
+  night_cast: 
+  day_start_time: 
+  night_start_time: 

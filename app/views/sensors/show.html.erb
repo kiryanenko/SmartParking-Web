@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @sensor.id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sensor.user %>
+</p>
+
+<p>
+  <strong>Sampling period:</strong>
+  <%= @sensor.sampling_period %>
+</p>
+
+<p>
+  <strong>Sending period:</strong>
+  <%= @sensor.sending_period %>
+</p>
+
+<p>
+  <strong>Day cast:</strong>
+  <%= @sensor.day_cast %>
+</p>
+
+<p>
+  <strong>Night cast:</strong>
+  <%= @sensor.night_cast %>
+</p>
+
+<p>
+  <strong>Day start time:</strong>
+  <%= @sensor.day_start_time %>
+</p>
+
+<p>
+  <strong>Night start time:</strong>
+  <%= @sensor.night_start_time %>
+</p>
+
+<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
+<%= link_to 'Back', sensors_path %>

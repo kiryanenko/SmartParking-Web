@@ -1,0 +1,57 @@
+<%= form_with(model: sensor, local: true) do |form| %>
+  <% if sensor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sensor.errors.count, "error") %> prohibited this sensor from being saved:</h2>
+
+      <ul>
+      <% sensor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sampling_period %>
+    <%= form.text_field :sampling_period %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sending_period %>
+    <%= form.text_field :sending_period %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day_cast %>
+    <%= form.text_field :day_cast %>
+  </div>
+
+  <div class="field">
+    <%= form.label :night_cast %>
+    <%= form.text_field :night_cast %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day_start_time %>
+    <%= form.text_field :day_start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :night_start_time %>
+    <%= form.text_field :night_start_time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
