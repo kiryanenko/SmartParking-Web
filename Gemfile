@@ -64,6 +64,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap'
+# bootstrap_form is a Rails form builder that makes it super easy to integrate Bootstrap v4-style forms into your Rails application.
+gem 'bootstrap_form', git: 'https://github.com/bootstrap-ruby/bootstrap_form.git', branch: 'master'
 
 # Аутентификация
 gem 'devise'
