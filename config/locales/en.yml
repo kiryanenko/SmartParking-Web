@@ -30,22 +30,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  login: "Login"
-  sign_up: "Sign up"
-  logout: "Logout"
-  language: "English"
-  owners_parking: "Owners parking"
-  parking_search: "Parking search"
-  sign_in: "Sign in"
-  password: "Password"
-  remember_me: "Remember me"
-  forgot_password: "Forgot your password?"
-  password_confirmation: "Password confirmation"
-  characters_minimum: "characters minimum"
-  full_name: "Full name"
-  full_name_example: "Musk E.R."
-  phone: "Mobile phone number"
   activerecord:
     errors:
       messages:
@@ -257,4 +241,24 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+  hello: "Hello world"
+  login: "Login"
+  sign_up: "Sign up"
+  logout: "Logout"
+  language: "English"
+  owners_parking: "Owners parking"
+  parking_search: "Parking search"
+  sign_in: "Sign in"
+  password: "Password"
+  remember_me: "Remember me"
+  forgot_password: "Forgot your password?"
+  password_confirmation: "Password confirmation"
+  characters_minimum: "characters minimum"
+  full_name: "Full name"
+  full_name_example: "Musk E.R."
+  phone: "Mobile phone number"
   control_panel: "Control panel"
+  dashboard: "Dashboard"
+  orders: "Orders"
+  sensors: "Sensors"
+  parkings: "Parkings"
