@@ -272,3 +272,4 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
+  control_panel: "Контрольная панель"

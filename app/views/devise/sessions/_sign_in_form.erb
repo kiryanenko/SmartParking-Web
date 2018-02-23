@@ -1,21 +1,13 @@
-<%= form_for(@user, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-group">
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control', placeholder: :email, required: true %>
-  </div>
-
-  <div class="form-group">
-    <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: t(:password), required: true %>
-  </div>
+<%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: :email, required: true %>
+  <%= f.password_field :password, autocomplete: "off", placeholder: t(:password), required: true %>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="form-check">
-      <%= f.check_box :remember_me, class: 'form-check-input' %>
-      <%= f.label t(:remember_me), class: 'form-check-label' %>
-    </div>
+      <%= f.check_box :remember_me, label: t(:remember_me) %>
   <% end -%>
 
   <div class="my-4">
-    <%= f.submit t(:login), class: 'btn btn-primary btn-block btn-lg' %>
+    <%= f.submit t(:login), class: 'btn-primary btn-block btn-lg' %>
   </div>
 <% end %>
 

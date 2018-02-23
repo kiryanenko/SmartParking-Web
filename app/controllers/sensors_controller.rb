@@ -1,10 +1,11 @@
 class SensorsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_sensor, only: [:show, :edit, :update, :destroy]
 
   # GET /sensors
   # GET /sensors.json
   def index
-    @sensors = Sensor.all
+    @sensors = Sensor.user_sensors current_user
   end
 
   # GET /sensors/1
@@ -69,6 +70,6 @@ class SensorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
-      params.require(:sensor).permit(:id, :user_id, :sampling_period, :sending_period, :day_cast, :night_cast, :day_start_time, :night_start_time)
+      params.require(:sensor).permit(:sampling_period, :sending_period, :day_cast, :night_cast, :day_start_time, :night_start_time)
     end
 end

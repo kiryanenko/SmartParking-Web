@@ -257,3 +257,4 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
+  control_panel: "Control panel"
