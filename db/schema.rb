@@ -15,10 +15,8 @@ ActiveRecord::Schema.define(version: 2018_02_22_120630) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "sensors", id: false, force: :cascade do |t|
-    t.integer "id"
-    t.integer "primary_key"
-    t.bigint "user_id"
+  create_table "sensors", id: :serial, force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.integer "sampling_period", limit: 2, default: 0
     t.integer "sending_period", limit: 2, default: 0
     t.integer "day_cast", limit: 2, default: 0

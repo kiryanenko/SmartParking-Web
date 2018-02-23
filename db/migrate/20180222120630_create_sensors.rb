@@ -1,8 +1,8 @@
 class CreateSensors < ActiveRecord::Migration[5.2]
   def change
     create_table :sensors, id: false do |t|
-      t.integer :id, :primary_key, limit: 4
-      t.belongs_to :user, index: true
+      t.integer :id, primary_key: true, limit: 4, null: false
+      t.belongs_to :user, index: true, null: false
       t.integer :sampling_period, default: 0, limit: 2
       t.integer :sending_period, default: 0, limit: 2
       t.integer :day_cast, default: 0, limit: 2

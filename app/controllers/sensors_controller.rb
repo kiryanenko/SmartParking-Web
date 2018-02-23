@@ -32,7 +32,7 @@ class SensorsController < ApplicationController
 
     respond_to do |format|
       if @sensor.save
-        format.html { redirect_to @sensor, notice: 'Sensor was successfully created.' }
+        format.html { redirect_to sensors_path, notice: t(:sensor_created) }
         format.json { render :show, status: :created, location: @sensor }
       else
         format.html { render :new }

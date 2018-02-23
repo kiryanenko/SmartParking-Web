@@ -287,3 +287,4 @@ ru:
   new_sensor: "Новый датчик"
   edit: "Изменить"
   destroy: "Удалить"
+  sensor_created: "Датчик успешно добавлен"

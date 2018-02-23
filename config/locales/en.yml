@@ -272,3 +272,4 @@ en:
   new_sensor: "New sensor"
   edit: "Edit"
   destroy: "Destroy"
+  sensor_created: "Sensor was successfully created."
