@@ -2,6 +2,9 @@ class SensorsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_sensor, only: [:show, :edit, :update, :destroy]
 
+  layout 'control_panel'
+
+
   # GET /sensors
   # GET /sensors.json
   def index
