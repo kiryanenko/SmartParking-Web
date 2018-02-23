@@ -17,9 +17,9 @@ class SensorsController < ApplicationController
   end
 
   # GET /sensors/new
-  def new
-    @sensor = Sensor.new
-  end
+  # def new
+  #   @sensor = Sensor.new
+  # end
 
   # GET /sensors/1/edit
   def edit
@@ -28,7 +28,7 @@ class SensorsController < ApplicationController
   # POST /sensors
   # POST /sensors.json
   def create
-    @sensor = Sensor.new(sensor_params)
+    @sensor = Sensor.new(user: current_user)
 
     respond_to do |format|
       if @sensor.save

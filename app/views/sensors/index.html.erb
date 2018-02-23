@@ -1,41 +1,36 @@
-<p id="notice"><%= notice %></p>
+<%= render 'components/header', title: t(:sensors) + ':' do %>
+  <%= link_to t(:new_sensor), sensors_path, method: :post, class: 'btn btn-sm btn-outline-secondary' %>
+<% end %>
 
-<h1>Sensors</h1>
-
-<table>
-  <thead>
+<% unless @sensors.empty? %>
+  <table class="table table-striped">
+    <thead>
     <tr>
-      <th>Id</th>
-      <th>User</th>
-      <th>Sampling period</th>
-      <th>Sending period</th>
-      <th>Day cast</th>
-      <th>Night cast</th>
-      <th>Day start time</th>
-      <th>Night start time</th>
-      <th colspan="3"></th>
+      <th>ID</th>
+      <th><%= t :sampling_period %></th>
+      <th><%= t :sending_period %></th>
+      <th><%= t :day_cast %></th>
+      <th><%= t :night_cast %></th>
+      <th><%= t :day_tariff_start_time %></th>
+      <th><%= t :night_tariff_start_time %></th>
+      <th colspan="2"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @sensors.each do |sensor| %>
       <tr>
-        <td><%= sensor.id %></td>
-        <td><%= sensor.user %></td>
+        <td><b><%= sensor.id %></b></td>
         <td><%= sensor.sampling_period %></td>
         <td><%= sensor.sending_period %></td>
         <td><%= sensor.day_cast %></td>
         <td><%= sensor.night_cast %></td>
-        <td><%= sensor.day_start_time %></td>
-        <td><%= sensor.night_start_time %></td>
-        <td><%= link_to 'Show', sensor %></td>
-        <td><%= link_to 'Edit', edit_sensor_path(sensor) %></td>
-        <td><%= link_to 'Destroy', sensor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= sensor.get_day_start_time.strftime "%R" %></td>
+        <td><%= sensor.get_night_start_time.strftime "%R" %></td>
+        <td><%= link_to t(:edit), edit_sensor_path(sensor) %></td>
+        <td><%= link_to t(:destroy), sensor, method: :delete, data: { confirm: t(:confirm) } %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Sensor', new_sensor_path %>
+    </tbody>
+  </table>
+<% end %>

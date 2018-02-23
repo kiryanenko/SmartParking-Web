@@ -5,4 +5,12 @@ class Sensor < ApplicationRecord
   def self.user_sensors(user)
     where user: user
   end
+
+  def get_day_start_time
+    Time.gm day_start_time
+  end
+
+  def get_night_start_time
+    Time.gm night_start_time
+  end
 end
