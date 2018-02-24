@@ -45,8 +45,11 @@ class SensorsController < ApplicationController
   # PATCH/PUT /sensors/1.json
   def update
     respond_to do |format|
-      if @sensor.update(sensor_params)
-        format.html { redirect_to @sensor, notice: 'Sensor was successfully updated.' }
+      params = sensor_params
+      params[:day_start_time] = parse_time params[:day_start_time]
+      params[:night_start_time] = parse_time params[:night_start_time]
+      if @sensor.update(params)
+        format.html { redirect_to sensors_path, notice: t(:sensor_updated) }
         format.json { render :show, status: :ok, location: @sensor }
       else
         format.html { render :edit }
@@ -74,5 +77,14 @@ class SensorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
       params.require(:sensor).permit(:sampling_period, :sending_period, :day_cast, :night_cast, :day_start_time, :night_start_time)
+    end
+
+    def parse_time(time_str)
+      begin
+        time = Time.parse(time_str)
+        time.hour * 3600 + time.min * 60 + time.sec
+      rescue
+        0
+      end
     end
 end

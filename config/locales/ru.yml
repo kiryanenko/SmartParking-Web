@@ -288,3 +288,8 @@ ru:
   edit: "Изменить"
   destroy: "Удалить"
   sensor_created: "Датчик успешно добавлен"
+  sensor_updated: "Настройки датчика успешно обновлены."
+  editing_sensor: "Изменение настроек сенсора"
+  detected_errors: "Обнаружено %{errors_count} ошибок."
+  save: "Сохранить"
+  back: "Назад"

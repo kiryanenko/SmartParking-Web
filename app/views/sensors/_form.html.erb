@@ -1,57 +1,12 @@
-<%= form_with(model: sensor, local: true) do |form| %>
-  <% if sensor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(sensor.errors.count, "error") %> prohibited this sensor from being saved:</h2>
+<%= bootstrap_form_with(model: sensor, local: true) do |form| %>
+  <%= render 'components/form_errors', resource: sensor %>
 
-      <ul>
-      <% sensor.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= form.number_field :sampling_period, label: t(:sampling_period), min: 0 %>
+  <%= form.number_field :sending_period, label: t(:sending_period), min: 0 %>
+  <%= form.number_field :day_cast, label: t(:day_cast), min: 0 %>
+  <%= form.number_field :night_cast, label: t(:night_cast), min: 0 %>
+  <%= form.time_field :day_start_time, label: t(:day_tariff_start_time), value: sensor.get_day_start_time.strftime("%R") %>
+  <%= form.time_field :night_start_time, label: t(:night_tariff_start_time), value: sensor.get_night_start_time.strftime("%R") %>
 
-  <div class="field">
-    <%= form.label :id %>
-    <%= form.number_field :id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sampling_period %>
-    <%= form.text_field :sampling_period %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sending_period %>
-    <%= form.text_field :sending_period %>
-  </div>
-
-  <div class="field">
-    <%= form.label :day_cast %>
-    <%= form.text_field :day_cast %>
-  </div>
-
-  <div class="field">
-    <%= form.label :night_cast %>
-    <%= form.text_field :night_cast %>
-  </div>
-
-  <div class="field">
-    <%= form.label :day_start_time %>
-    <%= form.text_field :day_start_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :night_start_time %>
-    <%= form.text_field :night_start_time %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit t :save %>
 <% end %>

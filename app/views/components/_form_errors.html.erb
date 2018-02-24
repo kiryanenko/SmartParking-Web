@@ -1,0 +1,6 @@
+<% if resource.errors.any? %>
+  <%= render partial: 'components/alert', locals: { msg: t(:detected_errors, errors_count: resource.errors.count), color: 'danger' } %>
+  <% resource.errors.messages[:base].each do |e| %>
+    <%= render partial: 'components/alert', locals: { msg: e, color: 'danger' } %>
+  <% end %>
+<% end %>

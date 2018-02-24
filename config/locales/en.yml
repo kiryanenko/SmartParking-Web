@@ -273,3 +273,8 @@ en:
   edit: "Edit"
   destroy: "Destroy"
   sensor_created: "Sensor was successfully created."
+  sensor_updated: "Sensor settings was successfully updated."
+  editing_sensor: "Editing sensor settings"
+  detected_errors: "Detected %{errors_count} errors."
+  save: "Save"
+  back: "Back"

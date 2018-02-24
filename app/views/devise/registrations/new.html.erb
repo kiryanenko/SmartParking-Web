@@ -2,12 +2,7 @@
   <div class="row h-100">
     <div class="col-4 m-auto text-center">
       <h1 class="mb-3"><%= t :sign_up %></h1>
-      <% unless resource.errors.empty? %>
-        <%= render partial: 'components/alert', locals: { msg: "Обнаружено #{resource.errors.count} ошибок", color: 'danger' } %>
-        <% resource.errors.messages[:base].each do |e| %>
-          <%= render partial: 'components/alert', locals: { msg: e, color: 'danger' } %>
-        <% end %>
-      <% end %>
+      <%= render 'components/form_errors', resource: resource %>
 
       <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.email_field :email, autofocus: true, autocomplete: :email, placeholder: 'email@example.com',

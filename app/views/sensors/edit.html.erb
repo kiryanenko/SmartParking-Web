@@ -1,6 +1,3 @@
-<h1>Editing Sensor</h1>
-
+<%= render 'components/header', title: "#{t(:editing_sensor)} <span class=\"font-italic font-weight-bold\">##{@sensor.id}</span>" %>
 <%= render 'form', sensor: @sensor %>
-
-<%= link_to 'Show', @sensor %> |
-<%= link_to 'Back', sensors_path %>
+<%= link_to t(:back), sensors_path %>
