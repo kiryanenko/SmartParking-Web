@@ -21,8 +21,8 @@
     <% @sensors.each do |sensor| %>
       <tr>
         <td><b><%= sensor.id %></b></td>
-        <td><%= sensor.sampling_period %></td>
-        <td><%= sensor.sending_period %></td>
+        <td><%= sensor.sampling_period %> <%= t :ms %></td>
+        <td><%= sensor.sending_period %> <%= t :ms %></td>
         <td><%= sensor.day_cast %></td>
         <td><%= sensor.night_cast %></td>
         <td><%= sensor.get_day_start_time.strftime "%R" %></td>
