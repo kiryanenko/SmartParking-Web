@@ -85,7 +85,6 @@ class SensorsController < ApplicationController
         time.hour * 3600 + time.min * 60 + time.sec
       rescue
         yield
-        0
       end
     end
 end
