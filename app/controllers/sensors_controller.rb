@@ -46,9 +46,9 @@ class SensorsController < ApplicationController
   def update
     respond_to do |format|
       params = sensor_params
-      params[:day_start_time] = parse_time params[:day_start_time]
-      params[:night_start_time] = parse_time params[:night_start_time]
-      if @sensor.update(params)
+      params[:day_start_time] = parse_time params[:day_start_time] { @sensor.errors.add :day_start_time, t(:invalid_time) }
+      params[:night_start_time] = parse_time params[:night_start_time] { @sensor.errors.add :night_start_time, t(:invalid_time) }
+      if @sensor.errors.empty? and @sensor.update(params)
         format.html { redirect_to sensors_path, notice: t(:sensor_updated) }
         format.json { render :show, status: :ok, location: @sensor }
       else
@@ -84,6 +84,7 @@ class SensorsController < ApplicationController
         time = Time.parse(time_str)
         time.hour * 3600 + time.min * 60 + time.sec
       rescue
+        yield
         0
       end
     end

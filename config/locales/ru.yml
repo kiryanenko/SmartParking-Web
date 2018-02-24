@@ -293,3 +293,4 @@ ru:
   detected_errors: "Обнаружено %{errors_count} ошибок."
   save: "Сохранить"
   back: "Назад"
+  invalid_time: "Не валидный формат времени."

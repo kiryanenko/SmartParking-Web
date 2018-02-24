@@ -278,3 +278,4 @@ en:
   detected_errors: "Detected %{errors_count} errors."
   save: "Save"
   back: "Back"
+  invalid_time: "Invalid time format."
