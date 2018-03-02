@@ -1,17 +1,15 @@
-<p id="notice"><%= notice %></p>
+<%= render 'components/header', title: "<b>#{t(:parking)}:</b> #{@parking.title}" do %>
+  <%= link_to t(:edit), edit_parking_path(@parking), class: 'btn btn-sm btn-outline-secondary' %>
+<% end %>
 
-<h3>
-  <strong>Title:</strong>
-  <%= @parking.title %>
-</h3>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t :description %>:</strong>
   <%= @parking.description %>
 </p>
 
 <p>
-  <strong>Cost:</strong>
+  <strong><%= t :cost %>:</strong>
   <%= @parking.cost %>
 </p>
 
@@ -30,5 +28,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_parking_path(@parking) %> |
-<%= link_to 'Back', parkings_path %>
+<%= link_to t(:back), parkings_path %>
