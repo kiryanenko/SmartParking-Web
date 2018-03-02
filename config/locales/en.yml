@@ -178,9 +178,9 @@ en:
     select:
       prompt: Please select
     submit:
-      create: Create %{model}
-      submit: Save %{model}
-      update: Update %{model}
+      create: Create
+      submit: Save
+      update: Update
   number:
     currency:
       format:
@@ -276,7 +276,15 @@ en:
   sensor_updated: "Sensor settings was successfully updated."
   editing_sensor: "Editing sensor settings"
   detected_errors: "Detected %{errors_count} errors."
-  save: "Save"
   back: "Back"
   invalid_time: "Invalid time format."
   ms: "ms"
+  title: "Title"
+  description: "Description"
+  cost: "Cost"
+  start_time: "Start time"
+  end_time: "End time"
+  new_parking: "New parking"
+  parking_place_count: "Parking place count"
+  editing_parking: "Editing parkoing"
+  working_hours: "Working hours"

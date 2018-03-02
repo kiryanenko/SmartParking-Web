@@ -1,0 +1,12 @@
+<%= bootstrap_form_with(model: parking, local: true) do |form| %>
+  <%= render 'components/form_errors', resource: parking %>
+
+  <%= form.text_field :title, label: t(:title), required: true %>
+  <%= form.text_area :description, label: t(:description) %>
+  <%= form.number_field :cost, label: t(:cost) %>
+  <%= form.text_field :area %>
+  <%= form.time_field :start_time, label: t(:start_time) %>
+  <%= form.time_field :end_time, label: t(:end_time) %>
+
+  <%= form.submit %>
+<% end %>

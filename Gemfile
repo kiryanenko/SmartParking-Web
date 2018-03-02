@@ -70,3 +70,6 @@ gem 'material_icons'
 
 # Аутентификация
 gem 'devise'
+
+# The activerecord-postgis-adapter provides access to features of the PostGIS geospatial database from ActiveRecord
+gem 'activerecord-postgis-adapter'

@@ -8,5 +8,5 @@
   <%= form.time_field :day_start_time, label: t(:day_tariff_start_time), value: sensor.get_day_start_time.strftime("%R") %>
   <%= form.time_field :night_start_time, label: t(:night_tariff_start_time), value: sensor.get_night_start_time.strftime("%R") %>
 
-  <%= form.submit t :save %>
+  <%= form.submit %>
 <% end %>

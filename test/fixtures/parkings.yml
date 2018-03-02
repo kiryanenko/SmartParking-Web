@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  description: MyText
+  cost: 1.5
+  user_id: one
+  area: 
+  start_time: 2018-03-02 13:20:37
+  end_time: 2018-03-02 13:20:37
+
+two:
+  title: MyText
+  description: MyText
+  cost: 1.5
+  user_id: two
+  area: 
+  start_time: 2018-03-02 13:20:37
+  end_time: 2018-03-02 13:20:37

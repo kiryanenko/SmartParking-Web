@@ -172,9 +172,9 @@ ru:
     select:
       prompt: 'Выберите: '
     submit:
-      create: Создать %{model}
-      submit: Сохранить %{model}
-      update: Сохранить %{model}
+      create: Создать
+      submit: Сохранить
+      update: Сохранить
   number:
     currency:
       format:
@@ -290,8 +290,16 @@ ru:
   sensor_created: "Датчик успешно добавлен"
   sensor_updated: "Настройки датчика успешно обновлены."
   editing_sensor: "Изменение настроек сенсора"
-  detected_errors: "Обнаружено %{errors_count} ошибок."
-  save: "Сохранить"
+  detected_errors: "Обнаружено %{errors_count} ошибки."
   back: "Назад"
   invalid_time: "Не валидный формат времени."
   ms: "мс"
+  title: "Название"
+  description: "Описание"
+  cost: "Цена"
+  start_time: "Время начала работы"
+  end_time: "Время конца работы"
+  new_parking: "Новая стоянка"
+  parking_place_count: "Количество парковочных мест"
+  editing_parking: "Изменение стоянки"
+  working_hours: "Время работы"

@@ -1,0 +1,36 @@
+<%= render 'components/header', title: t(:parkings) + ':' do %>
+  <%= link_to t(:new_parking), new_parking_path, class: 'btn btn-sm btn-outline-secondary' %>
+<% end %>
+
+<% unless @parkings.empty? %>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th><%= t :title %></th>
+      <th><%= t :description %></th>
+      <th><%= t :cost %></th>
+      <th><%= t :working_hours %></th>
+      <th><%= t :parking_place_count %></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @parkings.each do |parking| %>
+      <tr onclick="window.location.href='<%= parking_url(parking) %>'; return false">
+        <td><%= parking.title %></td>
+        <td><%= parking.description %></td>
+        <td><%= parking.cost %></td>
+        <td>
+          <% if parking.start_time.nil? %>
+            —
+          <% else %>
+            <%= parking.start_time.strftime("%R") %> — <%= parking.end_time.strftime("%R") %>
+          <% end %>
+        </td>
+        <td>123</td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
+<br>
