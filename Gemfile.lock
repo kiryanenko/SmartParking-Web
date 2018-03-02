@@ -250,6 +250,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.0.rc1)
   rgeo
+  rgeo-activerecord
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
