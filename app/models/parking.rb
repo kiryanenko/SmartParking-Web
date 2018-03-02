@@ -1,3 +1,5 @@
+require 'rgeo'
+
 class Parking < ApplicationRecord
   belongs_to :user
 
