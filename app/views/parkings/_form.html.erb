@@ -4,9 +4,27 @@
   <%= form.text_field :title, label: t(:title), required: true %>
   <%= form.text_area :description, label: t(:description) %>
   <%= form.number_field :cost, label: t(:cost) %>
-  <%= form.text_field :area %>
   <%= form.time_field :start_time, label: t(:start_time) %>
   <%= form.time_field :end_time, label: t(:end_time) %>
+  <%= form.text_field :area %>
 
-  <%= form.submit %>
+  <div id="map"></div>
+  <script>
+      function initMap() {
+          var uluru = {lat: -25.363, lng: 131.044};
+          var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 4,
+              center: uluru
+          });
+          var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+          });
+      }
+  </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+  </script>
+
+  <%= form.submit class: 'btn btn-secondary mt-3' %>
 <% end %>
