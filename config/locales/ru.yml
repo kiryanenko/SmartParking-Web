@@ -305,4 +305,4 @@ ru:
   working_hours: "Время работы"
   parking: "Стоянка"
   parking_space: "Парковочное пространство"
-  add_mark: "Добавить метку"
+  remove_vertex: "Удалить вершину"

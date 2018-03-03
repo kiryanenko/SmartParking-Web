@@ -1,4 +1,4 @@
-<%= bootstrap_form_with(model: parking, local: true) do |form| %>
+<%= bootstrap_form_with(model: parking, local: true, html: {onsubmit: 'setAreaField(); return true;'}) do |form| %>
   <%= render 'components/form_errors', resource: parking %>
 
   <%= form.text_field :title, label: t(:title), required: true %>
@@ -7,23 +7,18 @@
   <%= form.time_field :start_time, label: t(:start_time) %>
   <%= form.time_field :end_time, label: t(:end_time) %>
 
+  <%= form.hidden_field :area %>
   <div class="card">
     <div class="card-header"><%= t :parking_space %></div>
     <div class="card-body">
-      <button type="button" class="btn btn-outline-success mb-2"><%= t :add_mark %></button>
+      <button type="button" class="btn btn-outline-danger mb-2" onclick="removePolygonPoint()"><%= t :remove_vertex %></button>
 
       <div id="map"></div>
       <script>
           function initMap() {
-              var uluru = {lat: -25.363, lng: 131.044};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 4,
-                  center: uluru
-              });
-              var marker = new google.maps.Marker({
-                  position: uluru,
-                  map: map
-              });
+              initParkingAreaEditingMap([
+                  <%= parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') unless parking.area.nil? %>
+              ]);
           }
       </script>
       <script async defer

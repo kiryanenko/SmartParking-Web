@@ -17,4 +17,4 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require jasny-bootstrap
-//= require_tree .
+//= require config
