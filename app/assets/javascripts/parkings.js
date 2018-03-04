@@ -1,15 +1,17 @@
 let map;
 let area_polygon;
 
-function initParkingAreaEditingMap(area) {
+function initParkingAreaMap(area, editable) {
     let center;
     if (area.length === 0) {
         center = MAP_CENTER;
-        area = [
-            MAP_CENTER,
-            {lat: MAP_CENTER.lat, lng: MAP_CENTER.lng + 0.002},
-            {lat: MAP_CENTER.lat + 0.002, lng: MAP_CENTER.lng}
+        if (editable) {
+            area = [
+                MAP_CENTER,
+                {lat: MAP_CENTER.lat, lng: MAP_CENTER.lng + 0.002},
+                {lat: MAP_CENTER.lat + 0.002, lng: MAP_CENTER.lng}
             ];
+        }
     } else {
         center = area[0];
     }
@@ -27,8 +29,8 @@ function initParkingAreaEditingMap(area) {
         strokeWeight: 2,
         fillColor: '#36cfff',
         fillOpacity: 0.35,
-        editable: true,
-        draggable: true,
+        editable: editable,
+        draggable: editable,
         geodesic: true
     });
 }

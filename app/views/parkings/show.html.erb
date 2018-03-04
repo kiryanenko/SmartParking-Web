@@ -22,10 +22,17 @@
   <% end %>
 </p>
 
-<p>
-  <strong>Area:</strong>
-  <%= @parking.area %>
-</p>
+<div id="map" class="mb-4"></div>
+<script>
+    function initMap() {
+        initParkingAreaMap([
+            <%= @parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') unless @parking.area.nil? %>
+        ], false);
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+</script>
 
 
 <%= link_to t(:back), parkings_path %>
