@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @parking_place.place_id %>
+</p>
+
+<p>
+  <strong>Sensor:</strong>
+  <%= @parking_place.sensor %>
+</p>
+
+<p>
+  <strong>Parking:</strong>
+  <%= @parking_place.parking %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @parking_place.title %>
+</p>
+
+<p>
+  <strong>Coords:</strong>
+  <%= @parking_place.coords %>
+</p>
+
+<p>
+  <strong>For disabled:</strong>
+  <%= @parking_place.for_disabled %>
+</p>
+
+<p>
+  <strong>Booked:</strong>
+  <%= @parking_place.booked %>
+</p>
+
+<p>
+  <strong>Free:</strong>
+  <%= @parking_place.free %>
+</p>
+
+<p>
+  <strong>Connected:</strong>
+  <%= @parking_place.connected %>
+</p>
+
+<p>
+  <strong>Can book:</strong>
+  <%= @parking_place.can_book %>
+</p>
+
+<%= link_to 'Edit', edit_parking_place_path(@parking_place) %> |
+<%= link_to 'Back', parking_places_path %>

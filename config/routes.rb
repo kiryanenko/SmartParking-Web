@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :parking_places
   resources :parkings
   get 'control_panel/main'
   resources :sensors

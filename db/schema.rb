@@ -10,14 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_02_102037) do
+ActiveRecord::Schema.define(version: 2018_03_04_115555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
 
+  create_table "parking_places", force: :cascade do |t|
+    t.integer "place_id", limit: 2
+    t.bigint "sensor_id"
+    t.bigint "parking_id"
+    t.string "title"
+    t.geography "coord", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
+    t.boolean "for_disabled", default: false
+    t.boolean "booked", default: false
+    t.boolean "free", default: false
+    t.boolean "connected", default: false
+    t.boolean "can_book", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booked"], name: "index_parking_places_on_booked"
+    t.index ["can_book"], name: "index_parking_places_on_can_book"
+    t.index ["connected"], name: "index_parking_places_on_connected"
+    t.index ["coord"], name: "index_parking_places_on_coord"
+    t.index ["for_disabled"], name: "index_parking_places_on_for_disabled"
+    t.index ["free"], name: "index_parking_places_on_free"
+    t.index ["parking_id"], name: "index_parking_places_on_parking_id"
+    t.index ["place_id"], name: "index_parking_places_on_place_id"
+    t.index ["sensor_id"], name: "index_parking_places_on_sensor_id"
+  end
+
   create_table "parkings", force: :cascade do |t|
-    t.text "title"
+    t.string "title"
     t.text "description"
     t.float "cost", default: 0.0
     t.bigint "user_id"
@@ -26,6 +50,10 @@ ActiveRecord::Schema.define(version: 2018_03_02_102037) do
     t.time "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["area"], name: "index_parkings_on_area"
+    t.index ["cost"], name: "index_parkings_on_cost"
+    t.index ["end_time"], name: "index_parkings_on_end_time"
+    t.index ["start_time"], name: "index_parkings_on_start_time"
     t.index ["user_id"], name: "index_parkings_on_user_id"
   end
 
@@ -61,6 +89,8 @@ ActiveRecord::Schema.define(version: 2018_03_02_102037) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "parking_places", "parkings"
+  add_foreign_key "parking_places", "sensors"
   add_foreign_key "parkings", "users"
   add_foreign_key "sensors", "users"
 end
