@@ -1,0 +1,9 @@
+<div class="btn-group dropup">
+  <button class="btn btn-dark dropdown-toggle btn-xs" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= t :language %>
+  </button>
+  <div class="dropdown-menu dropdown-menu<%= '-right' if local_assigns[:right] %>">
+    <%= link_to 'English', { :locale=>'en' }, class: 'dropdown-item' %>
+    <%= link_to 'Русский', { :locale=>'ru' }, class: 'dropdown-item' %>
+  </div>
+</div>
