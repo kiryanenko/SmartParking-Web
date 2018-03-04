@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
   enable_extension "postgis"
 
   create_table "parking_places", force: :cascade do |t|
-    t.integer "place_id", limit: 2
-    t.bigint "sensor_id"
-    t.bigint "parking_id"
-    t.string "title"
-    t.geography "coord", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
-    t.boolean "for_disabled", default: false
-    t.boolean "booked", default: false
-    t.boolean "free", default: false
-    t.boolean "connected", default: false
-    t.boolean "can_book", default: false
+    t.integer "place_id", limit: 2, null: false
+    t.bigint "sensor_id", null: false
+    t.bigint "parking_id", null: false
+    t.string "title", null: false
+    t.geography "coord", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}, null: false
+    t.boolean "for_disabled", default: false, null: false
+    t.boolean "booked", default: false, null: false
+    t.boolean "free", default: false, null: false
+    t.boolean "connected", default: false, null: false
+    t.boolean "can_book", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["booked"], name: "index_parking_places_on_booked"
@@ -41,10 +41,10 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
   end
 
   create_table "parkings", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.float "cost", default: 0.0
-    t.bigint "user_id"
+    t.string "title", null: false
+    t.text "description", null: false
+    t.float "cost", default: 0.0, null: false
+    t.bigint "user_id", null: false
     t.geography "area", limit: {:srid=>4326, :type=>"st_polygon", :geographic=>true}, null: false
     t.time "start_time"
     t.time "end_time"
@@ -59,12 +59,12 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
 
   create_table "sensors", id: :serial, force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.integer "sampling_period", limit: 2, default: 0
-    t.integer "sending_period", limit: 2, default: 0
-    t.integer "day_cast", limit: 2, default: 0
-    t.integer "night_cast", limit: 2, default: 0
-    t.integer "day_start_time", limit: 2, default: 0
-    t.integer "night_start_time", limit: 2, default: 0
+    t.integer "sampling_period", limit: 2, default: 0, null: false
+    t.integer "sending_period", limit: 2, default: 0, null: false
+    t.integer "day_cast", limit: 2, default: 0, null: false
+    t.integer "night_cast", limit: 2, default: 0, null: false
+    t.integer "day_start_time", limit: 2, default: 0, null: false
+    t.integer "night_start_time", limit: 2, default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sensors_on_user_id"

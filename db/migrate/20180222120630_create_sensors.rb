@@ -3,12 +3,12 @@ class CreateSensors < ActiveRecord::Migration[5.2]
     create_table :sensors, id: false do |t|
       t.integer :id, primary_key: true, limit: 4, null: false
       t.belongs_to :user, index: true, null: false
-      t.integer :sampling_period, default: 0, limit: 2
-      t.integer :sending_period, default: 0, limit: 2
-      t.integer :day_cast, default: 0, limit: 2
-      t.integer :night_cast, default: 0, limit: 2
-      t.integer :day_start_time, default: 0, limit: 2
-      t.integer :night_start_time, default: 0, limit: 2
+      t.integer :sampling_period, default: 0, limit: 2, null: false
+      t.integer :sending_period, default: 0, limit: 2, null: false
+      t.integer :day_cast, default: 0, limit: 2, null: false
+      t.integer :night_cast, default: 0, limit: 2, null: false
+      t.integer :day_start_time, default: 0, limit: 2, null: false
+      t.integer :night_start_time, default: 0, limit: 2, null: false
 
       t.timestamps
     end
