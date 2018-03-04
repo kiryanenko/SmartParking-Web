@@ -1,6 +1,7 @@
 class ParkingPlacesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_parking_place, only: [:show, :edit, :update, :destroy]
+  before_action :set_parking, only: [:new, :create]
 
   layout 'control_panel'
 
@@ -27,7 +28,7 @@ class ParkingPlacesController < ApplicationController
   # POST /parking_places
   # POST /parking_places.json
   def create
-    @parking_place = ParkingPlace.new(parking_place_params)
+    @parking_place = ParkingPlace.new(parking_place_params.merge(parking: @parking))
 
     respond_to do |format|
       if @parking_place.save
@@ -65,13 +66,17 @@ class ParkingPlacesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_parking_place
-      @parking_place = ParkingPlace.find_for_user(params[:id], current_user)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_parking_place
+    @parking_place = ParkingPlace.find_for_user(params[:id], current_user)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def parking_place_params
-      params.require(:parking_place).permit(:place_id, :sensor_id, :parking_id, :title, :coord, :for_disabled, :can_book)
-    end
+  def set_parking
+    @parking = Parking.find_for_user(params[:parking_id], current_user)
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def parking_place_params
+    params.require(:parking_place).permit(:place_id, :sensor_id, :title, :coord, :for_disabled, :can_book)
+  end
 end

@@ -35,7 +35,7 @@
 </script>
 
 <%= render 'components/header', title: t(:parking_places) + ':', header_tag: 'h3' do %>
-  <%= link_to t(:add), new_parking_place_path, class: 'btn btn-outline-success btn-sm' %>
+  <%= link_to t(:add), new_parking_parking_place_path(@parking), class: 'btn btn-outline-success btn-sm' %>
 <% end %>
 <% if @parking.parking_places.any? %>
   <table class="table table-hover">
@@ -54,17 +54,17 @@
     </thead>
 
     <tbody>
-    <% @parkings.parking_places.each do |place| %>
-      <tr onclick="window.location.href='<%= parking_place_url(place) %>'; return false">
+    <% @parking.parking_places.each do |place| %>
+      <tr onclick="window.location.href='<%= parking_place_path(place) %>'; return false">
         <td><b><%= place.id %></b></td>
         <td><%= link_to place.sensor.id, place.sensor %></td>
         <td><%= place.title %></td>
-        <td><%= place.coord.lat %> <%= place.coord.lng %></td>
-        <td><%= place.for_disabled ? '<span class="text-info">+</span>' : '—' %></td>
-        <td><%= place.can_book ? '<span class="text-success">+</span>' : '<span class="text-danger">—</span>' %></td>
-        <td><%= place.booked ? '<span class="text-danger">+</span>' : '<span class="text-success">—</span>' %></td>
-        <td><%= place.free ? '<span class="text-success">+</span>' : '<span class="text-danger">—</span>' %></td>
-        <td><%= place.link ? '<span class="text-success">Online</span>' : '<span class="text-danger"Offline</span>' %></td>
+        <td><%= place.coord.x %> <%= place.coord.y %></td>
+        <td><%= raw place.for_disabled ? '<span class="text-info">+</span>' : '—' %></td>
+        <td><%= raw place.can_book ? '<span class="text-success">+</span>' : '<span class="text-danger">—</span>' %></td>
+        <td><%= raw place.booked ? '<span class="text-danger">+</span>' : '<span class="text-success">—</span>' %></td>
+        <td><%= raw place.free ? '<span class="text-success">+</span>' : '<span class="text-danger">—</span>' %></td>
+        <td><%= raw place.connected ? '<span class="text-success">Online</span>' : '<span class="text-danger">Offline</span>' %></td>
       </tr>
     <% end %>
     </tbody>

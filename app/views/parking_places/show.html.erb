@@ -1,48 +1,20 @@
-<p id="notice"><%= notice %></p>
+<%= render 'components/header', title: "#{t(:parking_place)} №#{@parking_place.place_id}" do %>
+  <%= link_to t(:edit), edit_parking_place_path(@parking_place), class: 'btn btn-sm btn-outline-secondary' %>
+<% end %>
 
-<p>
-  <strong>Place:</strong>
-  <%= @parking_place.place_id %>
-</p>
-
-<p>
-  <strong>Sensor:</strong>
-  <%= @parking_place.sensor %>
-</p>
-
-<p>
-  <strong>Parking:</strong>
-  <%= @parking_place.parking %>
-</p>
-
-<p>
-  <strong>Title:</strong>
+<h4>
+  <strong><%= t :title %>:</strong>
   <%= @parking_place.title %>
+</h4>
+
+<p>
+  <strong><%= t :sensor_id %>:</strong>
+  <%= link_to @parking_place.sensor.id, @parking_place.sensor %>
 </p>
 
 <p>
-  <strong>Coords:</strong>
-  <%= @parking_place.coords %>
-</p>
-
-<p>
-  <strong>For disabled:</strong>
+  <strong><%= t :for_disabled %>:</strong>
   <%= @parking_place.for_disabled %>
-</p>
-
-<p>
-  <strong>Booked:</strong>
-  <%= @parking_place.booked %>
-</p>
-
-<p>
-  <strong>Free:</strong>
-  <%= @parking_place.free %>
-</p>
-
-<p>
-  <strong>Connected:</strong>
-  <%= @parking_place.connected %>
 </p>
 
 <p>
@@ -50,5 +22,23 @@
   <%= @parking_place.can_book %>
 </p>
 
-<%= link_to 'Edit', edit_parking_place_path(@parking_place) %> |
-<%= link_to 'Back', parking_places_path %>
+
+<p>
+  <strong><%= t :booked %>:</strong>
+  <%= raw @parking_place.booked ? "<span class=\"text-danger\">#{t :yes_}</span>" : "<span class=\"text-success\">#{t :no_}</span>" %>
+  <br>
+  <strong><%= t :free %>:</strong>
+  <%= raw @parking_place.free ? "<span class=\"text-success\">#{t :yes_}</span>" : "<span class=\"text-danger\">#{t :no_}</span>" %>
+  <br>
+  <strong><%= t :link %>:</strong>
+  <%= raw @parking_place.connected ? '<span class="text-success">Online</span>' : '<span class="text-danger">Offline</span>' %>
+</p>
+
+
+<p>
+  <strong>Coords:</strong>
+  <%= @parking_place.coord %>
+</p>
+
+
+<%= link_to 'Back', parking_path(@parking_place.parking) %>

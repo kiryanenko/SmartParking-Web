@@ -18,4 +18,5 @@ Rails.application.config.assets.precompile += %w(
   control_panel.css control_panel.js
   sensors.css sensors.js
   parkings.css parkings.js
+  parking_places.css parking_places.js
 )

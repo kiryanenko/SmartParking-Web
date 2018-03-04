@@ -301,3 +301,9 @@ en:
   can_book: "Can book"
   add_parking_place: "Add parking place"
   add: "Add"
+  parking_created: "Parking was successfully created."
+  parking_updated: "Parking was successfully updated."
+  parking_destroyed: "Parking was successfully removed."
+  parking_place: "Parking place"
+  no_: No
+  yes_: Yes

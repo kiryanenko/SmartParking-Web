@@ -1,67 +1,12 @@
-<%= form_with(model: parking_place, local: true) do |form| %>
-  <% if parking_place.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(parking_place.errors.count, "error") %> prohibited this parking_place from being saved:</h2>
+<%= bootstrap_form_with(model: [local_assigns[:parking], parking_place], local: true) do |form| %>
+  <%= render 'components/form_errors', resource: parking_place %>
 
-      <ul>
-      <% parking_place.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= form.number_field :place_id %>
+  <%= form.text_field :sensor_id %>
+  <%= form.text_field :title %>
+  <%= form.text_field :coord %>
+  <%= form.check_box :for_disabled %>
+  <%= form.check_box :can_book %>
 
-  <div class="field">
-    <%= form.label :place_id %>
-    <%= form.number_field :place_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :sensor_id %>
-    <%= form.text_field :sensor_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :parking_id %>
-    <%= form.text_field :parking_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :coords %>
-    <%= form.text_field :coords %>
-  </div>
-
-  <div class="field">
-    <%= form.label :for_disabled %>
-    <%= form.check_box :for_disabled %>
-  </div>
-
-  <div class="field">
-    <%= form.label :booked %>
-    <%= form.check_box :booked %>
-  </div>
-
-  <div class="field">
-    <%= form.label :free %>
-    <%= form.check_box :free %>
-  </div>
-
-  <div class="field">
-    <%= form.label :connected %>
-    <%= form.check_box :connected %>
-  </div>
-
-  <div class="field">
-    <%= form.label :can_book %>
-    <%= form.check_box :can_book %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit %>
 <% end %>

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /ru|en/ do
-    resources :parking_places
-    resources :parkings
+    resources :parkings do
+      resources :parking_places, shallow: true
+    end
     get 'control_panel/main'
     resources :sensors
     devise_for :users
