@@ -5,7 +5,7 @@ class CreateParkings < ActiveRecord::Migration[5.2]
       t.text :description
       t.float :cost, default: 0, index: true
       t.references :user, foreign_key: true, index: true
-      t.st_polygon :area, geographic: true, index: true
+      t.st_polygon :area, geographic: true, null: false, index: true
       t.time :start_time, null: true, index: true
       t.time :end_time, null: true, index: true
 

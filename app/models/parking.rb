@@ -5,7 +5,7 @@ class Parking < ApplicationRecord
   has_many :parking_places
 
   before_validation :ensure_times_both_nil
-  validates :title, presence: true
+  validates :title, :area, presence: true
 
   def self.user_parkings(user)
     where(user: user).order(:id)
@@ -15,7 +15,6 @@ class Parking < ApplicationRecord
     find_by!(id: id, user: user)
   end
 
-  private
   def ensure_times_both_nil
     if start_time.nil? or end_time.nil?
       self.start_time = nil

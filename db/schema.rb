@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
     t.text "description"
     t.float "cost", default: 0.0
     t.bigint "user_id"
-    t.geography "area", limit: {:srid=>4326, :type=>"st_polygon", :geographic=>true}
+    t.geography "area", limit: {:srid=>4326, :type=>"st_polygon", :geographic=>true}, null: false
     t.time "start_time"
     t.time "end_time"
     t.datetime "created_at", null: false

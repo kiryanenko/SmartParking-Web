@@ -36,7 +36,7 @@ function initParkingAreaMap(area, editable) {
 }
 
 function removePolygonPoint() {
-    if (area_polygon.getPath().length > 2) {
+    if (area_polygon.getPath().length > 3) {
         area_polygon.getPath().removeAt(0);
     }
 }
