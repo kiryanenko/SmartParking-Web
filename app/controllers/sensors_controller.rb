@@ -13,8 +13,8 @@ class SensorsController < ApplicationController
 
   # GET /sensors/1
   # GET /sensors/1.json
-  # def show
-  # end
+  def show
+  end
 
   # GET /sensors/new
   # def new
