@@ -1,44 +1,28 @@
-<p id="notice"><%= notice %></p>
-
+<%= render 'components/header', title: "<b>#{t(:sensor)}:</b> ##{@sensor.id}" do %>
+  <%= link_to t(:edit), edit_sensor_path(@sensor), class: 'btn btn-sm btn-outline-secondary' %>
+<% end %>
 <p>
-  <strong>Id:</strong>
-  <%= @sensor.id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @sensor.user %>
-</p>
-
-<p>
-  <strong>Sampling period:</strong>
+  <strong><%= t :sampling_period %>:</strong>
   <%= @sensor.sampling_period %>
-</p>
-
-<p>
-  <strong>Sending period:</strong>
+  <br>
+  <strong><%= t :sending_period %>:</strong>
   <%= @sensor.sending_period %>
 </p>
 
 <p>
-  <strong>Day cast:</strong>
+  <strong><%= t :day_cast %>:</strong>
   <%= @sensor.day_cast %>
-</p>
-
-<p>
-  <strong>Night cast:</strong>
+  <br>
+  <strong><%= t :night_cast %>:</strong>
   <%= @sensor.night_cast %>
 </p>
 
 <p>
-  <strong>Day start time:</strong>
-  <%= @sensor.day_start_time %>
+  <strong><%= t :day_tariff_start_time %>:</strong>
+  <%= @sensor.get_day_start_time.strftime "%R" %>
+  <br>
+  <strong><%= t :night_tariff_start_time %>:</strong>
+  <%= @sensor.get_night_start_time.strftime "%R" %>
 </p>
 
-<p>
-  <strong>Night start time:</strong>
-  <%= @sensor.night_start_time %>
-</p>
-
-<%= link_to 'Edit', edit_sensor_path(@sensor) %> |
 <%= link_to 'Back', sensors_path %>
