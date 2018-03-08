@@ -1,4 +1,4 @@
-<%= render 'components/header', title: "#{t(:parking_place)} №#{@parking_place.place_id}" do %>
+<%= render 'components/header', title: "#{t(:parking_place)} № <b>#{@parking_place.place_id}</b>" do %>
   <%= link_to t(:edit), edit_parking_place_path(@parking_place), class: 'btn btn-sm btn-outline-secondary' %>
 <% end %>
 
@@ -14,24 +14,46 @@
 
 <p>
   <strong><%= t :for_disabled %>:</strong>
-  <%= @parking_place.for_disabled %>
+  <% if @parking_place.for_disabled %>
+    <span class="text-info"><%= t :yes_%></span>
+  <% else %>
+    <%= t :no_ %>
+  <% end %>
 </p>
 
 <p>
   <strong><%= t :can_book %>:</strong>
-  <%= @parking_place.can_book %>
+  <% if @parking_place.can_book %>
+    <span class="text-success"><%= t :yes_%></span>
+  <% else %>
+    <span class="text-danger"><%= t :no_%></span>
+  <% end %>
 </p>
 
 
 <p>
   <strong><%= t :booked %>:</strong>
-  <%= raw @parking_place.booked ? "<span class=\"text-danger\">#{t :yes_}</span>" : "<span class=\"text-success\">#{t :no_}</span>" %>
+  <% if @parking_place.booked %>
+    <span class="text-danger"><%= t :yes_%></span>
+  <% else %>
+    <span class="text-success"><%= t :no_%></span>
+  <% end %>
   <br>
+
   <strong><%= t :free %>:</strong>
-  <%= raw @parking_place.free ? "<span class=\"text-success\">#{t :yes_}</span>" : "<span class=\"text-danger\">#{t :no_}</span>" %>
+  <% if @parking_place.free %>
+    <span class="text-success"><%= t :yes_%></span>
+  <% else %>
+    <span class="text-danger"><%= t :no_%></span>
+  <% end %>
   <br>
+
   <strong><%= t :link %>:</strong>
-  <%= raw @parking_place.connected ? '<span class="text-success">Online</span>' : '<span class="text-danger">Offline</span>' %>
+  <% if @parking_place.connected %>
+    <span class="text-success">Online</span>
+  <% else %>
+    <span class="text-danger">Offline</span>
+  <% end %>
 </p>
 
 
