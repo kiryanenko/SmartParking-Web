@@ -322,3 +322,7 @@ ru:
   parking_place: "Парковочное место"
   no_: Нет
   yes_: Да
+  sensor_destroyed: "Датчик успешно удален."
+  parking_place_created: "Парковочное место успешно добавлено."
+  parking_place_updated: "Парковочное место успешно обновлено."
+  parking_place_destroyed: "Пакровочное место успешно удалено."

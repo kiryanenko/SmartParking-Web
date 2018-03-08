@@ -307,3 +307,7 @@ en:
   parking_place: "Parking place"
   no_: No
   yes_: Yes
+  sensor_destroyed: "Sensor was successfully destroyed."
+  parking_place_created: "Parking place was successfully added."
+  parking_place_updated: "Parking place was successfully updated."
+  parking_place_destroyed: "Parking place was successfully destroyed."

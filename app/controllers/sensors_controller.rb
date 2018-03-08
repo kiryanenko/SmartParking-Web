@@ -63,7 +63,7 @@ class SensorsController < ApplicationController
   def destroy
     @sensor.destroy
     respond_to do |format|
-      format.html { redirect_to sensors_url, notice: 'Sensor was successfully destroyed.' }
+      format.html { redirect_to sensors_url, notice: t(:sensor_destroyed) }
       format.json { head :no_content }
     end
   end
