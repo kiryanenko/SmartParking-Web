@@ -22,17 +22,20 @@
   <% end %>
 </p>
 
+
 <div id="map" class="mb-4"></div>
 <script>
     function initMap() {
-        initParkingAreaMap([
+        new ParkingAreaMap(document.getElementById('map'), [
             <%= @parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') unless @parking.area.nil? %>
         ]);
     }
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
 </script>
+
+
 
 <%= render 'components/header', title: t(:parking_places) + ':', header_tag: 'h3' do %>
   <%= link_to t(:add), new_parking_parking_place_path(@parking), class: 'btn btn-outline-success btn-sm' %>

@@ -1,4 +1,4 @@
-<%= bootstrap_form_with(model: parking, local: true, html: {onsubmit: 'setAreaField(); return true;'}) do |form| %>
+<%= bootstrap_form_with(model: parking, local: true, html: {onsubmit: 'map.setAreaField(); return true;'}) do |form| %>
   <%= render 'components/form_errors', resource: parking %>
 
   <%= form.text_field :title, label: t(:title), required: true %>
@@ -15,14 +15,16 @@
 
       <div id="map"></div>
       <script>
+          let map;
+
           function initMap() {
-              initParkingAreaMap([
+              map = new ParkingAreaMap(document.getElementById('map'), [
                   <%= parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') unless parking.area.nil? %>
               ], true);
           }
       </script>
       <script async defer
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+              src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
       </script>
     </div>
   </div>

@@ -18,7 +18,7 @@
 </p>
 
 <p>
-  <strong>Can book:</strong>
+  <strong><%= t :can_book %>:</strong>
   <%= @parking_place.can_book %>
 </p>
 
@@ -35,18 +35,19 @@
 </p>
 
 
-<div id="map"></div>
+<div id="map" class="mb-3"></div>
 <script>
     function initMap() {
-        initParkingPlaceMap(<%= "{lat: #{@parking_place.coord.x}, lng: #{@parking_place.coord.y}}" %>,
+        new ParkingPlaceMap(
+            document.getElementById('map'), <%= "{lat: #{@parking_place.coord.x}, lng: #{@parking_place.coord.y}}" %>,
             [<%= @parking_place.parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
             false
         );
     }
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
 </script>
 
 
-<%= link_to 'Back', parking_path(@parking_place.parking) %>
+<%= link_to t(:back), parking_path(@parking_place.parking) %>
