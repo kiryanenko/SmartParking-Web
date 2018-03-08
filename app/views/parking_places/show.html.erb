@@ -35,10 +35,18 @@
 </p>
 
 
-<p>
-  <strong>Coords:</strong>
-  <%= @parking_place.coord %>
-</p>
+<div id="map"></div>
+<script>
+    function initMap() {
+        initParkingPlaceMap(<%= "{lat: #{@parking_place.coord.x}, lng: #{@parking_place.coord.y}}" %>,
+            [<%= @parking_place.parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
+            false
+        );
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+</script>
 
 
 <%= link_to 'Back', parking_path(@parking_place.parking) %>

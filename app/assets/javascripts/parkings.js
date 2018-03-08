@@ -1,38 +1,24 @@
+//= require map
+
 let map;
 let area_polygon;
 
-function initParkingAreaMap(area, editable) {
-    let center;
-    if (area.length === 0) {
-        center = MAP_CENTER;
-        if (editable) {
-            area = [
-                MAP_CENTER,
-                {lat: MAP_CENTER.lat, lng: MAP_CENTER.lng + 0.002},
-                {lat: MAP_CENTER.lat + 0.002, lng: MAP_CENTER.lng}
-            ];
-        }
-    } else {
-        center = area[0];
+function initParkingAreaMap(area, editable = false) {
+    if (area.length === 0 && editable) {
+        area = [
+            MAP_CENTER,
+            {lat: MAP_CENTER.lat, lng: MAP_CENTER.lng + 0.002},
+            {lat: MAP_CENTER.lat + 0.002, lng: MAP_CENTER.lng}
+        ];
     }
+    let center = parkingAreaCenter(area);
 
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: center
     });
 
-    area_polygon = new google.maps.Polygon({
-        map: map,
-        paths: area,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: '#36cfff',
-        fillOpacity: 0.35,
-        editable: editable,
-        draggable: editable,
-        geodesic: true
-    });
+    area_polygon = addParkingArea(map, area, editable)
 }
 
 function removePolygonPoint() {

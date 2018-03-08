@@ -1,8 +1,8 @@
 <%= bootstrap_form_with(model: sensor, local: true) do |form| %>
   <%= render 'components/form_errors', resource: sensor %>
 
-  <%= form.number_field :sampling_period, label: "#{t :sampling_period} (#{t :ms})", min: 0 %>
-  <%= form.number_field :sending_period, label: "#{t :sending_period} (#{t :ms})", min: 0 %>
+  <%= form.number_field :sampling_period, label: "#{t :sampling_period} (#{t :ms})", min: 0, step: 1 %>
+  <%= form.number_field :sending_period, label: "#{t :sending_period} (#{t :ms})", min: 0, step: 1 %>
   <%= form.number_field :day_cast, label: t(:day_cast), min: 0 %>
   <%= form.number_field :night_cast, label: t(:night_cast), min: 0 %>
   <%= form.time_field :day_start_time, label: t(:day_tariff_start_time), value: sensor.get_day_start_time.strftime("%R") %>

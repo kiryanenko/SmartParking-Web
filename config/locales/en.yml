@@ -312,3 +312,5 @@ en:
   parking_place_updated: "Parking place was successfully updated."
   parking_place_destroyed: "Parking place was successfully destroyed."
   sensor: "Sensor"
+  parking_place_location: "Parking place location"
+  new_parking_place: "New parking place"

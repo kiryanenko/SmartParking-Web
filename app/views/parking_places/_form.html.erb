@@ -1,12 +1,29 @@
-<%= bootstrap_form_with(model: [local_assigns[:parking], parking_place], local: true) do |form| %>
+<%= bootstrap_form_with(model: local_assigns[:is_edit] ? parking_place : [parking, parking_place], local: true,
+                        html: {onsubmit: 'setCoordField(); return true;'}) do |form| %>
   <%= render 'components/form_errors', resource: parking_place %>
 
-  <%= form.number_field :place_id %>
-  <%= form.text_field :sensor_id %>
-  <%= form.text_field :title %>
-  <%= form.text_field :coord %>
-  <%= form.check_box :for_disabled %>
-  <%= form.check_box :can_book %>
+  <%= form.number_field :place_id, label: 'ID', min: 0, step: 1, required: true %>
+  <%= form.select :sensor_id, current_user.sensors.ids, label: t(:sensor_id), required: true %>
+  <%= form.text_field :title, label: t(:title), required: true %>
+  <%= form.check_box :for_disabled, label: t(:for_disabled) %>
+  <%= form.check_box :can_book, label: t(:can_book) %>
+
+  <%= form.hidden_field :coord %>
+  <div class="card my-3">
+    <div class="card-header"><%= t :parking_place_location %></div>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            initParkingPlaceMap(<%= local_assigns[:is_edit] ? "{lat: #{parking_place.coord.x}, lng: #{parking_place.coord.y}}" : "null" %>,
+                [<%= parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') unless parking.area.nil? %>],
+                true
+            );
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4A1KSLL-dVMvi9XwJOC0Br5-0Re9ahf4&callback=initMap">
+    </script>
+  </div>
 
   <%= form.submit %>
 <% end %>

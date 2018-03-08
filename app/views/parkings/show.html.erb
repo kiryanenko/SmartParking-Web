@@ -27,7 +27,7 @@
     function initMap() {
         initParkingAreaMap([
             <%= @parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') unless @parking.area.nil? %>
-        ], false);
+        ]);
     }
 </script>
 <script async defer

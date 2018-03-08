@@ -1,5 +1,5 @@
 <h1>Editing Parking Place</h1>
 
-<%= render 'form', parking_place: @parking_place %>
+<%= render 'form', parking_place: @parking_place, parking: @parking_place.parking, is_edit: true %>
 
 <%= link_to t(:back), @parking_place %>
