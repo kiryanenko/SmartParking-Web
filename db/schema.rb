@@ -27,10 +27,12 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
     t.boolean "free", default: false, null: false
     t.boolean "connected", default: false, null: false
     t.boolean "can_book", default: false, null: false
+    t.boolean "changed_state", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["booked"], name: "index_parking_places_on_booked"
     t.index ["can_book"], name: "index_parking_places_on_can_book"
+    t.index ["changed_state"], name: "index_parking_places_on_changed_state"
     t.index ["connected"], name: "index_parking_places_on_connected"
     t.index ["coord"], name: "index_parking_places_on_coord"
     t.index ["for_disabled"], name: "index_parking_places_on_for_disabled"

@@ -11,6 +11,7 @@ class CreateParkingPlaces < ActiveRecord::Migration[5.2]
       t.boolean :free, default: false, null: false, index: true
       t.boolean :connected, default: false, null: false, index: true
       t.boolean :can_book, default: false, null: false, index: true
+      t.boolean :changed_state, default: false, null: false, index: true
 
       t.timestamps
     end
