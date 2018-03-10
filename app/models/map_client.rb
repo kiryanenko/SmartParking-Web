@@ -9,8 +9,14 @@ class MapClient
   end
 
   def send_parkings
-    params = {}
+    params = {}       # FIXME: В дальнешем тут будут параметры поиска
     places = ParkingPlace.parking_places_at_location @coord, @radius, params
-    parkings = Parking.parking_places_at_location @coord, @radius, params
+    parkings = Parking.parkings_at_location @coord, @radius, params
+
+    response = {
+        parkings: parkings,
+        parking_places: places
+    }
+    MapChannel.broadcast_to @id, response
   end
 end

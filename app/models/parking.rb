@@ -10,14 +10,14 @@ class Parking < ApplicationRecord
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
   scope :user_parkings, ->(user) { where(user: user).order(:id) }
 
-  scope :parking_at_location, ->(coord, radius, params = {}) do
+  scope :parkings_at_location, ->(coord, radius, params = {}) do
     where("ST_Intersects(ST_GeographyFromText('SRID=4326;POLYGON((? ?, ? ?, ? ?, ? ?, ? ?))'), area)",
           coord[:lat] - radius, coord[:lng] - radius,
           coord[:lat] - radius, coord[:lng] + radius,
           coord[:lat] + radius, coord[:lng] + radius,
           coord[:lat] + radius, coord[:lng] - radius,
           coord[:lat] - radius, coord[:lng] - radius,
-          ).where(params)
+          ).joins(:parking_places).where(parking_places: params).distinct
   end
 
   def ensure_times_both_nil
