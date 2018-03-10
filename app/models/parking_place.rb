@@ -19,7 +19,7 @@ class ParkingPlace < ApplicationRecord
           coord[:lat] - radius, coord[:lng] + radius,
           coord[:lat] + radius, coord[:lng] + radius,
           coord[:lat] + radius, coord[:lng] - radius,
-          coord[:lat] - radius, coord[:lng] - radius,
+          coord[:lat] - radius, coord[:lng] - radius
     ).where(params)
   end
 end

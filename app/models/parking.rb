@@ -16,7 +16,7 @@ class Parking < ApplicationRecord
           coord[:lat] - radius, coord[:lng] + radius,
           coord[:lat] + radius, coord[:lng] + radius,
           coord[:lat] + radius, coord[:lng] - radius,
-          coord[:lat] - radius, coord[:lng] - radius,
+          coord[:lat] - radius, coord[:lng] - radius
           ).joins(:parking_places).where(parking_places: params).distinct
   end
 
