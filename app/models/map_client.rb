@@ -8,8 +8,9 @@ class MapClient
     @radius = radius
   end
 
-  def send_changed_parkings
-    params = {changed: true}
-    ParkingPlace.parking_places_in_area @coord, @radius, params
+  def send_parkings
+    params = {}
+    places = ParkingPlace.parking_places_at_location @coord, @radius, params
+    parkings = Parking.parking_places_at_location @coord, @radius, params
   end
 end

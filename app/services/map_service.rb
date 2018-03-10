@@ -5,6 +5,7 @@ class MapService
 
   def initialize
     @map_clients = Hash.new
+    run
   end
 
   def add_client(client)
@@ -20,9 +21,11 @@ class MapService
     Thread.new do
       loop do
         @map_clients.each_value do |client|
-          client.send_changed_parkings
+          client.send_parkings
         end
         ParkingPlace.unset_changed
+
+        sleep Rails.configuration.websocket_sending_period
       end
     end
   end

@@ -13,7 +13,7 @@ class ParkingPlace < ApplicationRecord
     place
   end
 
-  scope :parking_places_in_area, ->(coord, radius, params = {}) do
+  scope :parking_places_at_location, ->(coord, radius, params = {}) do
     where("ST_Intersects(ST_GeographyFromText('SRID=4326;POLYGON((? ?, ? ?, ? ?, ? ?, ? ?))'), coord)",
           coord[:lat] - radius, coord[:lng] - radius,
           coord[:lat] - radius, coord[:lng] + radius,

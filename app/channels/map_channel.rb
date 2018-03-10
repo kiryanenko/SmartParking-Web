@@ -1,10 +1,11 @@
 class MapChannel < ApplicationCable::Channel
   def subscribed
     client_id = connection_identifier
-    client = MapClient.new client_id, params[:coord], params[:diag]
-    MapService.add_client client
-
     stream_from client_id
+
+    client = MapClient.new client_id, params[:coord], params[:diag]
+    client.send_parkings
+    MapService.add_client client
   end
 
   def unsubscribed
