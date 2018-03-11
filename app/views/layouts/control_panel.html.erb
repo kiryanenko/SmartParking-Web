@@ -60,15 +60,7 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
       <%= yield %>
 
-      <div class="fixed-bottom w-100">
-        <div id="alerts" class="col-8">
-          <% if alert %>
-            <%= render partial: 'components/alert', locals: { msg: alert, color: 'danger' } %>
-          <% elsif notice %>
-            <%= render partial: 'components/alert', locals: { msg: notice, color: 'info' } %>
-          <% end %>
-        </div>
-      </div>
+      <%= render 'components/alerts' %>
     </main>
   </div>
 </div>
