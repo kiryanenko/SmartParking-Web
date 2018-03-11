@@ -5,7 +5,7 @@ class ParkingPlace < ApplicationRecord
 
   validates :title, presence: true
 
-  scope :unset_changed, -> { where(changed: true).update_all(changed: false) }
+  scope :unset_changed, -> { where(changed_state: true).update_all(changed_state: false) }
 
   scope :find_for_user, ->(id, user) do
     place = find(id)

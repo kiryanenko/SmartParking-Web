@@ -4,6 +4,7 @@ class MapService
   include Singleton
 
   def initialize
+    p 'initialize'
     @map_clients = Hash.new
     run
   end
@@ -20,11 +21,15 @@ class MapService
   def run
     Thread.new do
       loop do
-        @map_clients.each_value do |client|
-          client.send_parkings
+        begin
+          @map_clients.each_value do |client|
+            client.send_parkings
+          end
+          ParkingPlace.unset_changed
+        rescue Exception => e
+          puts e.message
+          puts e.backtrace.inspect
         end
-        ParkingPlace.unset_changed
-
         sleep Rails.configuration.websocket_sending_period
       end
     end
