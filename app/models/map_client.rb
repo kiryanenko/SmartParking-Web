@@ -14,8 +14,8 @@ class MapClient
     parkings = Parking.parkings_at_location @coord, @radius, params
 
     response = {
-        parkings: parkings,
-        parking_places: places
+        parkings: parkings.map { |parking| parking.response },
+        parking_places: places.map { |place| place.response }
     }
     ActionCable.server.broadcast @id, response
   end

@@ -22,4 +22,18 @@ class ParkingPlace < ApplicationRecord
           coord[:lat] - radius, coord[:lng] - radius
     ).where(params)
   end
+
+  def response
+    {
+        id: id,
+        parking_id: parking_id,
+        title: title,
+        coord: {lat: coord.x, lng: coord.y},
+        for_disabled: for_disabled,
+        booked: booked,
+        free: free,
+        connected: connected,
+        can_book: can_book
+    }
+  end
 end
