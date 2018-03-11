@@ -5,7 +5,7 @@
 App.map = App.cable.subscriptions.create({
     channel: "MapChannel",
     coord: MAP_CENTER,
-    diag: 1
+    radius: 1
 }, {
     received: (data) => {
         console.log(data)

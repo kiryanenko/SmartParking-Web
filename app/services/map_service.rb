@@ -4,7 +4,6 @@ class MapService
   include Singleton
 
   def initialize
-    p 'initialize'
     @map_clients = Hash.new
     run
   end
@@ -14,7 +13,7 @@ class MapService
   end
 
   def remove_client(id)
-    @map_clients.remove id
+    @map_clients.delete id
   end
 
   private

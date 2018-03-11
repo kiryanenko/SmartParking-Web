@@ -17,6 +17,6 @@ class MapClient
         parkings: parkings,
         parking_places: places
     }
-    MapChannel.broadcast_to @id, response
+    ActionCable.server.broadcast @id, response
   end
 end
