@@ -1,3 +1,6 @@
+/**
+ * @deprecated use Parking.addParkingArea
+ */
 function addParkingArea(map, area, editable = false) {
     return new google.maps.Polygon({
         map: map,
@@ -13,6 +16,9 @@ function addParkingArea(map, area, editable = false) {
     });
 }
 
+/**
+ * @deprecated use Parking.parkingAreaCenter
+ */
 function parkingAreaCenter(area) {
     let center;
     let count = area.length;
