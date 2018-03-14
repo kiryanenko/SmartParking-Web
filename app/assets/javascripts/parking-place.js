@@ -1,14 +1,27 @@
 'use strict';
 
 class ParkingPlace {
-    constructor(map, coord, properties = {}, editable = false) {
+    constructor(map, location, properties = {}, editable = false, cluster = null) {
         this.map = map;
-        this.coord = coord;
-        this.marker = Parking.addParkingArea(this.map, area, editable, strokeColor);
+        this.location = location;
         this.properties = properties;
+        this.cluster = cluster;
+
+        this.marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            draggable: editable
+        });
+
+        if (cluster != null) {
+            cluster.addMarker(this.marker);
+        }
     }
 
     remove() {
-        polygon.setMap(null);
+        if (this.cluster != null) {
+            this.cluster.removeMarker(this.marker);
+        }
+        this.marker.setMap(null);
     }
 }

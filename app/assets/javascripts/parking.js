@@ -43,6 +43,6 @@ class Parking {
     }
 
     remove() {
-        polygon.setMap(null);
+        this.polygon.setMap(null);
     }
 }

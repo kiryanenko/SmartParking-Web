@@ -11,45 +11,48 @@ class MainMap {
             center: MAP_CENTER
         });
 
-        this.parkings = {};
-        this.parkingPlaces = {};
+        this.cluster = new MarkerClusterer(this.map, [], {});
+
+        this.parkings = new Map();
+        this.parkingPlaces = new Map();
         this.update(parkings, parkingPlaces);
 
-        this.channel = new MapChannel(MAP_CENTER, 1, this.update)
+        this.channel = new MapChannel(MAP_CENTER, 1, this)
     }
 
     update(parkings, parkingPlaces) {
-        this.updateElements(this.parkings, parkings, this.createParking);
-        this.updateElements(this.parkingPlaces, parkingPlaces, this.createParkingPlace);
+        this.updateData(this.parkings, parkings, MainMap.createParking);
+        this.updateData(this.parkingPlaces, parkingPlaces, MainMap.createParkingPlace);
     }
 
-    updateElements(elements, newElements, create) {
-        let newElementsHash = {};
-        newElements.forEach((el) => {newElementsHash[el.id] = el});
+    updateData(data, newData, create) {
+        let newDataMap = new Map();
+        newData.forEach((el) => { newDataMap.set(el.id, el) });
 
-        for (let id in elements) {
-            let current = elements[id];
+        for (let id of data.keys()) {
+            let current = data.get(id);
 
-            if (!(id in newElementsHash)) {
+            if (!newDataMap.has(id)) {
                 current.remove();
+                data.delete(id);
                 continue;
             }
 
-            current.properties = newElementsHash[id];
+            current.properties = newDataMap.get(id);
         }
 
-        newElements.forEach((newEl) => {
-            if (!(newEl.id in elements)) {
-                elements[newEl.id] = create(newEl);
+        newData.forEach((newEl) => {
+            if (!data.has(newEl.id)) {
+                data.set(newEl.id, create(this, newEl));
             }
         });
     }
 
-    createParking(parking) {
-        return new Parking(this.map, parking.area, parking);
+    static createParking(self, parking) {
+        return new Parking(self.map, parking.area, parking);
     }
 
-    createParkingPlace(place) {
-        return new ParkingPlace(this.map, place.coord, place);
+    static createParkingPlace(self, place) {
+        return new ParkingPlace(self.map, place.coord, place, false, self.cluster);
     }
 }

@@ -33,7 +33,8 @@ class ParkingPlace < ApplicationRecord
         booked: booked,
         free: free,
         connected: connected,
-        can_book: can_book
+        can_book: can_book,
+        changed_state: changed_state
     }
   end
 end
