@@ -16,6 +16,10 @@ class MapService
     @map_clients.delete id
   end
 
+  def set_client(id, params)
+    @map_clients[id].set params
+  end
+
   private
   def run
     Thread.new do

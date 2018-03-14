@@ -11,4 +11,10 @@ class MapChannel < ApplicationCable::Channel
   def unsubscribed
     MapService.instance.remove_client connection.id
   end
+
+  def receive(data)
+    data.transform_keys! {|k| k.to_sym }
+    data[:coord].transform_keys! {|k| k.to_sym }
+    MapService.instance.set_client connection.id, data
+  end
 end

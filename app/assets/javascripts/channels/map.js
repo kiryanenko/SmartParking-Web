@@ -3,7 +3,7 @@
 'use strict';
 
 class MapChannel {
-    constructor(coord, radius, listener) {
+    constructor(coord, radius, onRecv) {
         this.connection = App.cable.subscriptions.create({
             channel: "MapChannel",
             coord: coord,
@@ -11,8 +11,12 @@ class MapChannel {
         }, {
             received: (data) => {
                 console.log(data);
-                listener.update(data.parkings, data.parking_places)
+                onRecv(data.parkings, data.parking_places);
             }
         });
+    }
+
+    setParams(coord, radius) {
+        this.connection.send({coord: coord, radius: radius});
     }
 }

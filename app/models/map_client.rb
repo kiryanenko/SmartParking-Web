@@ -19,4 +19,9 @@ class MapClient
     }
     ActionCable.server.broadcast @id, response
   end
+
+  def set(params)
+    @coord = params[:coord]
+    @radius = params[:radius]
+  end
 end

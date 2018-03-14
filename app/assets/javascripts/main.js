@@ -17,12 +17,14 @@ class MainMap {
         this.parkingPlaces = new Map();
         this.update(parkings, parkingPlaces);
 
-        this.channel = new MapChannel(MAP_CENTER, 1, this)
+        this.channel = new MapChannel(MAP_CENTER, this.getRadius(), this.update.bind(this));
+
+        this.map.bounds_changed = this.onBoundsChanged.bind(this)
     }
 
     update(parkings, parkingPlaces) {
-        this.updateData(this.parkings, parkings, MainMap.createParking);
-        this.updateData(this.parkingPlaces, parkingPlaces, MainMap.createParkingPlace);
+        this.updateData(this.parkings, parkings, this.createParking.bind(this));
+        this.updateData(this.parkingPlaces, parkingPlaces, this.createParkingPlace.bind(this));
     }
 
     updateData(data, newData, create) {
@@ -43,16 +45,34 @@ class MainMap {
 
         newData.forEach((newEl) => {
             if (!data.has(newEl.id)) {
-                data.set(newEl.id, create(this, newEl));
+                data.set(newEl.id, create(newEl));
             }
         });
     }
 
-    static createParking(self, parking) {
-        return new Parking(self.map, parking.area, parking);
+    createParking(parking) {
+        return new Parking(this.map, parking.area, parking);
     }
 
-    static createParkingPlace(self, place) {
-        return new ParkingPlace(self.map, place.coord, place, false, self.cluster);
+    createParkingPlace(place) {
+        return new ParkingPlace(this.map, place.coord, place, false, this.cluster);
+    }
+
+    getRadius() {
+        let bounds = this.map.getBounds();
+
+        if (!bounds) {
+            console.log('bounds undefined');
+            return 0.01;
+        }
+
+        let ne = bounds.getNorthEast();
+        let sw = bounds.getSouthWest();
+        return Math.sqrt((ne.lat() - sw.lat()) * (ne.lat() - sw.lat()) +
+            (ne.lng() - sw.lng()) * (ne.lng() - sw.lng()));
+    }
+
+    onBoundsChanged() {
+        this.channel.setParams(this.map.getCenter(), this.getRadius());
     }
 }
