@@ -1,3 +1,5 @@
+//= require markerclusterer
+
 'use strict';
 
 class Parking {

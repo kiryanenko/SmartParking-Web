@@ -11,7 +11,8 @@ class MainMap {
             center: MAP_CENTER
         });
 
-        this.cluster = new MarkerClusterer(this.map, [], {});
+        this.cluster = new MarkerClusterer(this.map, [],
+            {imagePath: '/assets/images/m'});
 
         this.parkings = new Map();
         this.parkingPlaces = new Map();
