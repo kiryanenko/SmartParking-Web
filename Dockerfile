@@ -43,23 +43,28 @@ ADD pg_hba.conf /etc/postgresql/$PGVER/main
 # Back to the root user
 USER root
 
+RUN gem install bundler
+
 # Configure the main working directory.
 # This is the base directory used in any further RUN, COPY, and ENTRYPOINT commands.
 ENV APP /app
-ADD ./ $APP
 WORKDIR $APP
 
 # Install the RubyGems.
 # This is a separate step so the dependencies will be cached unless changes to one of those two files are made.
-RUN gem install bundler && bundle update && bundle install --jobs 20
+ADD ./Gemfile $APP
+RUN bundle install --jobs 20
+
+ADD ./ $APP
 
 # Expose port 3000 to the Docker host, so we can access it
 # from the outside.
 EXPOSE 3000
 
-ENV ENV production
-RUN service postgresql start && rake db:gis:setup && rails db:migrate RAILS_ENV=$ENV # FIXME: SMARTPARKING-WEB_DATABASE_PASSWORD=123456
+ENV SECRET_KEY_BASE d30ddf547b1d600cb40d659380ddb17c70f55317886b88e5859a0c02363296ea956c95cc3b44f1b899354de3b6e0aa632981721780a9371d00300828d57cb971
+ENV SMARTPARKING-WEB_DATABASE_PASSWORD 123456
+RUN service postgresql start && rake db:gis:setup && rails db:migrate
 
 # The main command to run when the container starts.
 # Also tell the Rails dev server to bind to all interfaces by default.
-CMD service postgresql start && bundle exec rails server -b 0.0.0.0 -e $ENV --env SMARTPARKING-WEB_DATABASE_PASSWORD=123456
+CMD service postgresql start && bundle exec puma -b unix:///var/run/smartparking.sock -e production
