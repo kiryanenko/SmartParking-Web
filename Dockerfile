@@ -34,7 +34,7 @@ RUN /etc/init.d/postgresql start &&\
 EXPOSE 5432
 
 # Add VOLUMEs to allow backup of config, logs and databases
-VOLUME  ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
+VOLUME ["/etc/postgresql", "/var/log/postgresql", "/var/lib/postgresql"]
 
 # FIX Peer authentication failed for user
 ADD pg_hba.conf /etc/postgresql/$PGVER/main
@@ -42,6 +42,19 @@ ADD pg_hba.conf /etc/postgresql/$PGVER/main
 
 # Back to the root user
 USER root
+
+
+# Установка nginx
+RUN apt-get install -y nginx
+
+ADD smartparking_nginx.conf /etc/nginx/sites-available
+RUN ln -s /etc/nginx/sites-available/smartparking_nginx.conf /etc/nginx/sites-enabled/
+RUN nginx -t
+
+# Expose port 80 to the Docker host, so we can access it
+# from the outside.
+EXPOSE 80
+
 
 RUN gem install bundler
 
@@ -55,16 +68,18 @@ WORKDIR $APP
 ADD ./Gemfile $APP
 RUN bundle install --jobs 20
 
-ADD ./ $APP
-
-# Expose port 3000 to the Docker host, so we can access it
-# from the outside.
-EXPOSE 3000
-
 ENV SECRET_KEY_BASE d30ddf547b1d600cb40d659380ddb17c70f55317886b88e5859a0c02363296ea956c95cc3b44f1b899354de3b6e0aa632981721780a9371d00300828d57cb971
 ENV SMARTPARKING-WEB_DATABASE_PASSWORD 123456
-RUN service postgresql start && rake db:gis:setup && rails db:migrate
+ADD ./ $APP
+
+RUN service postgresql start && RAILS_ENV=production rake db:gis:setup && RAILS_ENV=production rails db:migrate
+
+# Add VOLUMEs to allow logs
+VOLUME $APP/log
+
 
 # The main command to run when the container starts.
 # Also tell the Rails dev server to bind to all interfaces by default.
-CMD service postgresql start && bundle exec puma -b unix:///var/run/smartparking.sock -e production
+CMD service nginx start &&\
+    service postgresql start &&\
+    bundle exec puma -b unix:///var/run/smartparking.sock -e production
