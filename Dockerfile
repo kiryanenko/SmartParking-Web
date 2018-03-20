@@ -75,10 +75,7 @@ ENV SECRET_KEY_BASE d30ddf547b1d600cb40d659380ddb17c70f55317886b88e5859a0c023632
 ENV DATABASE_URL postgis://smartparking:123456@localhost/smartparking
 ADD ./ $APP
 
-RUN service postgresql start &&\
-    RAILS_ENV=production rake db:gis:setup &&\
-    RAILS_ENV=production rails db:migrate &&\
-    RAILS_ENV=production rails assets:precompile
+RUN RAILS_ENV=production rails assets:precompile
 
 # Add VOLUMEs to allow logs
 VOLUME $APP/log
@@ -88,4 +85,6 @@ VOLUME $APP/log
 # Also tell the Rails dev server to bind to all interfaces by default.
 CMD service nginx start &&\
     service postgresql start &&\
+    RAILS_ENV=production rake db:gis:setup &&\
+    RAILS_ENV=production rails db:migrate &&\
     bundle exec puma -b unix:///var/run/smartparking.sock -e production

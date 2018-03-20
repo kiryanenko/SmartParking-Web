@@ -1,1 +1,6 @@
 Gemfile.lock
+.git
+.dockerignore
+.byebug_history
+log/*
+tmp/*
