@@ -20,6 +20,11 @@ RUN gem install bundler
 RUN npm install yarn -g
 
 
+# Установка Redis
+RUN apt-get install redis-server -y
+EXPOSE 6379
+
+
 # Установка postgresql
 ENV PGVER 9.5
 RUN apt-get install -y postgresql-$PGVER postgresql-contrib postgis
@@ -73,6 +78,7 @@ RUN bundle install --jobs 20
 
 ENV SECRET_KEY_BASE d30ddf547b1d600cb40d659380ddb17c70f55317886b88e5859a0c02363296ea956c95cc3b44f1b899354de3b6e0aa632981721780a9371d00300828d57cb971
 ENV DATABASE_URL postgis://smartparking:123456@localhost/smartparking
+ENV REDIS_URL redis://localhost:6379/1
 ADD ./ $APP
 
 RUN RAILS_ENV=production rails assets:precompile
@@ -84,6 +90,7 @@ VOLUME $APP/log
 # The main command to run when the container starts.
 # Also tell the Rails dev server to bind to all interfaces by default.
 CMD service nginx start &&\
+    service redis start &&\
     service postgresql start &&\
     RAILS_ENV=production rake db:gis:setup &&\
     RAILS_ENV=production rails db:migrate &&\
