@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
   git \
   build-essential \
   zlib1g-dev \
-  npm
+  npm \
+  nodejs
 RUN gem install bundler
 RUN npm install yarn -g
 
