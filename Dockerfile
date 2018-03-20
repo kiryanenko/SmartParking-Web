@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
   zlib1g-dev \
   npm \
   nodejs
+RUN ln -s /usr/bin/nodejs /usr/bin/node
 RUN gem install bundler
 RUN npm install yarn -g
 
