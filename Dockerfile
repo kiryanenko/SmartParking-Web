@@ -12,7 +12,10 @@ RUN apt-get update && apt-get install -y \
   nodejs \
   git \
   build-essential \
-  zlib1g-dev
+  zlib1g-dev \
+  npm
+RUN gem install bundler
+RUN npm install yarn -g
 
 
 # Установка postgresql
@@ -56,8 +59,6 @@ RUN nginx -t
 EXPOSE 80
 
 
-RUN gem install bundler
-
 # Configure the main working directory.
 # This is the base directory used in any further RUN, COPY, and ENTRYPOINT commands.
 ENV APP /app
@@ -69,10 +70,13 @@ ADD ./Gemfile $APP
 RUN bundle install --jobs 20
 
 ENV SECRET_KEY_BASE d30ddf547b1d600cb40d659380ddb17c70f55317886b88e5859a0c02363296ea956c95cc3b44f1b899354de3b6e0aa632981721780a9371d00300828d57cb971
-ENV SMARTPARKING-WEB_DATABASE_PASSWORD 123456
+ENV DATABASE_URL postgis://smartparking:123456@localhost/smartparking
 ADD ./ $APP
 
-RUN service postgresql start && RAILS_ENV=production rake db:gis:setup && RAILS_ENV=production rails db:migrate
+RUN service postgresql start &&\
+    RAILS_ENV=production rake db:gis:setup &&\
+    RAILS_ENV=production rails db:migrate &&\
+    RAILS_ENV=production rails assets:precompile
 
 # Add VOLUMEs to allow logs
 VOLUME $APP/log

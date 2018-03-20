@@ -84,4 +84,3 @@ test:
 #
 production:
   <<: *default
-  password: <%= ENV['SMARTPARKING-WEB_DATABASE_PASSWORD'] %>
