@@ -1,13 +1,14 @@
 FROM ruby:2.3.1
 MAINTAINER Kiryanenko Alexander <KiryanenkoAV@gmail.com>
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    nodejs \
-    npm \
-    postgresql-contrib \
-    git
-RUN npm install yarn -g
+RUN apt-get update &&\
+    apt-get install -y \
+        build-essential \
+        nodejs \
+        npm \
+        postgresql-contrib \
+        git &&\
+    npm install yarn -g
 
 RUN mkdir /app
 WORKDIR /app

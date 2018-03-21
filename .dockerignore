@@ -1,6 +1,10 @@
 Gemfile.lock
 .git
+.gitignore
+Dockerfile
+docker-compose.yml
 .dockerignore
-.byebug_history
 log/*
 tmp/*
+README.md
+.env

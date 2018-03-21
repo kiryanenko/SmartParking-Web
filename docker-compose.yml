@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   postgres:
@@ -23,25 +23,32 @@ services:
     depends_on:
       - postgres
       - redis
+    volumes:
+      - public:/app/public
     build: .
     ports:
       - 3000:3000
-    env_file:
-      - .env
+    env_file: .env
+    environment:
+      RAILS_ENV: production
+    links:
+      - postgres
+      - redis
 
   nginx:
     image: nginx
-    build:
-      context: .
-      dockerfile: Dockerfile-nginx
+    volumes_from:
+      - web
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - web
-    command: nginx -g 'daemon off;'
     ports:
-    - 80:80
+      - 80:80
+    links:
+      - web
 
 volumes:
   redis:
   postgres:
+  public:
