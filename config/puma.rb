@@ -28,7 +28,12 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
-# preload_app!
+preload_app!
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+
+# The heroku buildpack will not start NGINX until a file has been written to /tmp/app-initialized.
+before_fork do |server,worker|
+  FileUtils.touch('/tmp/app-initialized')
+end
