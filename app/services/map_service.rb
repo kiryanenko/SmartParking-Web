@@ -35,7 +35,7 @@ class MapService
           ParkingPlace.unset_changed
         rescue Exception => e
           puts e.message
-          puts e.backtrace.inspect
+          puts e.backtrace.join("\n")
         end
         sleep Rails.configuration.websocket_sending_period
       end

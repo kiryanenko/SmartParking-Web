@@ -73,3 +73,6 @@ gem 'devise'
 
 # The activerecord-postgis-adapter provides access to features of the PostGIS geospatial database from ActiveRecord
 gem 'activerecord-postgis-adapter'
+
+# Pure Ruby gem that implements the MQTT protocol, a lightweight protocol for publish/subscribe messaging.
+gem 'mqtt', :git => 'https://github.com/njh/ruby-mqtt.git'

@@ -6,6 +6,12 @@ GIT
     bootstrap_form (4.0.0.dev)
       rails (>= 5.0)
 
+GIT
+  remote: https://github.com/njh/ruby-mqtt.git
+  revision: 38958735278860d5793322c808e6c84694e2aa70
+  specs:
+    mqtt (0.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -247,6 +253,7 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   material_icons
+  mqtt!
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.0.rc1)

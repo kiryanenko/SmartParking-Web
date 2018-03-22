@@ -19,10 +19,16 @@ services:
     volumes:
       - redis:/data
 
+  mqtt:
+    image: ansi/mosquitto
+    ports:
+      - 1883:1883
+
   web:
     depends_on:
       - postgres
       - redis
+      - mqtt
     volumes:
       - public:/app/public
       - tmp:/tmp
@@ -33,10 +39,12 @@ services:
     environment:
       RAILS_ENV: production
       REDIS_URL: redis://redis:6379/1
+      MQTT_URI: mqtt://mqtt
       DB_HOST: postgres
     links:
       - postgres
       - redis
+      - mqtt
 
   nginx:
     image: nginx
