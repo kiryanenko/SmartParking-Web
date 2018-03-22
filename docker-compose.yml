@@ -25,6 +25,7 @@ services:
       - redis
     volumes:
       - public:/app/public
+      - tmp:/tmp
     build: .
     ports:
       - 3000:3000
@@ -42,7 +43,8 @@ services:
     volumes_from:
       - web
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./config/nginx.conf.erb:/etc/nginx/nginx.conf
+      - nginx_logs:/etc/nginx/logs/nginx
     depends_on:
       - web
     ports:
@@ -54,3 +56,5 @@ volumes:
   redis:
   postgres:
   public:
+  tmp:
+  nginx_logs:
