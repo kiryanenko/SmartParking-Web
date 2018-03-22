@@ -6,6 +6,7 @@ class MapClient
     @id = id
     @coord = coord
     @radius = radius
+    @last_send = Time.now
   end
 
   def send_parkings
@@ -18,10 +19,14 @@ class MapClient
         parking_places: places.map { |place| place.response }
     }
     ActionCable.server.broadcast @id, response
+
+    @last_send = Time.now
   end
 
   def set(params)
     @coord = params[:coord]
     @radius = params[:radius]
+
+    send_parkings if Time.now - @last_send > Rails.configuration.websocket_sending_period_on_update
   end
 end

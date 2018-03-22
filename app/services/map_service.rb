@@ -20,6 +20,10 @@ class MapService
     @map_clients[id].set params
   end
 
+  def get_client(id)
+    @map_clients[id]
+  end
+
   private
   def run
     Thread.new do
