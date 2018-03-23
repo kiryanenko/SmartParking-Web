@@ -10,13 +10,16 @@ class MapClient
   end
 
   def send_parkings
-    ActionCable.server.broadcast stream, @square.parkings
+    parkings = Rails.cache.fetch(@square.stream, expires_in: Rails.configuration.min_map_sending_period) do
+      @square.parkings
+    end
+    ActionCable.server.broadcast stream, parkings
     @last_send = Time.now
   end
 
   def set(params)
     @square = MapSquare.new params
-    send_parkings if Time.now - @last_send > Rails.configuration.websocket_sending_period_on_update
+    send_parkings if Time.now - @last_send > Rails.configuration.min_map_sending_period
   end
 
   def stream

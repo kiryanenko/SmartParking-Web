@@ -24,11 +24,17 @@ services:
     ports:
       - 1883:1883
 
+  memcached:
+      image: memcached
+      ports:
+        - 11211:11211
+
   web:
     depends_on:
       - postgres
       - redis
       - mqtt
+      - memcached
     volumes:
       - public:/app/public
       - tmp:/tmp
@@ -45,6 +51,7 @@ services:
       - postgres
       - redis
       - mqtt
+      - memcached
 
   nginx:
     image: nginx

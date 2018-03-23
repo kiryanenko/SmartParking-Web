@@ -76,3 +76,6 @@ gem 'activerecord-postgis-adapter'
 
 # Pure Ruby gem that implements the MQTT protocol, a lightweight protocol for publish/subscribe messaging.
 gem 'mqtt', :git => 'https://github.com/njh/ruby-mqtt.git'
+
+# Dalli is a high performance pure Ruby client for accessing memcached servers.
+gem 'dalli'

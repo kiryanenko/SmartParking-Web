@@ -64,7 +64,7 @@ class MainMap {
 
         if (!bounds) {
             console.log('bounds undefined');
-            return 0.01;
+            return 0.1;
         }
 
         let ne = bounds.getNorthEast();

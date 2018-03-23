@@ -30,7 +30,12 @@ class MapService
   end
 
   def add_square(square)
-    @squares[square.stream] = {square: square, count: 1}
+    if @squares.has_key? square.stream
+      sq = @squares[square.stream]
+      sq[:count] = sq[:count] + 1
+    else
+      @squares[square.stream] = {square: square, count: 1}
+    end
   end
 
   def remove_square(square)
@@ -58,7 +63,7 @@ class MapService
           Rails.logger.error e.backtrace
         end
 
-        sleep_time = Rails.configuration.websocket_sending_period - (Time.now - before)
+        sleep_time = Rails.configuration.map_sending_period - (Time.now - before)
         sleep sleep_time if sleep_time > 0
       end
     end
