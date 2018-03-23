@@ -6,6 +6,7 @@ class MapService
   def initialize
     @map_clients = Hash.new
     @squares = Hash.new
+    @squares_m = Mutex.new
     run
   end
 
@@ -30,20 +31,24 @@ class MapService
   end
 
   def add_square(square)
-    if @squares.has_key? square.stream
-      sq = @squares[square.stream]
-      sq[:count] = sq[:count] + 1
-    else
-      @squares[square.stream] = {square: square, count: 1}
+    @squares_m.synchronize do
+      if @squares.has_key? square.stream
+        sq = @squares[square.stream]
+        sq[:count] = sq[:count] + 1
+      else
+        @squares[square.stream] = {square: square, count: 1}
+      end
     end
   end
 
   def remove_square(square)
-    count = @squares[square.stream][:count] - 1
-    @squares[square.stream][:count] = count
+    @squares_m.synchronize do
+      count = @squares[square.stream][:count] - 1
+      @squares[square.stream][:count] = count
 
-    if count <= 0
-      @squares.delete square.stream
+      if count <= 0
+        @squares.delete square.stream
+      end
     end
   end
 
@@ -54,7 +59,9 @@ class MapService
         before = Time.now
 
         begin
-          @squares.each_value do |value|
+          values = []
+          @squares_m.synchronize { values = @squares.values.dup }
+          values.each do |value|
             value[:square].broadcast
           end
           ParkingPlace.unset_changed
