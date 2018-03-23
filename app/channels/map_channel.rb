@@ -1,10 +1,13 @@
+require './app/utils/hash.rb'
+
 class MapChannel < ApplicationCable::Channel
   def subscribed
     client_id = connection.id
-    client = MapClient.new client_id, params[:coord], params[:radius]
-    stream_from client_id
+    client = MapClient.new client_id, params
 
+    stream_from client.personal_stream
     client.send_parkings
+
     MapService.instance.add_client client
   end
 
@@ -13,8 +16,13 @@ class MapChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-    data.transform_keys! {|k| k.to_sym }
-    data[:coord].transform_keys! {|k| k.to_sym }
-    MapService.instance.set_client connection.id, data
+    data.recursive_transform_keys! {|k| k.to_sym }
+
+    client = MapService.instance.get_client connection.id
+
+    stop_all_streams
+    stream_from client.personal_stream
+
+    client.set data
   end
 end

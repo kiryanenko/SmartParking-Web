@@ -2,10 +2,9 @@ class MapClient
   attr_reader :id
   attr_accessor :coord, :radius
 
-  def initialize(id, coord, radius)
+  def initialize(id, params)
     @id = id
-    @coord = coord
-    @radius = radius
+    set_params params
     @last_send = Time.now
   end
 
@@ -18,15 +17,28 @@ class MapClient
         parkings: parkings.map { |parking| parking.response },
         parking_places: places.map { |place| place.response }
     }
-    ActionCable.server.broadcast @id, response
+    ActionCable.server.broadcast personal_stream, response
 
     @last_send = Time.now
   end
 
   def set(params)
-    @coord = params[:coord]
-    @radius = params[:radius]
+    set_params params
 
     send_parkings if Time.now - @last_send > Rails.configuration.websocket_sending_period_on_update
+  end
+
+  def personal_stream
+    "client_#{id}"
+  end
+
+  def square_map_stream
+    "square_#{id}"
+  end
+
+  private
+  def set_params(params)
+    @coord = params[:coord]
+    @radius = params[:radius]
   end
 end
