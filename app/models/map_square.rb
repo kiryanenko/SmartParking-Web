@@ -1,3 +1,5 @@
+# Для оптимизации карта была поделена на пересекающиеся квадраты.
+# Таким образом, было ограничено количество запросов к БД.
 class MapSquare
   attr_reader :coord, :radius
 
@@ -10,6 +12,7 @@ class MapSquare
       @radius = r_min * (2 ** scale)
     end
 
+    # Поиск ближайшей точки для центра
     n_lat = (params[:coord][:lat] / @radius).floor
     n_lng = (params[:coord][:lng] / @radius).floor
     @coord = {

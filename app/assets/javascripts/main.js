@@ -70,7 +70,7 @@ class MainMap {
         let ne = bounds.getNorthEast();
         let sw = bounds.getSouthWest();
         return Math.sqrt((ne.lat() - sw.lat()) * (ne.lat() - sw.lat()) +
-            (ne.lng() - sw.lng()) * (ne.lng() - sw.lng()));
+            (ne.lng() - sw.lng()) * (ne.lng() - sw.lng())) / 2;
     }
 
     onBoundsChanged() {
