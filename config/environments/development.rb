@@ -17,7 +17,15 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
-    config.cache_store = :memory_store
+    config.cache_store = :dalli_store,
+        (ENV["MEMCACHIER_SERVERS"] || "").split(","),
+        {:username => ENV["MEMCACHIER_USERNAME"],
+         :password => ENV["MEMCACHIER_PASSWORD"],
+         :failover => true,
+         :socket_timeout => 1.5,
+         :socket_failure_delay => 0.2,
+         :down_retry_delay => 60
+        }
     config.public_file_server.headers = {
       'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
