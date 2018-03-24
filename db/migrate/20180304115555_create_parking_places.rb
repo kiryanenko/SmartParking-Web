@@ -18,5 +18,7 @@ class CreateParkingPlaces < ActiveRecord::Migration[5.2]
       t.index :coord, using: :gist
       t.index :updated_at
     end
+
+    add_index :parking_places, [:place_id, :sensor_id], unique: true
   end
 end

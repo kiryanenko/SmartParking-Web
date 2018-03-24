@@ -433,6 +433,13 @@ CREATE INDEX index_parking_places_on_place_id ON public.parking_places USING btr
 
 
 --
+-- Name: index_parking_places_on_place_id_and_sensor_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_parking_places_on_place_id_and_sensor_id ON public.parking_places USING btree (place_id, sensor_id);
+
+
+--
 -- Name: index_parking_places_on_sensor_id; Type: INDEX; Schema: public; Owner: -
 --
 

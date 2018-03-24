@@ -4,6 +4,7 @@ class ParkingPlace < ApplicationRecord
   has_one :user, through: :parking
 
   validates :title, presence: true
+  validates :place_id, uniqueness: { scope: :sensor, message: I18n.t(:place_id_should_be_uniq) }
 
   scope :unset_changed, -> { where(changed_state: true).update_all(changed_state: false) }
   scope :find_for_user, ->(id, user) { joins(:parking).find_by!(id: id, parkings: {user: user}) }
@@ -27,7 +28,7 @@ class ParkingPlace < ApplicationRecord
   def response
     {
         id: id,
-        parking_id: parking_id,
+        parking: parking_id,
         title: title,
         coord: {lat: coord.x, lng: coord.y},
         for_disabled: for_disabled,
