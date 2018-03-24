@@ -5,7 +5,7 @@ class CreateParkingPlaces < ActiveRecord::Migration[5.2]
       t.references :sensor, foreign_key: true, null: false, index: true
       t.references :parking, foreign_key: true, null: false, index: true
       t.string :title, null: false
-      t.st_point :coord, geographic: true, null: false, index: true
+      t.st_point :coord, geographic: true, null: false
       t.boolean :for_disabled, default: false, null: false, index: true
       t.boolean :booked, default: false, null: false, index: true
       t.boolean :free, default: false, null: false, index: true
@@ -14,6 +14,8 @@ class CreateParkingPlaces < ActiveRecord::Migration[5.2]
       t.boolean :changed_state, default: false, null: false, index: true
 
       t.timestamps
+
+      t.index :coord, using: :gist
     end
   end
 end

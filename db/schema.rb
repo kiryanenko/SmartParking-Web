@@ -13,6 +13,8 @@
 ActiveRecord::Schema.define(version: 2018_03_04_115555) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "btree_gin"
+  enable_extension "btree_gist"
   enable_extension "plpgsql"
   enable_extension "postgis"
 
@@ -34,7 +36,7 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
     t.index ["can_book"], name: "index_parking_places_on_can_book"
     t.index ["changed_state"], name: "index_parking_places_on_changed_state"
     t.index ["connected"], name: "index_parking_places_on_connected"
-    t.index ["coord"], name: "index_parking_places_on_coord"
+    t.index ["coord"], name: "index_parking_places_on_coord", using: :gist
     t.index ["for_disabled"], name: "index_parking_places_on_for_disabled"
     t.index ["free"], name: "index_parking_places_on_free"
     t.index ["parking_id"], name: "index_parking_places_on_parking_id"
@@ -52,7 +54,7 @@ ActiveRecord::Schema.define(version: 2018_03_04_115555) do
     t.time "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["area"], name: "index_parkings_on_area"
+    t.index ["area"], name: "index_parkings_on_area", using: :gist
     t.index ["cost"], name: "index_parkings_on_cost"
     t.index ["end_time"], name: "index_parkings_on_end_time"
     t.index ["start_time"], name: "index_parkings_on_start_time"

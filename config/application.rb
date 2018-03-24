@@ -21,5 +21,7 @@ module SmartParkingWeb
 
     # устанавливаем локаль по умолчанию на что-либо другое, чем :en
     config.i18n.default_locale = :ru
+
+    config.active_record.schema_format = :sql
   end
 end
