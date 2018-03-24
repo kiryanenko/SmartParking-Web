@@ -34,7 +34,7 @@ class MapService
     @squares_m.synchronize do
       if @squares.has_key? square.stream
         sq = @squares[square.stream]
-        sq[:count] = sq[:count] + 1
+        sq[:count] += 1
       else
         @squares[square.stream] = {square: square, count: 1}
       end
@@ -43,10 +43,10 @@ class MapService
 
   def remove_square(square)
     @squares_m.synchronize do
-      count = @squares[square.stream][:count] - 1
-      @squares[square.stream][:count] = count
+      sq = @squares[square.stream]
+      sq[:count] -= 1
 
-      if count <= 0
+      if sq[:count] <= 0
         @squares.delete square.stream
       end
     end
