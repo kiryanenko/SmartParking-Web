@@ -5,14 +5,13 @@ class MQTTService
     begin
       connect
     rescue Exception => e
-      puts 'ERROR! Can not connect to MQTT'
-      puts e.message
-      puts e.backtrace.join("\n")
+      Rails.logger.error 'ERROR! Can not connect to MQTT: ' + e.message
+      Rails.logger.error e.backtrace.join("\n")
     end
   end
 
   def connect
-    @client = MQTT::Client.connect(ENV.fetch("MQTT_URI") { 'mqtt://0.0.0.0' })
+    @client = MQTT::Client.connect(ENV["MQTT_URI"] || ENV["CLOUDMQTT_URL"] || 'mqtt://0.0.0.0')
 
     @client.subscribe 'status'
 
