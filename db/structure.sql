@@ -121,6 +121,39 @@ ALTER SEQUENCE public.parking_places_id_seq OWNED BY public.parking_places.id;
 
 
 --
+-- Name: parking_states; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.parking_states (
+    id bigint NOT NULL,
+    parking_place_id bigint,
+    booked boolean,
+    free boolean,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: parking_states_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.parking_states_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: parking_states_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.parking_states_id_seq OWNED BY public.parking_states.id;
+
+
+--
 -- Name: parkings; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -256,6 +289,13 @@ ALTER TABLE ONLY public.parking_places ALTER COLUMN id SET DEFAULT nextval('publ
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY public.parking_states ALTER COLUMN id SET DEFAULT nextval('public.parking_states_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY public.parkings ALTER COLUMN id SET DEFAULT nextval('public.parkings_id_seq'::regclass);
 
 
@@ -287,6 +327,14 @@ ALTER TABLE ONLY public.ar_internal_metadata
 
 ALTER TABLE ONLY public.parking_places
     ADD CONSTRAINT parking_places_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: parking_states_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.parking_states
+    ADD CONSTRAINT parking_states_pkey PRIMARY KEY (id);
 
 
 --
@@ -392,6 +440,20 @@ CREATE INDEX index_parking_places_on_sensor_id ON public.parking_places USING bt
 
 
 --
+-- Name: index_parking_places_on_updated_at; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_parking_places_on_updated_at ON public.parking_places USING btree (updated_at);
+
+
+--
+-- Name: index_parking_states_on_parking_place_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_parking_states_on_parking_place_id ON public.parking_states USING btree (parking_place_id);
+
+
+--
 -- Name: index_parkings_on_area; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -472,6 +534,14 @@ ALTER TABLE ONLY public.parking_places
 
 
 --
+-- Name: fk_rails_85c5a6cc67; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.parking_states
+    ADD CONSTRAINT fk_rails_85c5a6cc67 FOREIGN KEY (parking_place_id) REFERENCES public.parking_places(id);
+
+
+--
 -- Name: fk_rails_89c657275d; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -490,6 +560,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20180216002009'),
 ('20180222120630'),
 ('20180302102037'),
-('20180304115555');
+('20180304115555'),
+('20180324084246');
 
 

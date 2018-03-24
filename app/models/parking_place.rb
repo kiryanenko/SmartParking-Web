@@ -6,11 +6,10 @@ class ParkingPlace < ApplicationRecord
   validates :title, presence: true
 
   scope :unset_changed, -> { where(changed_state: true).update_all(changed_state: false) }
+  scope :find_for_user, ->(id, user) { joins(:parking).find_by!(id: id, parkings: {user: user}) }
 
-  scope :find_for_user, ->(id, user) do
-    place = find(id)
-    raise ActiveRecord::RecordNotFound unless place.user == user
-    place
+  scope :find_by_place_id_and_user, ->(place_id, sensor, user) do
+    joins(:parking).find_by!(place_id: place_id, sensor: sensor, parkings: {user: user})
   end
 
   scope :parking_places_at_location, ->(coord, radius, params = {}) do
@@ -22,6 +21,8 @@ class ParkingPlace < ApplicationRecord
           coord[:lat] - radius, coord[:lng] - radius
     ).where(params)
   end
+
+
 
   def response
     {

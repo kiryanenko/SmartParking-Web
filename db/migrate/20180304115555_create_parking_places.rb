@@ -16,6 +16,7 @@ class CreateParkingPlaces < ActiveRecord::Migration[5.2]
       t.timestamps
 
       t.index :coord, using: :gist
+      t.index :updated_at
     end
   end
 end

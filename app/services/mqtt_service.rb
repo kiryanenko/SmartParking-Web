@@ -6,7 +6,7 @@ class MQTTService
       connect
     rescue Exception => e
       Rails.logger.error 'ERROR! Can not connect to MQTT: ' + e.message
-      Rails.logger.error e.backtrace.join("\n")
+      Rails.logger.error e.backtrace
     end
   end
 
@@ -21,15 +21,24 @@ class MQTTService
     Thread.new do
       @client.get do |topic,message|
         begin
+          data = JSON.parse(message).transform_keys! {|k| k.to_sym }
+          user = User.authenticate! data[:login], data[:password]
+
           case topic
             when 'status'
-              # TODO
+              place = ParkingPlace.find_by_place_id_and_user data[:place_id], data[:sensor], user
+              ParkingState.set_state place, data[:free], data[:booked]
             else
               Rails.logger.error 'ERROR! UNDEFINED TOPIC'
           end
+        rescue User::AuthenticationFail => e
+          Rails.logger.warn e.message
+        rescue ActiveRecord::RecordNotFound => e
+          Rails.logger.warn e.message
+          Rails.logger.warn e.backtrace
         rescue Exception => e
           Rails.logger.error e.message
-          Rails.logger.error e.backtrace.inspect
+          Rails.logger.error e.backtrace
         end
       end
     end
