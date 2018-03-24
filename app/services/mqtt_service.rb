@@ -12,9 +12,7 @@ class MQTTService
 
   def connect
     @client = MQTT::Client.connect(ENV["MQTT_URI"] || ENV["CLOUDMQTT_URL"] || 'mqtt://0.0.0.0')
-
     @client.subscribe 'status'
-
     run
   end
 
@@ -27,11 +25,11 @@ class MQTTService
             when 'status'
               # TODO
             else
-              puts 'ERROR! UNDEFINED TOPIC'
+              Rails.logger.error 'ERROR! UNDEFINED TOPIC'
           end
         rescue Exception => e
-          puts e.message
-          puts e.backtrace.inspect
+          Rails.logger.error e.message
+          Rails.logger.error e.backtrace.inspect
         end
       end
     end
