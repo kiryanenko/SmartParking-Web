@@ -1,3 +1,4 @@
-# Инициализация происходит при приходе первого юзера
-# MapService.instance
-MQTTService.instance
+Rails.configuration.servicies = {
+    map: MapService.instance,
+    mqtt: MQTTService.instance
+}

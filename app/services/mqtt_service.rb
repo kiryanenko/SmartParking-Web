@@ -27,7 +27,7 @@ class MQTTService
           case topic
             when 'status'
               place = ParkingPlace.find_by_place_id_and_user data[:place_id], data[:sensor], user
-              ParkingState.set_state place, data[:free], data[:booked]
+              ParkingState.set_state place, data[:free]
             else
               Rails.logger.error 'ERROR! UNDEFINED TOPIC'
           end

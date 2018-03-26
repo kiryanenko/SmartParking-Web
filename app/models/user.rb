@@ -8,12 +8,13 @@ class User < ApplicationRecord
 
   def self.authenticate(login, password)
     user = find_for_authentication(:email => login)
+    return nil if user.nil?
     user.valid_password?(password) ? user : nil
   end
 
   def self.authenticate!(login, password)
     user = authenticate login, password
-    raise AuthenticationFail 'Authentication failed' if user.nil?
+    raise AuthenticationFail if user.nil?
     user
   end
 
