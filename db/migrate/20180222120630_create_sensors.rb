@@ -5,8 +5,8 @@ class CreateSensors < ActiveRecord::Migration[5.2]
       t.belongs_to :user, index: true, null: false
       t.integer :sampling_period, default: 0, limit: 2, null: false
       t.integer :sending_period, default: 0, limit: 2, null: false
-      t.integer :day_cast, default: 0, limit: 2, null: false
-      t.integer :night_cast, default: 0, limit: 2, null: false
+      t.integer :day_cost, default: 0, limit: 2, null: false
+      t.integer :night_cost, default: 0, limit: 2, null: false
       t.integer :day_start_time, default: 0, limit: 2, null: false
       t.integer :night_start_time, default: 0, limit: 2, null: false
 
