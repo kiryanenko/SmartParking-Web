@@ -11,6 +11,9 @@ class MapChannel {
         }, {
             received: (data) => {
                 console.log(data);
+                data.parking_places.forEach((place) => {
+                    place.parking = data.parkings.find((el) => { return el.id === place.parking_id; })
+                });
                 onRecv(data.parkings, data.parking_places);
             }
         });

@@ -1,0 +1,55 @@
+'use strict';
+
+class ParkingPlace {
+    constructor(map, location, properties = {}, editable = false, cluster = null) {
+        this.map = map;
+        this.location = location;
+        this.properties = properties;
+        this.cluster = cluster;
+
+        this.marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            draggable: editable
+        });
+
+        this.infoWindow = new google.maps.InfoWindow({
+            title: '<%= I18n.t :parking_place %>:' + properties.title
+        });
+
+        this.marker.addListener('click', this.openInfoWindow.bind(this));
+
+        if (cluster != null) {
+            cluster.addMarker(this.marker);
+        }
+    }
+
+    remove() {
+        if (this.cluster != null) {
+            this.cluster.removeMarker(this.marker);
+        }
+        this.marker.setMap(null);
+    }
+
+    getContent() {
+        let res = '<b><%= I18n.t :parking %>:</b> ' + this.properties.parking.title + '<br>';
+        if (this.properties.for_disabled) res += '<br><span class="text-info"><%= I18n.t :for_disabled %></span>';
+        if (this.properties.booked) res += '<br><span class="text-danger"><%= I18n.t :booked %></span>';
+        if (this.properties.free) {
+            res += '<br><span class="text-success"><%= I18n.t :free %></span>';
+        } else {
+            res += '<br><span class="text-danger"><%= I18n.t :not_free %></span>';
+        }
+        res += '<br><b><%= I18n.t :cost %>:</b> ' + this.properties.parking.cost;
+        if (this.properties.parking.start_time != null) {
+            res += '<br><b><%= I18n.t :working_hours %>:</b> ' + this.properties.parking.start_time + ' - ' + this.properties.parking.end_time;
+        }
+        res += '<br><br><b><%= I18n.t :description %>:</b> ' + this.properties.parking.description;
+        return res;
+    }
+
+    openInfoWindow() {
+        this.infoWindow.setContent(this.getContent());
+        this.infoWindow.open(this.map, this.marker);
+    }
+}

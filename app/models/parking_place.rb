@@ -23,12 +23,10 @@ class ParkingPlace < ApplicationRecord
     ).where(params)
   end
 
-
-
   def response
     {
         id: id,
-        parking: parking_id,
+        parking_id: parking_id,
         title: title,
         coord: {lat: coord.x, lng: coord.y},
         for_disabled: for_disabled,

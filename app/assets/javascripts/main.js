@@ -1,6 +1,6 @@
 //= require channels/map
 //= require parking
-//= require parking-place
+//= require parking-place.js.erb
 
 'use strict';
 
