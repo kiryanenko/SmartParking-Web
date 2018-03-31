@@ -4,8 +4,8 @@ class ParkingPlace {
     constructor(map, location, properties = {}, editable = false, cluster = null) {
         this.map = map;
         this.location = location;
-        this.properties = properties;
         this.cluster = cluster;
+        this._properties = properties;
 
         this.marker = new google.maps.Marker({
             position: location,
@@ -13,10 +13,7 @@ class ParkingPlace {
             draggable: editable
         });
 
-        this.infoWindow = new google.maps.InfoWindow({
-            title: '<%= I18n.t :parking_place %>:' + properties.title
-        });
-
+        this.infoWindow = new google.maps.InfoWindow({content: this.getContent()});
         this.marker.addListener('click', this.openInfoWindow.bind(this));
 
         if (cluster != null) {
@@ -32,7 +29,8 @@ class ParkingPlace {
     }
 
     getContent() {
-        let res = '<b><%= I18n.t :parking %>:</b> ' + this.properties.parking.title + '<br>';
+        let res = '<h5><%= I18n.t :parking_place %>:' + this.properties.title + '</h5>'
+            + '<b><%= I18n.t :parking %>:</b> ' + this.properties.parking.title + '<br>';
         if (this.properties.for_disabled) res += '<br><span class="text-info"><%= I18n.t :for_disabled %></span>';
         if (this.properties.booked) res += '<br><span class="text-danger"><%= I18n.t :booked %></span>';
         if (this.properties.free) {
@@ -49,7 +47,17 @@ class ParkingPlace {
     }
 
     openInfoWindow() {
-        this.infoWindow.setContent(this.getContent());
         this.infoWindow.open(this.map, this.marker);
+    }
+
+    set properties(value) {
+        if (value.changed_state) {
+          this._properties = value;
+          this.infoWindow.setContent(this.getContent());
+        }
+    }
+
+    get properties() {
+        return this._properties;
     }
 }
