@@ -11,13 +11,17 @@ class Parking < ApplicationRecord
   scope :user_parkings, ->(user) { where(user: user).order(:id) }
 
   scope :parkings_at_location, ->(coord, radius, params = {}) do
-    res = where("ST_Intersects(ST_GeographyFromText('SRID=4326;POLYGON((? ?, ? ?, ? ?, ? ?, ? ?))'), area)",
-          coord[:lat] - radius, coord[:lng] - radius,
-          coord[:lat] - radius, coord[:lng] + radius,
-          coord[:lat] + radius, coord[:lng] + radius,
-          coord[:lat] + radius, coord[:lng] - radius,
-          coord[:lat] - radius, coord[:lng] - radius
-          )
+    res = where("ST_Intersects(ST_GeographyFromText('SRID=4326;POLYGON((
+                :area_lat1 :area_lng1,
+                :area_lat2 :area_lng2,
+                :area_lat3 :area_lng3,
+                :area_lat4 :area_lng4,
+                :area_lat1 :area_lng1))'), parkings.area)",
+              area_lat1: coord[:lat] - radius, area_lng1: coord[:lng] - radius,
+              area_lat2: coord[:lat] - radius, area_lng2: coord[:lng] + radius,
+              area_lat3: coord[:lat] + radius, area_lng3: coord[:lng] + radius,
+              area_lat4: coord[:lat] + radius, area_lng4: coord[:lng] - radius,
+    )
     res = res.joins(:parking_places).where(parking_places: params).distinct if params.any?
     res
   end
@@ -36,8 +40,19 @@ class Parking < ApplicationRecord
         description: description,
         cost: cost,
         area: area.coordinates.first.map { |coord| {lat: coord.first, lng: coord.last} },
-        start_time: start_time,
-        end_time: end_time
+        start_time: start_time.strftime("%R"),
+        end_time: end_time.strftime("%R"),
+        places_count: parking_places_count,
     }
+  end
+
+  def self.response_parkings_at_location(coord, radius, params = {})
+    parkings_at_location(coord, radius, params).map do |parking|
+      res = parking.response
+      places = parking.parking_places.where(params)
+      res[:parking_places] = places.map { |place| place.response }
+      res[:selected_places_count] = places.size
+      res
+    end
   end
 end

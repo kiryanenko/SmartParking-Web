@@ -23,13 +23,7 @@ class MapSquare
 
   def parkings
     params = {}       # FIXME: В дальнешем тут будут параметры поиска
-    places = ParkingPlace.parking_places_at_location @coord, @radius, params
-    parkings = Parking.parkings_at_location @coord, @radius, params
-
-    {
-        parkings: parkings.map { |parking| parking.response },
-        parking_places: places.map { |place| place.response }
-    }
+    Parking.response_parkings_at_location @coord, @radius, params
   end
 
   def broadcast

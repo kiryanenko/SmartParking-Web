@@ -1,0 +1,80 @@
+//= require markerclusterer
+
+'use strict';
+
+class Parking {
+    constructor(map, area, properties = {}, editable = false, strokeColor = '#3557ff') {
+        this.map = map;
+        this.area = area;
+        this.polygon = Parking.addParkingArea(this.map, area, editable, strokeColor);
+        this._properties = properties;
+
+        this.infoWindow = new google.maps.InfoWindow({content: this.getContent()});
+        this.polygon.addListener('click', this.openInfoWindow.bind(this));
+    }
+
+    static addParkingArea(map, area, editable = false, strokeColor = '#3557ff') {
+        return new google.maps.Polygon({
+            map: map,
+            paths: area,
+            strokeColor: strokeColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#36cfff',
+            fillOpacity: 0.35,
+            editable: editable,
+            draggable: editable,
+            geodesic: true
+        });
+    }
+
+    static parkingAreaCenter(area) {
+        let center;
+        let count = area.length;
+        if (count === 0) {
+            center = MAP_CENTER;
+        } else {
+            center = area.reduce(function(res, point) {
+                res.lat += point.lat / count;
+                res.lng += point.lng / count;
+                return res;
+            }, {lat: 0.0, lng: 0.0});
+        }
+        return center;
+    }
+
+    parkingAreaCenter() {
+        return Parking.parkingAreaCenter(this.area);
+    }
+
+    remove() {
+        this.polygon.setMap(null);
+    }
+
+    getContent() {
+        let res = '<h5><%= I18n.t :parking %>: ' + this.properties.title + '</h5>'
+            + '<b><%= I18n.t :places_count %>:</b> ' + this.properties.selected_places_count + ' / ' + this.properties.places_count
+            + '<br><b><%= I18n.t :cost %>:</b> ' + this.properties.cost;
+        if (this.properties.start_time != null) {
+            res += '<br><b><%= I18n.t :working_hours %>:</b> ' + this.properties.start_time + ' - ' + this.properties.end_time;
+        }
+        res += '<br><br><b><%= I18n.t :description %>:</b> ' + this.properties.description;
+        return res;
+    }
+
+    openInfoWindow(event) {
+        this.infoWindow.setPosition(event.latLng);
+        this.infoWindow.open(this.map, this.marker);
+    }
+
+    set properties(value) {
+        if (value.changed_state) {
+            this._properties = value;
+            this.infoWindow.setContent(this.getContent());
+        }
+    }
+
+    get properties() {
+        return this._properties;
+    }
+}

@@ -1,6 +1,6 @@
 class ParkingPlace < ApplicationRecord
   belongs_to :sensor
-  belongs_to :parking
+  belongs_to :parking, counter_cache: true
   has_one :user, through: :parking
 
   validates :title, presence: true

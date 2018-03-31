@@ -166,6 +166,7 @@ CREATE TABLE public.parkings (
     area public.geography(Polygon,4326) NOT NULL,
     start_time time without time zone,
     end_time time without time zone,
+    parking_places_count integer DEFAULT 0 NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );

@@ -11,10 +11,14 @@ class MapChannel {
         }, {
             received: (data) => {
                 console.log(data);
-                data.parking_places.forEach((place) => {
-                    place.parking = data.parkings.find((el) => { return el.id === place.parking_id; })
-                });
-                onRecv(data.parkings, data.parking_places);
+                let parking_places = data.reduce((res, parking) => {
+                    parking.parking_places.forEach((place) => {
+                        place.parking = parking;
+                        res.push(place);
+                    });
+                    return res;
+                }, []);
+                onRecv(data, parking_places);
             }
         });
     }
