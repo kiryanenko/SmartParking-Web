@@ -4,7 +4,10 @@ class ParkingPlace < ApplicationRecord
   has_one :user, through: :parking
 
   validates :title, presence: true
-  validates :place_id, uniqueness: { scope: :sensor, message: I18n.t(:place_id_should_be_uniq) }
+  validates :place_id, uniqueness: { scope: :sensor }
+  validates :title, format: {
+      with: /\A[\w@"':№.,*()А-Яа-яёЁ]*\Z/,
+  }
 
   scope :unset_changed, -> { where(changed_state: true).update_all(changed_state: false) }
   scope :find_for_user, ->(id, user) { joins(:parking).find_by!(id: id, parkings: {user: user}) }

@@ -6,6 +6,9 @@ class Parking < ApplicationRecord
 
   before_validation :ensure_times_both_nil
   validates :title, :area, presence: true
+  validates :title, :description, format: {
+      with: /\A[\w@"':№.,*()А-Яа-яёЁ]*\Z/
+  }
 
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
   scope :user_parkings, ->(user) { where(user: user).order(:id) }
