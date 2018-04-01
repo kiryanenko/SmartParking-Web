@@ -13,14 +13,15 @@ RUN apt-get update &&\
 RUN mkdir /app
 WORKDIR /app
 
-# Setting env up
-ENV RAILS_ENV 'production'
-ENV RAKE_ENV 'production'
-
 COPY Gemfile ./
 RUN bundle install --jobs 20
 
 COPY . .
+
+# Setting env up
+ENV RAILS_ENV 'production'
+ENV RAKE_ENV 'production'
+ENV SECRET_KEY_BASE $(rake secret)
 
 RUN bundle exec rake assets:precompile
 
