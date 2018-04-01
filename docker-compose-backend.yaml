@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+  web:
+    depends_on:
+      - postgres
+      - redis
+      - mqtt
+      - memcached
+    volumes:
+      - public:/app/public
+      - tmp:/tmp
+    build: .
+    ports:
+      - 3000:3000
+    env_file: .env
+    environment:
+      RAILS_ENV: production
+    links:
+      - postgres
+      - redis
+      - mqtt
+      - memcached
+    restart: always
+
+  nginx:
+    image: nginx:alpine
+    volumes_from:
+      - web
+    volumes:
+      - ./config/nginx.conf.erb:/etc/nginx/nginx.conf
+      - nginx_logs:/etc/nginx/logs/nginx
+    depends_on:
+      - web
+    ports:
+      - 80:80
+    links:
+      - web
+    restart: always
+
+volumes:
+  public:
+  tmp:
+  nginx_logs:
