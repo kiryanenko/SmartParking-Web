@@ -26,4 +26,4 @@ RUN bundle exec rake assets:precompile
 
 EXPOSE 3000
 
-CMD bundle exec puma -C config/puma.rb
+CMD rails db:migrate && bundle exec puma -C config/puma.rb

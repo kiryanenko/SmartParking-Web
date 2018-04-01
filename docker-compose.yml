@@ -10,6 +10,7 @@ services:
       - 5432:5432
     volumes:
       - postgres:/var/lib/postgresql/data
+    restart: always
 
   redis:
     image: redis
@@ -18,11 +19,13 @@ services:
       - 6379:6379
     volumes:
       - redis:/data
+    restart: always
 
   mqtt:
     image: ansi/mosquitto
     ports:
       - 1883:1883
+    restart: always
 
   memcached:
       image: memcached:alpine
@@ -52,6 +55,7 @@ services:
       - redis
       - mqtt
       - memcached
+    restart: always
 
   nginx:
     image: nginx:alpine
@@ -66,6 +70,7 @@ services:
       - 80:80
     links:
       - web
+    restart: always
 
 volumes:
   redis:

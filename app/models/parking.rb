@@ -7,7 +7,7 @@ class Parking < ApplicationRecord
   before_validation :ensure_times_both_nil
   validates :title, :area, presence: true
   validates :title, :description, format: {
-      with: /\A[\w@"':№.,*()А-Яа-яёЁ]*\Z/
+      with: /\A[\w @"':№.,«»*()А-Яа-яёЁ\/-]*\Z/
   }
 
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
@@ -43,8 +43,8 @@ class Parking < ApplicationRecord
         description: description,
         cost: cost,
         area: area.coordinates.first.map { |coord| {lat: coord.first, lng: coord.last} },
-        start_time: start_time.strftime("%R"),
-        end_time: end_time.strftime("%R"),
+        start_time: start_time.nil? ? nil : start_time.strftime("%R"),
+        end_time: end_time.nil? ? nil : end_time.strftime("%R"),
         places_count: parking_places_count,
     }
   end

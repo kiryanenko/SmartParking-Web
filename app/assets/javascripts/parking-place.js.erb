@@ -42,7 +42,9 @@ class ParkingPlace {
         if (this.properties.parking.start_time != null) {
             res += '<br><b><%= I18n.t :working_hours %>:</b> ' + this.properties.parking.start_time + ' — ' + this.properties.parking.end_time;
         }
-        res += '<br><br><b><%= I18n.t :description %>:</b><br>' + this.properties.parking.description;
+        if (this.properties.description != "") {
+            res += '<br><br><b><%= I18n.t :description %>:</b><br>' + this.properties.parking.description;
+        }
         return res;
     }
 
