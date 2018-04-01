@@ -2,11 +2,6 @@ version: '2'
 
 services:
   web:
-    depends_on:
-      - postgres
-      - redis
-      - mqtt
-      - memcached
     volumes:
       - public:/app/public
       - tmp:/tmp
@@ -16,11 +11,6 @@ services:
     env_file: .env
     environment:
       RAILS_ENV: production
-    links:
-      - postgres
-      - redis
-      - mqtt
-      - memcached
     restart: always
 
   nginx:
