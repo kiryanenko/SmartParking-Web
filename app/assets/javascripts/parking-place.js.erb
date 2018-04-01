@@ -54,7 +54,9 @@ class ParkingPlace {
 
     set properties(value) {
         this._properties = value;
-        this.infoWindow.setContent(this.getContent());
+        if (value.changed_state) {
+            this.infoWindow.setContent(this.getContent());
+        }
     }
 
     get properties() {
