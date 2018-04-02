@@ -30,10 +30,15 @@ http {
     server unix:/tmp/nginx.socket fail_timeout=0;
   }
 
-    server {
+  server {
     listen 80;
     server_name localhost;
     root /app/public;
+    allow all;
+
+    location /nginx_status {
+      stub_status;
+    }
 
     location / {
       try_files $uri @app;
