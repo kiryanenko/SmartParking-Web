@@ -1,11 +1,12 @@
 #daemon off;
 #Heroku dynos have at least 4 cores.
-worker_processes 4;
+worker_processes auto;
 
 events {
   use epoll;
   accept_mutex on;
   worker_connections 1024;
+  multi_accept on;
 }
 
 http {
