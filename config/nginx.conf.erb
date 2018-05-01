@@ -1,3 +1,5 @@
+# https://github.com/heroku/heroku-buildpack-nginx.git
+
 #daemon off;
 #Heroku dynos have at least 4 cores.
 worker_processes auto;
@@ -37,9 +39,9 @@ http {
     root /app/public;
     allow all;
 
-    # location /nginx_status {
-    #   stub_status;
-    # }
+    location /nginx_status {
+      stub_status;
+    }
 
     location / {
       try_files $uri @app;
