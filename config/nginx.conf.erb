@@ -43,7 +43,6 @@ http {
 
     location / {
       try_files $uri @app;
-      gzip_static on;
       expires max;
       proxy_read_timeout 150;
       add_header Cache-Control public;
