@@ -335,4 +335,5 @@ ru:
   places_count: "Количество мест"
   with_parkings_for_disabled: "С парковками для инвалидов"
   currency: "₽"
+  only_free: "Только свободные"
 

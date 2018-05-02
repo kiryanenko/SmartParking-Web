@@ -1,7 +1,7 @@
 # Для оптимизации карта была поделена на пересекающиеся квадраты.
 # Таким образом, было ограничено количество запросов к БД.
 class MapSquare
-  attr_reader :coord, :radius, :cost, :with_disabled
+  attr_reader :coord, :radius, :cost, :with_disabled, :only_free, :can_book
 
   def initialize(params)
     r_min = Rails.configuration.min_map_square_side / 2
@@ -21,12 +21,21 @@ class MapSquare
     }
 
     @cost = params[:cost] || 1000
+    @only_free = params[:only_free].nil? ? true : params[:only_free]
+    @can_book = params[:can_book] || false
     @with_disabled = params[:with_disabled] || false
   end
 
   def parkings
     params = {}
-    params[:for_disabled] = false unless with_disabled
+    if @only_free
+      params[:free] = true
+      params[:booked] = false
+      params[:connected] = true
+    end
+    params[:can_book] = true if @can_book
+    params[:for_disabled] = false unless @with_disabled
+
     Parking.response_parkings_at_location @coord, @radius, @cost, params
   end
 
@@ -35,6 +44,6 @@ class MapSquare
   end
 
   def stream
-    "square_R:#{@radius}_LAT:#{@coord[:lat]}_LNG:#{@coord[:lng]}_COST:#{@cost}_DISABLED:#{@with_disabled}"
+    "square_R:#{@radius}_LAT:#{@coord[:lat]}_LNG:#{@coord[:lng]}_COST:#{@cost}_FREE:#{@only_free}_BOOK:#{@can_book}_DISABLED:#{@with_disabled}"
   end
 end

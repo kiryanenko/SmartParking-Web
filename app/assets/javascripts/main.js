@@ -25,6 +25,8 @@ class MainMap {
         this.filterForm = document.getElementById('filter_form');
         this.costField = document.getElementById('cost');
         this.costRangeField = document.getElementById('cost_range');
+        this.onlyFreeField = document.getElementById('only_free');
+        this.canBookField = document.getElementById('can_book');
         this.withDisabledField = document.getElementById('with_disabled');
 
         this.filterForm.onchange = this.sendSetParams.bind(this);
@@ -87,6 +89,8 @@ class MainMap {
             this.map.getCenter(),
             this.getRadius(),
             parseFloat(this.costField.value),
+            this.onlyFreeField.checked,
+            this.canBookField.checked,
             this.withDisabledField.checked
         );
     }

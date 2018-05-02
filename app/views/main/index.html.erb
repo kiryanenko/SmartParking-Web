@@ -29,12 +29,16 @@
         <hr class="hr-sidebar">
 
         <!-- Фильтр -->
-        <%= bootstrap_form_tag :html => { id: :filter_form, :onsubmit => 'return false;' } do |f| %>
-          <%= f.number_field :cost, label: t(:cost), min: 0, max: 1000, value: 1000, append: t(:currency),
-                             class: 'form-control-sm', layout: :horizontal %>
-          <%= f.range_field :cost_range, min: 0, max: 1000, value: 1000, hide_label: true %>
-          <%= f.check_box :with_disabled, label: t(:with_parkings_for_disabled), value: false %>
-        <% end %>
+        <div class="text-left">
+          <%= bootstrap_form_tag :html => { id: :filter_form, :onsubmit => 'return false;' } do |f| %>
+            <%= f.number_field :cost, label: t(:cost), min: 0, max: 1000, value: 1000, append: t(:currency),
+                               class: 'form-control-sm', layout: :horizontal %>
+            <%= f.range_field :cost_range, min: 0, max: 1000, value: 1000, hide_label: true %>
+            <%= f.check_box :only_free, label: t(:only_free), checked: true %>
+            <%= f.check_box :can_book, label: t(:can_book), checked: false %>
+            <%= f.check_box :with_disabled, label: t(:with_parkings_for_disabled), checked: false %>
+          <% end %>
+        </div>
 
       </td></tr>
       <tr><td class="align-bottom">

@@ -320,3 +320,4 @@ en:
   places_count: "Places count"
   with_parkings_for_disabled: "With parkings for disabled"
   currency: "$"
+  only_free: "Only free"

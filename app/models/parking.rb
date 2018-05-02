@@ -25,7 +25,6 @@ class Parking < ApplicationRecord
               area_lat3: coord[:lat] + radius, area_lng3: coord[:lng] + radius,
               area_lat4: coord[:lat] + radius, area_lng4: coord[:lng] - radius,
     )
-    p cost
     res = res.where('cost <= ?', cost) if cost > 0
     res = res.joins(:parking_places).where(parking_places: params).distinct if params.any?
     res

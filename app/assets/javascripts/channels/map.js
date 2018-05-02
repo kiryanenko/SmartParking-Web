@@ -23,7 +23,13 @@ class MapChannel {
         });
     }
 
-    setParams(coord, radius, cost, withDisabled) {
-        this.connection.send({coord: coord, radius: radius, cost: cost, with_disabled: withDisabled});
+    setParams(coord, radius, cost, onlyFree, canBook, withDisabled) {
+        this.connection.send({
+            coord: coord,
+            radius: radius,
+            cost: cost,
+            only_free: onlyFree,
+            can_book: canBook,
+            with_disabled: withDisabled});
     }
 }
