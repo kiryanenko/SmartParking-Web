@@ -318,3 +318,5 @@ en:
   place_id_should_be_uniq: "ID of parking place should be uniqueness per sensor"
   not_free: "Not free"
   places_count: "Places count"
+  with_parkings_for_disabled: "With parkings for disabled"
+  currency: "$"

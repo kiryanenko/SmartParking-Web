@@ -20,7 +20,16 @@ class MainMap {
 
         this.channel = new MapChannel(MAP_CENTER, this.getRadius(), this.update.bind(this));
 
-        this.map.bounds_changed = this.onBoundsChanged.bind(this)
+        this.map.bounds_changed = this.onBoundsChanged.bind(this);
+
+        this.filterForm = document.getElementById('filter_form');
+        this.costField = document.getElementById('cost');
+        this.costRangeField = document.getElementById('cost_range');
+        this.withDisabledField = document.getElementById('with_disabled');
+
+        this.filterForm.onchange = this.onChangeFilterForm.bind(this);
+        this.costField.oninput = this.onChangeCostField.bind(this);
+        this.costRangeField.oninput = this.onChangeCostRangeField.bind(this);
     }
 
     update(parkings, parkingPlaces) {
@@ -75,5 +84,17 @@ class MainMap {
 
     onBoundsChanged() {
         this.channel.setParams(this.map.getCenter(), this.getRadius());
+    }
+
+    onChangeFilterForm() {
+
+    }
+
+    onChangeCostField() {
+        this.costRangeField.value = this.costField.value;
+    }
+
+    onChangeCostRangeField() {
+        this.costField.value = this.costRangeField.value;
     }
 }

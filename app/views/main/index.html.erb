@@ -27,6 +27,15 @@
           <%= link_to t(:sign_up), new_user_registration_path, :class => 'btn btn-outline-info btn-sm' %>
         <% end %>
         <hr class="hr-sidebar">
+
+        <!-- Фильтр -->
+        <%= bootstrap_form_tag :html => { id: :filter_form, :onsubmit => 'return false;' } do |f| %>
+          <%= f.number_field :cost, label: t(:cost), min: 0, max: 1000, value: 1000, append: t(:currency),
+                             class: 'form-control-sm', layout: :horizontal %>
+          <%= f.range_field :cost_range, min: 0, max: 1000, value: 1000, hide_label: true %>
+          <%= f.check_box :with_disabled, label: t(:with_parkings_for_disabled) %>
+        <% end %>
+
       </td></tr>
       <tr><td class="align-bottom">
         <%= link_to t(:owners_parking), control_panel_main_path, :class => 'text-secondary btn btn-link btn-xs' %>

@@ -333,4 +333,6 @@ ru:
   place_id_should_be_uniq: "ID парковочного места должен быть уникальным для датчика"
   not_free: "Занята"
   places_count: "Количество мест"
+  with_parkings_for_disabled: "С парковками для инвалидов"
+  currency: "₽"
 
