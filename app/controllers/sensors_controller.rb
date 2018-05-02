@@ -49,6 +49,8 @@ class SensorsController < ApplicationController
       params[:day_start_time] = parse_time params[:day_start_time] { @sensor.errors.add :day_start_time, t(:invalid_time) }
       params[:night_start_time] = parse_time params[:night_start_time] { @sensor.errors.add :night_start_time, t(:invalid_time) }
       if @sensor.errors.empty? and @sensor.update(params)
+        MQTTService.instance.set_settings(@sensor)
+
         format.html { redirect_to sensors_path, notice: t(:sensor_updated) }
         format.json { render :show, status: :ok, location: @sensor }
       else
@@ -76,7 +78,7 @@ class SensorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sensor_params
-      params.require(:sensor).permit(:sampling_period, :sending_period, :day_cast, :night_cast, :day_start_time, :night_start_time)
+      params.require(:sensor).permit(:sampling_period, :sending_period, :day_cost, :night_cost, :day_start_time, :night_start_time)
     end
 
     def parse_time(time_str)

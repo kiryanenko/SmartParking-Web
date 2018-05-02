@@ -11,18 +11,34 @@ class MQTTService
   end
 
   def connect
-    @client = MQTT::Client.connect(ENV["MQTT_URI"] || ENV["CLOUDMQTT_URL"] || 'mqtt://0.0.0.0')
+    @mqtt = MQTT::Client.connect(ENV["MQTT_URI"] || ENV["CLOUDMQTT_URL"] || 'mqtt://0.0.0.0')
 
-    @client.subscribe 'init'
-    @client.subscribe 'status'
+    @mqtt.subscribe 'init'
+    @mqtt.subscribe 'status'
 
     run
+  end
+
+  def set_settings(sensor)
+    begin
+      @mqtt.publish("sensor_#{sensor.id}", JSON.generate({
+                                                             sampling_period: sensor.sampling_period,
+                                                             sending_period: sensor.sending_period,
+                                                             day_cost: sensor.day_cost,
+                                                             night_cost: sensor.night_cost,
+                                                             day_start_time: sensor.day_start_time,
+                                                             night_start_time: sensor.night_start_time
+                                                         }))
+    rescue Exception => e
+      Rails.logger.error e.message
+      Rails.logger.error e.backtrace
+    end
   end
 
   private
   def run
     Thread.new do
-      @client.get do |topic,message|
+      @mqtt.get do |topic,message|
         begin
           data = JSON.parse(message).transform_keys! {|k| k.to_sym }
           user = User.authenticate! data[:login], data[:password]

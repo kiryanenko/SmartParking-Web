@@ -7,8 +7,8 @@ class CreateSensors < ActiveRecord::Migration[5.2]
       t.integer :sending_period, default: 0, limit: 2, null: false
       t.integer :day_cost, default: 0, limit: 2, null: false
       t.integer :night_cost, default: 0, limit: 2, null: false
-      t.integer :day_start_time, default: 0, limit: 2, null: false
-      t.integer :night_start_time, default: 0, limit: 2, null: false
+      t.integer :day_start_time, default: 0, limit: 4, null: false
+      t.integer :night_start_time, default: 0, limit: 4, null: false
 
       t.timestamps
     end

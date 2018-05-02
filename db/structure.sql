@@ -211,8 +211,8 @@ CREATE TABLE public.sensors (
     sending_period smallint DEFAULT 0 NOT NULL,
     day_cost smallint DEFAULT 0 NOT NULL,
     night_cost smallint DEFAULT 0 NOT NULL,
-    day_start_time smallint DEFAULT 0 NOT NULL,
-    night_start_time smallint DEFAULT 0 NOT NULL,
+    day_start_time integer DEFAULT 0 NOT NULL,
+    night_start_time integer DEFAULT 0 NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
