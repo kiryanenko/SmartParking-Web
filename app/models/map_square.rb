@@ -1,7 +1,7 @@
 # Для оптимизации карта была поделена на пересекающиеся квадраты.
 # Таким образом, было ограничено количество запросов к БД.
 class MapSquare
-  attr_reader :coord, :radius
+  attr_reader :coord, :radius, :cost, :with_disabled
 
   def initialize(params)
     r_min = Rails.configuration.min_map_square_side / 2
@@ -19,11 +19,15 @@ class MapSquare
         lat: params[:coord][:lat].near(@radius * n_lat, @radius * (n_lat + 1)),
         lng: params[:coord][:lng].near(@radius * n_lng, @radius * (n_lng + 1))
     }
+
+    @cost = params[:cost] || 1000
+    @with_disabled = params[:with_disabled] || false
   end
 
   def parkings
-    params = {}       # FIXME: В дальнешем тут будут параметры поиска
-    Parking.response_parkings_at_location @coord, @radius, params
+    params = {}
+    params[:for_disabled] = false unless with_disabled
+    Parking.response_parkings_at_location @coord, @radius, @cost, params
   end
 
   def broadcast
@@ -31,6 +35,6 @@ class MapSquare
   end
 
   def stream
-    "square_R:#{@radius}_LAT:#{@coord[:lat]}_LNG:#{@coord[:lng]}"
+    "square_R:#{@radius}_LAT:#{@coord[:lat]}_LNG:#{@coord[:lng]}_COST:#{@cost}_DISABLED:#{@with_disabled}"
   end
 end

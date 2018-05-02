@@ -33,7 +33,7 @@
           <%= f.number_field :cost, label: t(:cost), min: 0, max: 1000, value: 1000, append: t(:currency),
                              class: 'form-control-sm', layout: :horizontal %>
           <%= f.range_field :cost_range, min: 0, max: 1000, value: 1000, hide_label: true %>
-          <%= f.check_box :with_disabled, label: t(:with_parkings_for_disabled) %>
+          <%= f.check_box :with_disabled, label: t(:with_parkings_for_disabled), value: false %>
         <% end %>
 
       </td></tr>

@@ -23,7 +23,7 @@ class MapChannel {
         });
     }
 
-    setParams(coord, radius) {
-        this.connection.send({coord: coord, radius: radius});
+    setParams(coord, radius, cost, withDisabled) {
+        this.connection.send({coord: coord, radius: radius, cost: cost, with_disabled: withDisabled});
     }
 }
