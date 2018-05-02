@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  parking_place: 
+  cost: 
+  payment: 1.5
+
+two:
+  user: 
+  parking_place: 
+  cost: 
+  payment: 1.5

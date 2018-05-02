@@ -80,6 +80,40 @@ CREATE TABLE public.ar_internal_metadata (
 
 
 --
+-- Name: orders; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.orders (
+    id bigint NOT NULL,
+    user_id bigint,
+    parking_place_id bigint,
+    cost double precision DEFAULT 0.0,
+    payment double precision DEFAULT 0.0,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: orders_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.orders_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: orders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.orders_id_seq OWNED BY public.orders.id;
+
+
+--
 -- Name: parking_places; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -283,6 +317,13 @@ ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
+ALTER TABLE ONLY public.orders ALTER COLUMN id SET DEFAULT nextval('public.orders_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
 ALTER TABLE ONLY public.parking_places ALTER COLUMN id SET DEFAULT nextval('public.parking_places_id_seq'::regclass);
 
 
@@ -320,6 +361,14 @@ ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_
 
 ALTER TABLE ONLY public.ar_internal_metadata
     ADD CONSTRAINT ar_internal_metadata_pkey PRIMARY KEY (key);
+
+
+--
+-- Name: orders_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT orders_pkey PRIMARY KEY (id);
 
 
 --
@@ -368,6 +417,20 @@ ALTER TABLE ONLY public.sensors
 
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_orders_on_parking_place_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_orders_on_parking_place_id ON public.orders USING btree (parking_place_id);
+
+
+--
+-- Name: index_orders_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_orders_on_user_id ON public.orders USING btree (user_id);
 
 
 --
@@ -569,6 +632,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20180222120630'),
 ('20180302102037'),
 ('20180304115555'),
-('20180324084246');
+('20180324084246'),
+('20180502182205');
 
 
