@@ -1,27 +1,20 @@
-<div class="container h-100">
-  <div class="row h-100">
-    <div class="col-4 m-auto text-center">
-      <h1 class="mb-3"><%= t :sign_up %></h1>
-      <%= render 'components/form_errors', resource: resource %>
+<h1 class="mb-3"><%= t :sign_up %></h1>
+<%= render 'components/form_errors', resource: resource %>
 
-      <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= f.email_field :email, autofocus: true, autocomplete: :on, placeholder: 'email@example.com',
-                          label: :email, prepend: '@', required: true %>
-        <%= f.password_field :password, autocomplete: 'off', placeholder: :password, label: t(:password),
-                             help: "#{@minimum_password_length} #{t :characters_minimum}", required: true %>
-        <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: :password,
-                             label: t(:password_confirmation), required: true %>
-        <%= f.text_field :full_name, autofocus: true, autocomplete: :on, placeholder: t(:full_name_example),
-                           label: t(:full_name), required: true  %>
-        <%= f.text_field :phone, autofocus: true, autocomplete: :on, placeholder: '+7 (555) 555-55-55',
-                         label: t(:phone), required: true  %>
-        <div class="my-4">
-          <%= f.submit t(:sign_up), class: 'btn-primary btn-block btn-lg' %>
-        </div>
-      <% end %>
-
-      <%= render "devise/shared/links" %>
-      <p class="mt-5 text-muted">© 2017-2018</p>
-    </div>
+<%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.email_field :email, autofocus: true, autocomplete: :on, placeholder: 'email@example.com',
+                    label: :email, prepend: '@', required: true %>
+  <%= f.password_field :password, autocomplete: 'off', placeholder: :password, label: t(:password),
+                       help: "#{@minimum_password_length} #{t :characters_minimum}", required: true %>
+  <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: :password,
+                       label: t(:password_confirmation), required: true %>
+  <%= f.text_field :full_name, autofocus: true, autocomplete: :on, placeholder: t(:full_name_example),
+                   label: t(:full_name), required: true  %>
+  <%= f.text_field :phone, autofocus: true, autocomplete: :on, placeholder: '+7 (555) 555-55-55',
+                   label: t(:phone), required: true  %>
+  <div class="my-4">
+    <%= f.submit t(:sign_up), class: 'btn-primary btn-block btn-lg' %>
   </div>
-</div>
+<% end %>
+
+<%= render "devise/shared/links" %>

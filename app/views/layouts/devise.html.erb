@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SmartParkingWeb</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>SmartParkingWeb</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'devise', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
+<body>
+<div class="container h-100">
+  <div class="row h-100">
+    <div class="col-4 m-auto text-center">
+      <%= yield %>
+      <p class="mt-5 text-muted">© 2017-2018</p>
+    </div>
+  </div>
+</div>
 
-    <%= render 'components/alerts' %>
-  </body>
+<%= render 'components/alerts' %>
+</body>
 </html>
