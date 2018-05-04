@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
-
+<h1><%= t :order %> № <%= @order.id %></h1>
 <p>
-  <strong>User:</strong>
-  <%= @order.user %>
+  <strong><%= t :user %>:</strong>
+  <%= @order.user.full_name %>
 </p>
 
 <p>
-  <strong>Parking place:</strong>
-  <%= @order.parking_place %>
+  <strong><%= t :parking_place %>:</strong>
+  <%= link_to @order.parking_place.title, @order.parking_place %>
 </p>
 
 <p>
-  <strong>Cost:</strong>
+  <strong><%= t :amount_to_pay %>:</strong>
   <%= @order.cost %>
 </p>
 
 <p>
-  <strong>Payment:</strong>
+  <strong><%= t :entered_amount %>:</strong>
   <%= @order.payment %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<p>
+  <strong><%= t :change %>:</strong>
+  <%= @order.payment - @order.cost %>
+</p>
+
+<%= link_to t(:back), root_path %>

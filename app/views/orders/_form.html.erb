@@ -16,9 +16,32 @@
     </p>
   <% end %>
 
-  <h6><strong><%= t :cost %>:</strong> <%= parking_place.parking.cost %> <%= t :currency %></h6>
+  <h6><strong><%= t :cost_per_hour %>:</strong> <%= parking_place.parking.cost %> <%= t :currency %></h6>
 
-  <%= form.time_select :order_time, prompt: {hour: 1, minute_step: 5}, label: t(:order_time) %>
+  <%= form.select :order_time, [
+      ["15 #{t :min}", 15 * 60],
+      ["20 #{t :min}", 20 * 60],
+      ["30 #{t :min}", 30 * 60],
+      ["40 #{t :min}", 40 * 60],
+      ["45 #{t :min}", 45 * 60],
+      ["1 #{t :hour}", 1 * 60 * 60],
+      ["1 #{t :hour} 15 #{t :min}", 1 * 60 * 60 + 15 * 60],
+      ["1 #{t :hour} 30 #{t :min}", 1 * 60 * 60 + 30 * 60],
+      ["1 #{t :hour} 45 #{t :min}", 1 * 60 * 60 + 45 * 60],
+      ["2 #{t :hour}", 2 * 60 * 60],
+      ["2 #{t :hour} 30 #{t :min}", 2 * 60 * 60 + 30 * 60],
+      ["3 #{t :hour}", 3 * 60 * 60],
+      ["3 #{t :hour} 30 #{t :min}", 3 * 60 * 60 + 30 * 60],
+      ["4 #{t :hour}", 4 * 60 * 60],
+      ["5 #{t :hour}", 5 * 60 * 60],
+      ["6 #{t :hour}", 6 * 60 * 60],
+      ["8 #{t :hour}", 8 * 60 * 60],
+      ["10 #{t :hour}", 10 * 60 * 60],
+      ["12 #{t :hour}", 12 * 60 * 60],
+      ["24 #{t :hour}", 24 * 60 * 60],
+      ["48 #{t :hour}", 48 * 60 * 60],
+      ["72 #{t :hour}", 72 * 60 * 60]
+  ], label: t(:order_time), required: true %>
 
   <div id="map"></div>
   <script>

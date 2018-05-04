@@ -3,7 +3,7 @@
 
 <%= bootstrap_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.email_field :email, autofocus: true, autocomplete: :on, placeholder: 'email@example.com',
-                    label: :email, prepend: '@', required: true %>
+                    label: :email, required: true %>
   <%= f.password_field :password, autocomplete: 'off', placeholder: :password, label: t(:password),
                        help: "#{@minimum_password_length} #{t :characters_minimum}", required: true %>
   <%= f.password_field :password_confirmation, autocomplete: 'off', placeholder: :password,
