@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit]
+  before_action :set_parking_place, only: [:new, :create]
+
+  layout 'devise'
+
 
   # GET /orders
   # GET /orders.json
@@ -13,13 +17,13 @@ class OrdersController < ApplicationController
   def show
   end
 
-  # GET /orders/new
+  # GET /parking_places/1/orders/new
   def new
     @order = Order.new
   end
 
-  # POST /orders
-  # POST /orders.json
+  # POST /parking_places/1/orders
+  # POST /parking_places/1/orders.json
   def create
     @order = Order.new(order_params)
 
@@ -40,8 +44,12 @@ class OrdersController < ApplicationController
       @order = Order.find(params[:id])
     end
 
+    def set_parking_place
+      @parking_place = ParkingPlace.find(params[:parking_place_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:user, :parking_place, :cost, :payment)
+      params.require(:order).permit(:order_time, :payment)
     end
 end
