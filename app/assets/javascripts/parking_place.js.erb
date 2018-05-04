@@ -45,7 +45,7 @@ class ParkingPlace {
         if (this.properties.description != "") {
             res += '<br><br><b><%= I18n.t :description %>:</b><br>' + this.properties.parking.description;
         }
-        if (this.properties.can_book) {
+        if (this.properties.can_book && this.properties.free && !this.properties.booked && this.properties.connected) {
             res += '<br><a class="btn btn-sm btn-primary" href="'
                 + Routes.new_parking_place_order_path(this.properties.id) + '">'
                 + '<%= I18n.t :book %></a>';

@@ -1,6 +1,23 @@
 <%= bootstrap_form_with(model: [parking_place, order], local: true) do |form| %>
   <%= render 'components/form_errors', resource: parking_place %>
 
+  <h5><b><%= t :parking_place %>:</b> <%= parking_place.title %></h5>
+
+  <% if parking_place.for_disabled %><p class="text-info"><%= t :for_disabled %></p><% end %>
+
+  <% unless parking_place.parking.start_time.nil? %>
+    <p><b><%= t :working_hours %>:</b> <%= parking_place.parking.start_time + ' — ' + parking_place.parking.end_time %>
+  <% end %>
+
+  <% unless parking_place.parking.description.empty? %>
+    <p>
+      <b><%= t :description %></b>:
+      <br><%= parking_place.parking.description %>
+    </p>
+  <% end %>
+
+  <h6><strong><%= t :cost %>:</strong> <%= parking_place.parking.cost %> <%= t :currency %></h6>
+
   <%= form.time_select :order_time, prompt: {hour: 1, minute_step: 5}, label: t(:order_time) %>
 
   <div id="map"></div>
@@ -19,5 +36,5 @@
           src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
   </script>
 
-  <%= form.submit %>
+  <%= form.submit t(:book), class: 'btn-primary btn-lg mt-3' %>
 <% end %>
