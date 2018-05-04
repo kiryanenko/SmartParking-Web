@@ -79,3 +79,6 @@ gem 'mqtt', :git => 'https://github.com/njh/ruby-mqtt.git'
 
 # Dalli is a high performance pure Ruby client for accessing memcached servers.
 gem 'dalli'
+
+# Generates javascript file that defines all Rails named routes as javascript helpers
+gem 'js-routes'

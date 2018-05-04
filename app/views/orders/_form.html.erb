@@ -1,26 +1,23 @@
-<%= bootstrap_form_with(model: [parking, parking_place, order], local: true) do |form| %>
+<%= bootstrap_form_with(model: [parking_place, order], local: true) do |form| %>
   <%= render 'components/form_errors', resource: parking_place %>
 
+  <%= form.time_select :order_time, prompt: {hour: 1, minute_step: 5}, label: t(:order_time) %>
 
+  <div id="map"></div>
+  <script>
+      let map;
 
-  <div class="card my-3">
-    <div class="card-header"><%= t :parking_place_location %></div>
-    <div id="map"></div>
-    <script>
-        let map;
-
-        function initMap() {
-            map = new ParkingPlaceMap(
-                document.getElementById('map'), {lat: <%= parking_place.coord.x %>, lng: <%= parking_place.coord.y %>},
-                [<%= parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
-                true
-            );
-        }
-    </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
-    </script>
-  </div>
+      function initMap() {
+          map = new ParkingPlaceMap(
+              document.getElementById('map'), {lat: <%= parking_place.coord.x %>, lng: <%= parking_place.coord.y %>},
+              [<%= parking_place.parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
+              true
+          );
+      }
+  </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
+  </script>
 
   <%= form.submit %>
 <% end %>

@@ -20,5 +20,7 @@ Rails.application.config.assets.precompile += %w(
   sensors.css sensors.js
   parkings.css parkings.js
   parking_places.css parking_places.js
+  orders.css orders.js
+  devise/*.css devise/*.js
   cluster.png
 )

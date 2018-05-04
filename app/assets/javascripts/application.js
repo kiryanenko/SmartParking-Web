@@ -18,3 +18,4 @@
 //= require bootstrap-sprockets
 //= require jasny-bootstrap
 //= require config
+//= require js-routes

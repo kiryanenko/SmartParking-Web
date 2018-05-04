@@ -322,3 +322,5 @@ en:
   currency: "$"
   only_free: "Only free"
   book: "Book"
+  new_order: "New order"
+  order_time: "Order time"

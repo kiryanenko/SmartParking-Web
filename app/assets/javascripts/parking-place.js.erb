@@ -46,7 +46,9 @@ class ParkingPlace {
             res += '<br><br><b><%= I18n.t :description %>:</b><br>' + this.properties.parking.description;
         }
         if (this.properties.can_book) {
-            res += '<br><a class="btn btn-sm btn-primary" href="#"><%= I18n.t :book %></a>';
+            res += '<br><a class="btn btn-sm btn-primary" href="'
+                + Routes.new_parking_place_order_path(this.properties.id) + '">'
+                + '<%= I18n.t :book %></a>';
         }
         return res;
     }
