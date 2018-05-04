@@ -1,37 +1,26 @@
-<%= form_with(model: order, local: true) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<%= bootstrap_form_with(model: [parking, parking_place, order], local: true) do |form| %>
+  <%= render 'components/form_errors', resource: parking_place %>
 
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= form.label :user %>
-    <%= form.text_field :user %>
+
+  <div class="card my-3">
+    <div class="card-header"><%= t :parking_place_location %></div>
+    <div id="map"></div>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new ParkingPlaceMap(
+                document.getElementById('map'), {lat: <%= parking_place.coord.x %>, lng: <%= parking_place.coord.y %>},
+                [<%= parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
+                true
+            );
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
+    </script>
   </div>
 
-  <div class="field">
-    <%= form.label :parking_place %>
-    <%= form.text_field :parking_place %>
-  </div>
-
-  <div class="field">
-    <%= form.label :cost %>
-    <%= form.text_field :cost %>
-  </div>
-
-  <div class="field">
-    <%= form.label :payment %>
-    <%= form.text_field :payment %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.submit %>
 <% end %>
