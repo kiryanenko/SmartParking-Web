@@ -37,7 +37,7 @@ class Order < ApplicationRecord
     Order.new(
         user: user,
         parking_place: parking_place,
-        order_time: order_time,
+        booked_time: order_time,
         cost: parking_place.parking.cost * order_time * 1.0 / 1.hour,
         payment: payment
     )

@@ -26,7 +26,7 @@ class OrdersController < ApplicationController
   # POST /parking_places/1/orders
   # POST /parking_places/1/orders.json
   def create
-    @order = Order.payment(current_user, @parking_place, order_params[:order_time].to_i, order_params[:payment])
+    @order = Order.payment(current_user, @parking_place, order_params[:booked_time].to_i, order_params[:payment])
 
     begin
       respond_to do |format|
@@ -69,6 +69,6 @@ class OrdersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def order_params
-    params.require(:order).permit(:order_time, :payment)
+    params.require(:order).permit(:booked_time, :payment)
   end
 end

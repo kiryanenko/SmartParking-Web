@@ -18,7 +18,7 @@
 
   <h6><strong><%= t :cost_per_hour %>:</strong> <%= parking_place.parking.cost %> <%= t :currency %></h6>
 
-  <%= form.select :order_time, [
+  <%= form.select :booked_time, [
       ["15 #{t :min}", 15 * 60],
       ["20 #{t :min}", 20 * 60],
       ["30 #{t :min}", 30 * 60],
@@ -41,7 +41,7 @@
       ["24 #{t :hour}", 24 * 60 * 60],
       ["48 #{t :hour}", 48 * 60 * 60],
       ["72 #{t :hour}", 72 * 60 * 60]
-  ], label: t(:order_time), required: true %>
+  ], label: t(:booked_time), required: true %>
 
   <div id="map"></div>
   <script>

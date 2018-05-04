@@ -89,7 +89,7 @@ CREATE TABLE public.orders (
     parking_place_id bigint NOT NULL,
     cost double precision DEFAULT 0.0 NOT NULL,
     payment double precision DEFAULT 0.0 NOT NULL,
-    order_time integer NOT NULL,
+    booked_time integer NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );

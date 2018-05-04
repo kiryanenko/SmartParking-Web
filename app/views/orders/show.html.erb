@@ -5,8 +5,18 @@
 </p>
 
 <p>
+  <strong><%= t :created_at %>:</strong>
+  <%= @order.created_at %>
+</p>
+
+<p>
   <strong><%= t :parking_place %>:</strong>
   <%= link_to @order.parking_place.title, @order.parking_place %>
+</p>
+
+<p>
+  <strong><%= t :booking_time %>:</strong>
+  <%= @order.booked_time / 60 %> <%= t :min %>
 </p>
 
 <p>

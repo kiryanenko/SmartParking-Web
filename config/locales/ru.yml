@@ -338,7 +338,7 @@ ru:
   only_free: "Только свободные"
   book: "Забронировать"
   new_order: "Новый заказ"
-  order_time: "Забронировать на"
+  booked_time: "Забронировать на"
   cost_per_hour: "Цена за час"
   not_enough_money: "Недостаточно средств"
   parking_place_not_free: "Парковочое место занято"
@@ -354,4 +354,6 @@ ru:
   cancel: "Отммена"
   change: "Сдача"
   order: "Заказ"
+  created_at: "Время создания"
+  booking_time: "Время бронирования"
 

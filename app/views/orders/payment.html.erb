@@ -3,7 +3,7 @@
 <%= bootstrap_form_with(model: [@parking_place, @order], local: true) do |f| %>
   <%= render 'components/form_errors', resource: @order %>
 
-  <%= f.hidden_field :order_time %>
+  <%= f.hidden_field :booked_time %>
   <%= f.number_field :payment, label: t(:enter_amount), required: true %>
   <%= f.submit t(:pay), class: 'btn-primary btn-lg mt-3' %>
 <% end %>
