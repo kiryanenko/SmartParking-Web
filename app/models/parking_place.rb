@@ -40,4 +40,9 @@ class ParkingPlace < ApplicationRecord
         changed_state: changed_state
     }
   end
+
+  def book(booking_time)
+    update(booked: true)
+    MQTTService.instance.book(self, booking_time)
+  end
 end

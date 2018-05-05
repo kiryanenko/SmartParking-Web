@@ -3,6 +3,7 @@ class Order < ApplicationRecord
   belongs_to :parking_place
 
   before_validation :payment_not_nil
+  after_create :book
 
   validate :need_payment, :enough_money, :parking_place_is_free
 
@@ -50,5 +51,10 @@ class Order < ApplicationRecord
   end
 
   class ParkingPlaceNotFree < StandardError
+  end
+
+  private
+  def book
+    self.parking_place.book(self.booked_time)
   end
 end

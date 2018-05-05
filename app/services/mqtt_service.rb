@@ -21,7 +21,7 @@ class MQTTService
 
   def set_settings(sensor)
     begin
-      @mqtt.publish("sensor_#{sensor.id}", JSON.generate({
+      @mqtt.publish("sensor_#{sensor.id}-settings", JSON.generate({
                                                              sampling_period: sensor.sampling_period,
                                                              sending_period: sensor.sending_period,
                                                              day_cost: sensor.day_cost,
@@ -29,6 +29,18 @@ class MQTTService
                                                              day_start_time: sensor.day_start_time,
                                                              night_start_time: sensor.night_start_time
                                                          }))
+    rescue Exception => e
+      Rails.logger.error e.message
+      Rails.logger.error e.backtrace
+    end
+  end
+
+  def book(parking_place, booking_time)
+    begin
+      @mqtt.publish("sensor_#{parking_place.sensor.id}-book", JSON.generate({
+                                                                                place_id: parking_place.place_id,
+                                                                                booking_time: booking_time,
+                                                                            }))
     rescue Exception => e
       Rails.logger.error e.message
       Rails.logger.error e.backtrace
