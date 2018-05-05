@@ -4,6 +4,7 @@
   <thead>
   <tr>
     <th><%= t :order_id %></th>
+    <th><%= t :user %></th>
     <th><%= t :parking_place %></th>
     <th><%= t :booking_time %></th>
     <th><%= t :cost %></th>
@@ -14,6 +15,7 @@
   <% @orders.each do |order| %>
     <tr>
       <td><%= link_to order.id, order %></td>
+      <td><%= order.user.full_name %></td>
       <td>
         <a href="<%= parking_path order.parking_place.parking %>">
           <b><%= t :parking %>:</b> <%= order.parking_place.parking.title %><br></a>
