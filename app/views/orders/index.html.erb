@@ -16,8 +16,7 @@
         <td><%= link_to order.id, order %></td>
         <td>
           <b><%= t :parking %>:</b> <%= order.parking_place.parking.title %><br>
-          <a href="<%= parking_place_path order.parking_place %>">
-            <b><%= t :parking_place %> №</b> <%= order.parking_place.title %></a>
+          <b><%= t :parking_place %> №</b> <%= order.parking_place.title %>
         </td>
         <td><%= order.booked_time %> <%= t :min %></td>
         <td><%= order.cost %> <%= t :currency %></td>

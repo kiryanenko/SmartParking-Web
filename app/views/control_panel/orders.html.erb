@@ -1,0 +1,28 @@
+<h1><%= t :orders %></h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= t :order_id %></th>
+    <th><%= t :parking_place %></th>
+    <th><%= t :booking_time %></th>
+    <th><%= t :cost %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= link_to order.id, order %></td>
+      <td>
+        <a href="<%= parking_path order.parking_place.parking %>">
+          <b><%= t :parking %>:</b> <%= order.parking_place.parking.title %><br></a>
+        <a href="<%= parking_place_path order.parking_place %>">
+          <b><%= t :parking_place %> №</b> <%= order.parking_place.title %></a>
+      </td>
+      <td><%= order.booked_time %> <%= t :min %></td>
+      <td><%= order.cost %> <%= t :currency %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

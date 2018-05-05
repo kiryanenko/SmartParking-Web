@@ -3,6 +3,9 @@ class ControlPanelController < ApplicationController
   before_action :authenticate_user!
 
   def main
-    render 'control_panel/main'
+  end
+
+  def orders
+    @orders = Order.owner_orders current_user
   end
 end

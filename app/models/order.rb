@@ -9,6 +9,7 @@ class Order < ApplicationRecord
 
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
   scope :user_orders, ->(user) { where(user: user).order(:id) }
+  scope :owner_orders, ->(user) { joins(parking_place: :parking).where(parking_places: {parkings: {user: user}}).order(:id) }
 
   def payment_not_nil
     self.payment = 0 if self.payment.nil?
