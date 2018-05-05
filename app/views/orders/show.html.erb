@@ -10,8 +10,15 @@
 </p>
 
 <p>
-  <strong><%= t :parking_place %>:</strong>
-  <%= link_to @order.parking_place.title, @order.parking_place %>
+  <strong><%= t :parking_place %>:</strong> <%= @order.parking_place.title %>
+  <br>
+  <strong><%= t :parking %>:</strong> <%= @order.parking_place.parking.title %>
+  <br>
+  <% unless @order.parking_place.parking.description.empty? %>
+    <strong><%= t :description %>:</strong>
+    <br>
+    <%= @order.parking_place.parking.description %>
+  <% end %>
 </p>
 
 <p>
@@ -20,18 +27,27 @@
 </p>
 
 <p>
-  <strong><%= t :amount_to_pay %>:</strong>
-  <%= @order.cost %>
+  <strong><%= t :amount_to_pay %>:</strong> <%= @order.cost %>
+  <br>
+  <strong><%= t :entered_amount %>:</strong> <%= @order.payment %>
+  <br>
+  <strong><%= t :change %>:</strong> <%= @order.payment - @order.cost %>
 </p>
 
-<p>
-  <strong><%= t :entered_amount %>:</strong>
-  <%= @order.payment %>
-</p>
+<div id="map"></div>
+<script>
+    let map;
 
-<p>
-  <strong><%= t :change %>:</strong>
-  <%= @order.payment - @order.cost %>
-</p>
+    function initMap() {
+        map = new ParkingPlaceMap(
+            document.getElementById('map'), {lat: <%= @order.parking_place.coord.x %>, lng: <%= @order.parking_place.coord.y %>},
+            [<%= @order.parking_place.parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
+            true
+        );
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.google_maps_api %>&callback=initMap">
+</script>
 
 <%= link_to t(:back), root_path %>
