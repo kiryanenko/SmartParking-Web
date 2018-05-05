@@ -341,3 +341,4 @@ en:
   order: "Order"
   created_at: "Created at"
   booking_time: "Booking time"
+  order_id: "Order ID"
