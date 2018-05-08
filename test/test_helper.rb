@@ -8,3 +8,18 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+
+class ActionDispatch::IntegrationTest
+  def assert_redirected_to_auth(*args)
+    args.to_h.each_pair do |path, method|
+      case method.downcase
+      when 'get'
+        get path
+      when 'post'
+        post path
+      end
+      assert_redirected_to new_user_session_path
+    end
+  end
+end

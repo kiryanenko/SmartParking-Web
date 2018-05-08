@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
   place_id: 1
   sensor: one
   parking: one
@@ -14,7 +13,6 @@ one:
   can_book: false
 
 two:
-  id: 2
   place_id: 1
   sensor: two
   parking: two

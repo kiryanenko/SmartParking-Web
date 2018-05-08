@@ -27,7 +27,7 @@ class ControlPanelControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # В экшене main перенаправить на страницу авторизации для не авторизованного пользователя
+  # В экшене orders перенаправить на страницу авторизации для не авторизованного пользователя
   test "in orders should redirect to auth" do
     get control_panel_orders_url
     assert_redirected_to new_user_session_path

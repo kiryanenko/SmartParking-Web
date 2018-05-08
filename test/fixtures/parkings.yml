@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 1
   title: MyText
   description: MyText
   cost: 1.5
@@ -11,7 +10,6 @@ one:
   end_time: 2018-03-02 13:20:37
 
 two:
-  id: 2
   title: MyText
   description: MyText
   cost: 1.5

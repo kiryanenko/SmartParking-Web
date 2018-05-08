@@ -6,7 +6,7 @@
   <% if parking_place.for_disabled %><p class="text-info"><%= t :for_disabled %></p><% end %>
 
   <% unless parking_place.parking.start_time.nil? %>
-    <p><b><%= t :working_hours %>:</b> <%= parking_place.parking.start_time + ' — ' + parking_place.parking.end_time %>
+    <p><b><%= t :working_hours %>:</b> <%= parking_place.parking.start_time %> — <%= parking_place.parking.end_time %>
   <% end %>
 
   <% unless parking_place.parking.description.empty? %>

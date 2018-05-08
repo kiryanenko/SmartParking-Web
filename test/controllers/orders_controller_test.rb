@@ -1,17 +1,23 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup do
     @order = orders(:one)
+    @user = users(:one)
+    @parking_place = parking_places(:one)
   end
 
-  test "should get index" do
+  test "should get order index" do
+    sign_in @user
     get orders_url
     assert_response :success
   end
 
-  test "should get new" do
-    get new_order_url
+  test "should get order new" do
+    sign_in @user
+    get new_parking_place_order_url parking_place_id: @parking_place.id
     assert_response :success
   end
 
@@ -44,5 +50,16 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to orders_url
+  end
+
+  # В контроллере orders перенаправить на страницу авторизации для не авторизованного пользователя
+  test "should redirect to auth" do
+    assert_redirected_to_auth(
+        [orders_url, 'get'],
+        [new_parking_parking_place_order_url, 'get'],
+        [control_panel_orders_url, 'get'],
+        [control_panel_orders_url, 'get'],
+        [control_panel_orders_url, 'get'],
+    )
   end
 end
