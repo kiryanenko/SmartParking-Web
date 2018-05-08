@@ -11,6 +11,8 @@ end
 
 
 class ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   def assert_redirected_to_auth(*args)
     args.to_h.each_pair do |path, method|
       case method.downcase
