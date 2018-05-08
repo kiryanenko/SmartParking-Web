@@ -3,19 +3,19 @@
 one:
   id: 1
   user: one
-  sampling_period: 
-  sending_period: 
-  day_cast: 
-  night_cast: 
-  day_start_time: 
-  night_start_time: 
+  sampling_period: 1
+  sending_period: 1
+  day_cost: 1
+  night_cost: 1
+  day_start_time: 1
+  night_start_time: 1
 
 two:
-  id: 1
+  id: 2
   user: two
-  sampling_period: 
-  sending_period: 
-  day_cast: 
-  night_cast: 
-  day_start_time: 
-  night_start_time: 
+  sampling_period: 2
+  sending_period: 2
+  day_cost: 2
+  night_cost: 2
+  day_start_time: 2
+  night_start_time: 2

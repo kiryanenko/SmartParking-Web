@@ -1,11 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   place_id: 1
   sensor: one
   parking: one
   title: MyString
-  coords: 
+  coord: POINT (55.75 37.61)
   for_disabled: false
   booked: false
   free: false
@@ -13,11 +14,12 @@ one:
   can_book: false
 
 two:
+  id: 2
   place_id: 1
   sensor: two
   parking: two
   title: MyString
-  coords: 
+  coord: POINT (55.75 37.61)
   for_disabled: false
   booked: false
   free: false

@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   parking_place: one
   booked: false
   free: false
 
 two:
+  id: 2
   parking_place: two
   booked: false
   free: false

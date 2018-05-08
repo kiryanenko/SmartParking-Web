@@ -1,13 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: 
-  parking_place: 
-  cost: 
+  id: 1
+  user: one
+  parking_place: one
+  booked_time: 1
+  cost: 1
   payment: 1.5
 
 two:
-  user: 
-  parking_place: 
-  cost: 
+  id: 2
+  user: two
+  parking_place: two
+  booked_time: 2
+  cost: 2
   payment: 1.5

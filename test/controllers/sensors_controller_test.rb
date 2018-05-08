@@ -23,10 +23,10 @@ class SensorsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to sensor_url(Sensor.last)
   end
 
-  test "should show sensor" do
-    get sensor_url(@sensor)
-    assert_response :success
-  end
+  # test "should show sensor" do
+  #   get sensor_url(@sensor)
+  #   assert_response :success
+  # end
 
   test "should get edit" do
     get edit_sensor_url(@sensor)
