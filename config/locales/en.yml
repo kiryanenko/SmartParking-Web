@@ -342,3 +342,4 @@ en:
   created_at: "Created at"
   booking_time: "Booking time"
   order_id: "Order ID"
+  payment_terminal: "Payment terminal"

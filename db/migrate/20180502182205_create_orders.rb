@@ -1,7 +1,7 @@
 class CreateOrders < ActiveRecord::Migration[5.2]
   def change
     create_table :orders do |t|
-      t.references :user, index: true, null: false
+      t.references :user, index: true, null: true
       t.references :parking_place, index: true, null: false
       t.float :cost, default: 0, null: false
       t.float :payment, default: 0, null: false

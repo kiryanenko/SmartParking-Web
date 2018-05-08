@@ -8,6 +8,8 @@
     <th><%= t :parking_place %></th>
     <th><%= t :booking_time %></th>
     <th><%= t :cost %></th>
+    <th><%= t :entered_amount %></th>
+    <th><%= t :change %></th>
   </tr>
   </thead>
 
@@ -15,7 +17,13 @@
   <% @orders.each do |order| %>
     <tr>
       <td><%= link_to order.id, order %></td>
-      <td><%= order.user.full_name %></td>
+      <td>
+        <% if order.payment_terminal? %>
+          <span class="text-info"><%= t :payment_terminal %></span>
+        <% else %>
+          <%= order.user.full_name %>
+        <% end %>
+      </td>
       <td>
         <a href="<%= parking_path order.parking_place.parking %>">
           <b><%= t :parking %>:</b> <%= order.parking_place.parking.title %><br></a>
@@ -24,6 +32,8 @@
       </td>
       <td><%= order.booked_time %> <%= t :min %></td>
       <td><%= order.cost %> <%= t :currency %></td>
+      <td><%= order.payment %> <%= t :currency %></td>
+      <td><%= order.payment - order.cost %> <%= t :currency %></td>
     </tr>
   <% end %>
   </tbody>

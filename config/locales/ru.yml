@@ -357,4 +357,5 @@ ru:
   created_at: "Время создания"
   booking_time: "Время бронирования"
   order_id: "Номер заказа"
+  payment_terminal: "Терминал оплаты"
 

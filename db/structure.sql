@@ -85,7 +85,7 @@ CREATE TABLE public.ar_internal_metadata (
 
 CREATE TABLE public.orders (
     id bigint NOT NULL,
-    user_id bigint NOT NULL,
+    user_id bigint,
     parking_place_id bigint NOT NULL,
     cost double precision DEFAULT 0.0 NOT NULL,
     payment double precision DEFAULT 0.0 NOT NULL,

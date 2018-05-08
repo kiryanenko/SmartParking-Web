@@ -1,11 +1,11 @@
 class Order < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   belongs_to :parking_place
 
   before_validation :payment_not_nil
   after_create :book
 
-  validate :need_payment, :enough_money, :parking_place_is_free
+  validate :need_payment, :enough_money, :parking_place_is_free, unless: :payment_terminal?
 
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
   scope :user_orders, ->(user) { where(user: user).order(:id) }
@@ -28,6 +28,10 @@ class Order < ApplicationRecord
     end
   end
 
+  def payment_terminal?
+    self.user.nil?
+  end
+
   def parking_place_is_free
     if self.payment < self.cost
       errors.add(:base, I18n.t(:parking_place_not_free))
@@ -35,12 +39,13 @@ class Order < ApplicationRecord
     end
   end
 
-  def self.payment(user, parking_place, order_time, payment = 0)
+  def self.payment(user, parking_place, order_time, payment = 0, cost = nil)
+    cost = parking_place.parking.cost * order_time * 1.0 / 1.hour if cost.nil?
     Order.new(
         user: user,
         parking_place: parking_place,
         booked_time: order_time,
-        cost: parking_place.parking.cost * order_time * 1.0 / 1.hour,
+        cost: cost,
         payment: payment
     )
   end
@@ -56,6 +61,6 @@ class Order < ApplicationRecord
 
   private
   def book
-    self.parking_place.book(self.booked_time)
+    self.parking_place.book(self.booked_time) unless self.user.nil?
   end
 end
