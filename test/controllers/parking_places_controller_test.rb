@@ -3,6 +3,7 @@ require 'test_helper'
 class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @parking_place = parking_places(:one)
+    @user = users(:owner)
   end
 
   test "should get index" do
@@ -15,9 +16,19 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create parking_place" do
+  # Создать новое парковочное место
+  test "should create parking place" do
+    sign_in @user
+
     assert_difference('ParkingPlace.count') do
-      post parking_places_url, params: { parking_place: { booked: @parking_place.booked, can_book: @parking_place.can_book, connected: @parking_place.connected, coords: @parking_place.coords, for_disabled: @parking_place.for_disabled, free: @parking_place.free, parking_id: @parking_place.parking_id, place_id: @parking_place.place_id, sensor_id: @parking_place.sensor_id, title: @parking_place.title } }
+      post parking_parking_places_url(parking_id: @parking_place.parking_id), params: { parking_place: {
+          can_book: @parking_place.can_book,
+          coord: @parking_place.coord,
+          for_disabled: @parking_place.for_disabled,
+          place_id: @parking_place.place_id + 100,
+          sensor_id: @parking_place.sensor_id,
+          title: @parking_place.title
+      }}
     end
 
     assert_redirected_to parking_place_url(ParkingPlace.last)
