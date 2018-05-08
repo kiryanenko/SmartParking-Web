@@ -9,21 +9,38 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     @parking_place = parking_places(:one)
   end
 
+  # Отобразить страницу со списком заказов
   test "should get order index" do
     sign_in @user
     get orders_url
     assert_response :success
   end
 
+  # Отобразить страницу создания заказа
   test "should get order new" do
     sign_in @user
     get new_parking_place_order_url parking_place_id: @parking_place.id
     assert_response :success
   end
 
+  # Создать новый заказ
   test "should create order" do
+    sign_in @user
     assert_difference('Order.count') do
-      post orders_url, params: { order: { cost: @order.cost, parking_place: @order.parking_place, payment: @order.payment, user: @order.user } }
+      post parking_place_orders_url(parking_place_id: @parking_place.id),
+           params: { order: { payment: @order.payment, booked_time: @order.booked_time} }
+    end
+
+    assert_redirected_to order_url(Order.last)
+  end
+
+  # Создать заказ для бесплатной парковки без оплаты
+  test "should create order for free parking" do
+    sign_in @user
+    order = orders(:order_without_payment)
+    assert_difference('Order.count') do
+      post parking_place_orders_url(parking_place_id: order.parking_place),
+           params: { order: { booked_time: @order.booked_time} }
     end
 
     assert_redirected_to order_url(Order.last)
@@ -56,8 +73,8 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   test "should redirect to auth" do
     assert_redirected_to_auth(
         [orders_url, 'get'],
-        [new_parking_parking_place_order_url, 'get'],
-        [control_panel_orders_url, 'get'],
+        [new_parking_place_order_url(parking_place_id: @parking_place.id), 'get'],
+        [parking_place_orders_url(parking_place_id: @parking_place.id), 'post'],
         [control_panel_orders_url, 'get'],
         [control_panel_orders_url, 'get'],
     )

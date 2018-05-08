@@ -4,7 +4,7 @@ one:
   title: MyText
   description: MyText
   cost: 1.5
-  user_id: one
+  user_id: owner
   area: POLYGON ((55.753 37.611, 55.754 37.611, 55.754 37.612, 55.754 37.613, 55.753 37.611))
   start_time: 2018-03-02 13:20:37
   end_time: 2018-03-02 13:20:37
@@ -13,7 +13,16 @@ two:
   title: MyText
   description: MyText
   cost: 1.5
-  user_id: two
+  user_id: owner
+  area: POLYGON ((55.753 37.611, 55.754 37.611, 55.754 37.612, 55.754 37.613, 55.753 37.611))
+  start_time: 2018-03-02 13:20:37
+  end_time: 2018-03-02 13:20:37
+
+free_parking:
+  title: Free parking
+  description: Free parking
+  cost: 0
+  user_id: owner
   area: POLYGON ((55.753 37.611, 55.754 37.611, 55.754 37.612, 55.754 37.613, 55.753 37.611))
   start_time: 2018-03-02 13:20:37
   end_time: 2018-03-02 13:20:37

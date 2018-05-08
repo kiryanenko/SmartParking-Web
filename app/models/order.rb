@@ -33,7 +33,8 @@ class Order < ApplicationRecord
   end
 
   def parking_place_is_free
-    if self.payment < self.cost
+    place = self.parking_place
+    if not place.can_book or not place.free or place.booked or not place.connected
       errors.add(:base, I18n.t(:parking_place_not_free))
       raise ParkingPlaceNotFree
     end

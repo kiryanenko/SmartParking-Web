@@ -5,11 +5,16 @@ one:
   parking_place: one
   booked_time: 1
   cost: 1
-  payment: 1.5
+  payment: 2.5
 
 two:
   user: two
   parking_place: two
-  booked_time: 2
+  booked_time: 1
   cost: 2
   payment: 1.5
+
+order_without_payment:
+  user: one
+  parking_place: free_parking
+  booked_time: 1

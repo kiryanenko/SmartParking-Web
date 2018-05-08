@@ -8,18 +8,30 @@ one:
   coord: POINT (55.75 37.61)
   for_disabled: false
   booked: false
-  free: false
-  connected: false
-  can_book: false
+  free: true
+  connected: true
+  can_book: true
 
 two:
-  place_id: 1
+  place_id: 2
   sensor: two
   parking: two
   title: MyString
   coord: POINT (55.75 37.61)
   for_disabled: false
   booked: false
-  free: false
-  connected: false
-  can_book: false
+  free: true
+  connected: true
+  can_book: true
+
+free_parking:
+  place_id: 3
+  sensor: two
+  parking: free_parking
+  title: Free 1
+  coord: POINT (55.75 37.61)
+  for_disabled: false
+  booked: false
+  free: true
+  connected: true
+  can_book: true
