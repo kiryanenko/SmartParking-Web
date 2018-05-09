@@ -44,27 +44,11 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to order_url(Order.last)
   end
 
+  # Отобразить страницу заказа
   test "should show order" do
-    get order_url(@order)
+    sign_in @user
+    get order_url(id: @order.id)
     assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_order_url(@order)
-    assert_response :success
-  end
-
-  test "should update order" do
-    patch order_url(@order), params: { order: { cost: @order.cost, parking_place: @order.parking_place, payment: @order.payment, user: @order.user } }
-    assert_redirected_to order_url(@order)
-  end
-
-  test "should destroy order" do
-    assert_difference('Order.count', -1) do
-      delete order_url(@order)
-    end
-
-    assert_redirected_to orders_url
   end
 
   # В контроллере orders перенаправить на страницу авторизации для не авторизованного пользователя
@@ -73,8 +57,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
         [orders_url, 'get'],
         [new_parking_place_order_url(parking_place_id: @parking_place.id), 'get'],
         [parking_place_orders_url(parking_place_id: @parking_place.id), 'post'],
-        [control_panel_orders_url, 'get'],
-        [control_panel_orders_url, 'get'],
+        [order_url(id: @order.id), 'get']
     )
   end
 end
