@@ -20,6 +20,8 @@ class ActionDispatch::IntegrationTest
         get path
       when 'post'
         post path
+      when 'patch'
+        patch path
       end
       assert_redirected_to new_user_session_path
     end
