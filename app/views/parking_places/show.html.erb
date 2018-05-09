@@ -1,5 +1,6 @@
 <%= render 'components/header', title: "#{t(:parking_place)} № <b>#{@parking_place.place_id}</b>" do %>
   <%= link_to t(:edit), edit_parking_place_path(@parking_place), class: 'btn btn-sm btn-outline-secondary' %>
+  <%= link_to t(:remove), parking_place_path(@parking_place), method: :delete, class: 'btn btn-sm btn-outline-danger' %>
 <% end %>
 
 <h4>
