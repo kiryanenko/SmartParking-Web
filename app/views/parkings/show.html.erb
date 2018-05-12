@@ -1,5 +1,11 @@
 <%= render 'components/header', title: "<b>#{t(:parking)}:</b> #{@parking.title}" do %>
-  <%= link_to t(:edit), edit_parking_path(@parking), class: 'btn btn-sm btn-outline-secondary' %>
+  <%= link_to edit_parking_path(@parking), class: 'btn btn-sm btn-outline-secondary mx-1' do %>
+    <%= material_icon.edit.css_class('feather md-16') %> <%= t(:edit) %>
+  <% end %>
+  <%= link_to parking_path(@parking), method: :delete, class: 'btn btn-sm btn-outline-danger',
+              data: {confirm: t(:confirm)} do %>
+    <%= material_icon.delete.css_class('feather md-16') %> <%= t(:remove) %>
+  <% end %>
 <% end %>
 
 

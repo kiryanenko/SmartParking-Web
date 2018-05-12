@@ -1,5 +1,11 @@
 <%= render 'components/header', title: "<b>#{t(:sensor)}:</b> ##{@sensor.id}" do %>
-  <%= link_to t(:edit), edit_sensor_path(@sensor), class: 'btn btn-sm btn-outline-secondary' %>
+  <%= link_to edit_sensor_path(@sensor), class: 'btn btn-sm btn-outline-secondary mx-1' do %>
+    <%= material_icon.edit.css_class('feather md-16') %> <%= t(:edit) %>
+  <% end %>
+  <%= link_to sensor_path(@sensor), method: :delete, class: 'btn btn-sm btn-outline-danger',
+              data: {confirm: t(:confirm)} do %>
+    <%= material_icon.delete.css_class('feather md-16') %> <%= t(:remove) %>
+  <% end %>
 <% end %>
 <p>
   <strong><%= t :sampling_period %>:</strong>

@@ -2,6 +2,8 @@ class ParkingPlace < ApplicationRecord
   belongs_to :sensor
   belongs_to :parking, counter_cache: true
   has_one :user, through: :parking
+  has_many :parking_states, dependent: :destroy
+  has_many :orders, dependent: :destroy
 
   validates :title, presence: true
   validates :place_id, uniqueness: { scope: :sensor }

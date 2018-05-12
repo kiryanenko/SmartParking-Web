@@ -2,7 +2,7 @@ require 'rgeo'
 
 class Parking < ApplicationRecord
   belongs_to :user
-  has_many :parking_places
+  has_many :parking_places, dependent: :destroy
 
   before_validation :ensure_times_both_nil
   validates :title, :area, presence: true

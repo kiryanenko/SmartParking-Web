@@ -60,7 +60,7 @@ class ParkingPlacesController < ApplicationController
   def destroy
     @parking_place.destroy
     respond_to do |format|
-      format.html { redirect_to parking_places_url, notice: t(:parking_place_destroyed) }
+      format.html { redirect_to @parking_place.parking, notice: t(:parking_place_destroyed) }
       format.json { head :no_content }
     end
   end

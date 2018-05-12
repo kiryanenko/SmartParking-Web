@@ -1,14 +1,10 @@
 class Sensor < ApplicationRecord
   self.primary_key = :id
   belongs_to :user
+  has_many :parking_places, dependent: :destroy
 
-  def self.user_sensors(user)
-    where(user: user).order(:id)
-  end
-
-  def self.find_for_user(id, user)
-    find_by!(id: id, user: user)
-  end
+  scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
+  scope :user_sensors, ->(user) { where(user: user).order(:id) }
 
   def get_day_start_time
     Time.at(day_start_time).utc
