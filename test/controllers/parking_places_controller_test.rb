@@ -36,6 +36,7 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to parking_place_url(ParkingPlace.last)
   end
 
+
   # Отобразить страницу парковочного места
   test "should show parking place" do
     sign_in @user
@@ -43,12 +44,30 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # Получить ошибку при попытки открыть страницу парковочного места другого пользователя
+  test "should get error in show parking place for other user" do
+    sign_in users(:two)
+    assert_raises ActiveRecord::RecordNotFound do
+      get parking_place_url(id: @parking_place)
+    end
+  end
+
+
   # Отобразить страницу изменения парковочного места
   test "should get parking place edit page" do
     sign_in @user
     get edit_parking_place_url(id: @parking_place)
     assert_response :success
   end
+
+  # Получить ошибку при попытки открыть страницу изменения парковочного места другого пользователя
+  test "should get error in edit parking place for other user" do
+    sign_in users(:two)
+    assert_raises ActiveRecord::RecordNotFound do
+      get edit_parking_place_url(id: @parking_place)
+    end
+  end
+
 
   # Изменить парковочное место
   test "should update parking_place" do
@@ -64,6 +83,22 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to parking_place_url(@parking_place)
   end
 
+  # Получить ошибку при попытки изменить парковочного места другого пользователя
+  test "should get error at updating parking place for other user" do
+    sign_in users(:two)
+    assert_raises ActiveRecord::RecordNotFound do
+      patch parking_place_url(id: @parking_place), params: { parking_place: {
+          coord: @parking_place.coord,
+          for_disabled: @parking_place.for_disabled,
+          parking_id: @parking_place.parking_id,
+          place_id: @parking_place.place_id,
+          sensor_id: @parking_place.sensor_id,
+          title: @parking_place.title
+      }}
+    end
+  end
+
+
   # Удалить парковочное место
   test "should destroy parking_place" do
     sign_in @user
@@ -71,8 +106,17 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
       delete parking_place_url(id: @parking_place)
     end
 
-    assert_redirected_to parking_places_url
+    assert_redirected_to parking_url(@parking_place.parking_id)
   end
+
+  # Получить ошибку при попытки открыть страницу изменения парковочного места другого пользователя
+  test "should get error at destroying parking place for other user" do
+    sign_in users(:two)
+    assert_raises ActiveRecord::RecordNotFound do
+      delete parking_place_url(id: @parking_place)
+    end
+  end
+
 
   # В контроллере parking places перенаправить на страницу авторизации для не авторизованного пользователя
   test "should redirect to auth" do
@@ -82,7 +126,8 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
         [parking_place_orders_url(parking_place_id: @parking_place.id), 'post'],
         [parking_place_url(id: @parking_place), 'get'],
         [parking_place_url(id: @parking_place), 'patch'],
-        [edit_parking_place_url(id: @parking_place), 'get'],
+        [parking_place_url(id: @parking_place), 'delete'],
+        [edit_parking_place_url(id: @parking_place), 'get']
     )
   end
 end
