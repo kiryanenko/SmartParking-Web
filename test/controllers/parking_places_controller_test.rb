@@ -123,7 +123,6 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to_auth(
         [new_parking_parking_place_url(parking_id: @parking_place.parking), 'get'],
         [parking_parking_places_url(parking_id: @parking_place.parking_id), 'get'],
-        [parking_place_orders_url(parking_place_id: @parking_place.id), 'post'],
         [parking_place_url(id: @parking_place), 'get'],
         [parking_place_url(id: @parking_place), 'patch'],
         [parking_place_url(id: @parking_place), 'delete'],
