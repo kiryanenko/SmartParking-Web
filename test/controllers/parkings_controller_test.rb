@@ -110,6 +110,15 @@ class ParkingsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to parkings_url
   end
 
+  # Получить ошибку при попытки удалить стоянку другого пользователя
+  test "should get error at deleting parking for other user" do
+    sign_in users(:two)
+    assert_raises ActiveRecord::RecordNotFound do
+      delete parking_url(id: @parking)
+    end
+  end
+
+
   # В контроллере parkings перенаправить на страницу авторизации для не авторизованного пользователя
   test "should redirect to auth" do
     assert_redirected_to_auth(
