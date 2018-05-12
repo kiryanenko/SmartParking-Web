@@ -16,7 +16,7 @@
   <tbody>
   <% @orders.each do |order| %>
     <tr>
-      <td><%= link_to order.id, order %></td>
+      <td><%= order.id %></td>
       <td>
         <% if order.payment_terminal? %>
           <span class="text-info"><%= t :payment_terminal %></span>

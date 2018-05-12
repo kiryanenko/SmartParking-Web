@@ -60,7 +60,7 @@ class OrdersController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_order
-    @order = Order.find(params[:id])
+    @order = Order.find_for_user(params[:id], current_user)
   end
 
   def set_parking_place

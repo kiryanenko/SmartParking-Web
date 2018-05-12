@@ -51,6 +51,14 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # Получить ошибку при попытки открыть страницу заказа другого пользователя
+  test "should get error in show order for other user" do
+    sign_in users(:two)
+    assert_raises ActiveRecord::RecordNotFound do
+      get order_url(id: @order.id)
+    end
+  end
+
   # В контроллере orders перенаправить на страницу авторизации для не авторизованного пользователя
   test "should redirect to auth" do
     assert_redirected_to_auth(
