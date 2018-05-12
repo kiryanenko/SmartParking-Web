@@ -7,14 +7,14 @@ class ParkingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   # Отобразить страницу стоянок
-  test "should get index" do
+  test "should get parking index" do
     sign_in @user
     get parkings_url
     assert_response :success
   end
 
   # Отобразить страницу добавления стоянки
-  test "should get new" do
+  test "should get parking new" do
     sign_in @user
     get new_parking_url
     assert_response :success

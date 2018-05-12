@@ -54,7 +54,7 @@ class SensorsController < ApplicationController
         format.html { redirect_to sensors_path, notice: t(:sensor_updated) }
         format.json { render :show, status: :ok, location: @sensor }
       else
-        format.html { render :edit }
+        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @sensor.errors, status: :unprocessable_entity }
       end
     end
