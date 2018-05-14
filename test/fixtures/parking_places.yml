@@ -35,3 +35,39 @@ free_parking:
   free: true
   connected: true
   can_book: true
+
+not_free_parking:
+  place_id: 5
+  sensor: two
+  parking: one
+  title: Not Free 1
+  coord: POINT (55.75 37.61)
+  for_disabled: false
+  booked: false
+  free: false
+  connected: true
+  can_book: true
+
+booked_parking:
+  place_id: 6
+  sensor: two
+  parking: one
+  title: Not Free 1
+  coord: POINT (55.75 37.61)
+  for_disabled: false
+  booked: true
+  free: true
+  connected: true
+  can_book: true
+
+disconnected_parking:
+  place_id: 7
+  sensor: two
+  parking: one
+  title: Not Free 1
+  coord: POINT (55.75 37.61)
+  for_disabled: false
+  booked: false
+  free: false
+  connected: false
+  can_book: true

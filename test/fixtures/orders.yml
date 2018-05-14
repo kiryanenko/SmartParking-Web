@@ -3,7 +3,7 @@
 one:
   user: one
   parking_place: one
-  booked_time: 1
+  booked_time: 3600
   cost: 1
   payment: 2.5
 
@@ -12,9 +12,43 @@ two:
   parking_place: two
   booked_time: 1
   cost: 2
-  payment: 1.5
+  payment: 2.5
 
 order_without_payment:
   user: one
   parking_place: free_parking
   booked_time: 1
+
+not_free_parking:
+  user: one
+  parking_place: not_free_parking
+  booked_time: 1
+
+booked_parking:
+  user: one
+  parking_place: booked_parking
+  booked_time: 1
+
+disconnected_parking:
+  user: one
+  parking_place: disconnected_parking
+  booked_time: 1
+
+terminal_payment:
+  user: NULL
+  parking_place: not_free_parking
+  booked_time: 1
+
+not_enough_money:
+  user: one
+  parking_place: one
+  booked_time: 1
+  cost: 2
+  payment: 1.5
+
+need_payment:
+  user: one
+  parking_place: one
+  booked_time: 1
+  cost: 2
+  payment: 0
