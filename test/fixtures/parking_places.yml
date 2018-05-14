@@ -71,3 +71,15 @@ disconnected_parking:
   free: false
   connected: false
   can_book: true
+
+can_not_book:
+  place_id: 8
+  sensor: one
+  parking: one
+  title: MyString
+  coord: POINT (55.75 37.61)
+  for_disabled: false
+  booked: false
+  free: true
+  connected: true
+  can_book: false

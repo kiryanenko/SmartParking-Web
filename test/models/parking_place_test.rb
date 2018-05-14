@@ -18,4 +18,15 @@ class ParkingPlaceTest < ActiveSupport::TestCase
       ParkingPlace.parking_places_at_location(coord, radius).find(parking_place.id)
     end
   end
+
+  # Парковочное место в заданном положении было отфильтровано
+  test "parking place at location filtered by params" do
+    parking_place = parking_places(:can_not_book)
+    coord = {lat: parking_place.coord.x - 1, lng: parking_place.coord.y + 1}
+    radius = 2
+    params = {can_book: true}
+    assert_raise ActiveRecord::RecordNotFound do
+      ParkingPlace.parking_places_at_location(coord, radius, params).find(parking_place.id)
+    end
+  end
 end
