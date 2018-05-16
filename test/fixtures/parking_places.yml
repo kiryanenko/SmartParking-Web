@@ -75,7 +75,7 @@ disconnected_parking:
 can_not_book:
   place_id: 8
   sensor: one
-  parking: one
+  parking: can_not_book
   title: MyString
   coord: POINT (55.75 37.61)
   for_disabled: false

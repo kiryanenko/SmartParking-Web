@@ -26,3 +26,12 @@ free_parking:
   area: POLYGON ((55.753 37.611, 55.754 37.611, 55.754 37.612, 55.754 37.613, 55.753 37.611))
   start_time: 2018-03-02 13:20:37
   end_time: 2018-03-02 13:20:37
+
+can_not_book:
+  title: Free parking
+  description: Free parking
+  cost: 0
+  user: owner
+  area: POLYGON ((55.753 37.611, 55.754 37.611, 55.754 37.612, 55.754 37.613, 55.753 37.611))
+  start_time: 2018-03-02 13:20:37
+  end_time: 2018-03-02 13:20:37
