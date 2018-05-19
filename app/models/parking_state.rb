@@ -12,7 +12,7 @@ class ParkingState < ApplicationRecord
 
     parking_place.free = free
     parking_place.connected = true
-    parking_place.changed_state = true  # FIXME
+    parking_place.changed_state = true  # FIXME: костыль
     parking_place.save
   end
 end

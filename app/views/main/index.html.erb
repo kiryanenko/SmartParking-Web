@@ -20,6 +20,7 @@
         <% if user_signed_in? %>
           <span><%= current_user.email %></span>
           <div class="mt-2">
+            <%= link_to t(:orders), orders_path, :class => 'btn btn-outline-light btn-sm'%>
             <%= link_to t(:logout), destroy_user_session_path, :method => :delete, :class => 'btn btn-secondary btn-sm'%>
           </div>
         <% else %>
