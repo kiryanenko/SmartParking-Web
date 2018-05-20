@@ -21,6 +21,7 @@ Rails.application.config.assets.precompile += %w(
   parkings.css parkings.js
   parking_places.css parking_places.js
   orders.css orders.js
-  devise/*.css devise/*.js
+  devise/sessions.css devise/sessions.js
+  devise/registrations.css devise/registrations.js
   cluster.png
 )

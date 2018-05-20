@@ -82,3 +82,6 @@ gem 'dalli'
 
 # Generates javascript file that defines all Rails named routes as javascript helpers
 gem 'js-routes'
+
+# Whenever is a Ruby gem that provides a clear syntax for writing and deploying cron jobs.
+gem 'whenever'
