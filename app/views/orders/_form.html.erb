@@ -51,7 +51,7 @@
           map = new ParkingPlaceMap(
               document.getElementById('map'), {lat: <%= parking_place.coord.x %>, lng: <%= parking_place.coord.y %>},
               [<%= parking_place.parking.area.coordinates[0].map { |coord| "{lat: #{coord.first}, lng: #{coord.last}}" }.join(', ') %>],
-              true
+              false
           );
       }
   </script>
