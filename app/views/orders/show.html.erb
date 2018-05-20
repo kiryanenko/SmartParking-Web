@@ -23,7 +23,7 @@
 
 <p>
   <strong><%= t :booking_time %>:</strong>
-  <%= @order.booked_time / 60 %> <%= t :min %>
+  <%= @order.booked_time / 1.minute %> <%= t :min %>
 </p>
 
 <p>

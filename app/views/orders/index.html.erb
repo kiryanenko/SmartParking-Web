@@ -20,7 +20,7 @@
           <b><%= t :parking %>:</b> <%= order.parking_place.parking.title %><br>
           <b><%= t :parking_place %> №</b> <%= order.parking_place.title %>
         </td>
-        <td><%= order.booked_time %> <%= t :min %></td>
+        <td><%= order.booked_time / 1.minute %> <%= t :min %></td>
         <td><%= order.cost %> <%= t :currency %></td>
       </tr>
     <% end %>
