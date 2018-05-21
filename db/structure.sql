@@ -90,6 +90,8 @@ CREATE TABLE public.orders (
     cost double precision DEFAULT 0.0 NOT NULL,
     payment double precision DEFAULT 0.0 NOT NULL,
     booked_time integer NOT NULL,
+    end_time timestamp without time zone NOT NULL,
+    active boolean DEFAULT true NOT NULL,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -418,6 +420,20 @@ ALTER TABLE ONLY public.sensors
 
 ALTER TABLE ONLY public.users
     ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_orders_on_active; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_orders_on_active ON public.orders USING btree (active);
+
+
+--
+-- Name: index_orders_on_end_time; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_orders_on_end_time ON public.orders USING btree (end_time);
 
 
 --

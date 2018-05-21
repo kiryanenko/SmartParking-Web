@@ -16,11 +16,6 @@ class ParkingPlace < ApplicationRecord
     joins(:parking).find_by!(place_id: place_id, sensor: sensor, parkings: {user: user})
   end
 
-  scope :cancel_reservations, -> do
-    where(booked: true).joins(:orders).where("orders.created_at + INTERVAL '1 second' * orders.booked_time < now()").
-        order('orders.id DESC').limit(1).update_all(booked: false)
-  end
-
   scope :parking_places_at_location, ->(coord, radius, params = {}) do
     where("ST_Intersects(ST_GeographyFromText('SRID=4326;POLYGON((? ?, ? ?, ? ?, ? ?, ? ?))'), coord)",
           coord[:lat] - radius, coord[:lng] - radius,

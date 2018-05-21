@@ -6,6 +6,8 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.float :cost, default: 0, null: false
       t.float :payment, default: 0, null: false
       t.integer :booked_time, limit: 4, null: false
+      t.timestamp :end_time, index: true, null: false
+      t.boolean :active, default: true, index: true, null: false
 
       t.timestamps
     end

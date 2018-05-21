@@ -20,5 +20,5 @@ set :output, "/app/log/cron.log"
 # Learn more: http://github.com/javan/whenever
 
 every 1.minute do
-  runner 'ParkingPlace.cancel_reservations'
+  runner 'Order.stop_reservations'
 end

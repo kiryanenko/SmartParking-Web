@@ -3,13 +3,17 @@ class Order < ApplicationRecord
   belongs_to :parking_place
 
   before_validation :payment_not_nil
+  before_create :set_end_time
   after_create :book
 
   validate :need_payment, :enough_money, :parking_place_is_free, unless: :payment_terminal?
 
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
   scope :user_orders, ->(user) { where(user: user).order(id: :desc) }
-  scope :owner_orders, ->(user) { joins(parking_place: :parking).where(parking_places: {parkings: {user: user}}).order(id: :desc) }
+
+  scope :owner_orders, ->(user) do
+    joins(parking_place: :parking).where(parking_places: {parkings: {user: user}}).order(id: :desc)
+  end
 
   def payment_not_nil
     self.payment = 0 if self.payment.nil?
@@ -51,6 +55,12 @@ class Order < ApplicationRecord
     )
   end
 
+  def self.stop_reservations
+    orders_to_finish = where(active: true).where('end_time < now()')
+    ParkingPlace.joins(:orders).where(orders: orders_to_finish).update_all(booked: false)
+    orders_to_finish.update_all(active: false)
+  end
+
   class NeedPayment < StandardError
   end
 
@@ -63,5 +73,9 @@ class Order < ApplicationRecord
   private
   def book
     self.parking_place.book(self.booked_time) unless self.user.nil?
+  end
+
+  def set_end_time
+    self.end_time = Time.now + self.booked_time
   end
 end
