@@ -20,7 +20,7 @@ class MapSquare
         lng: params[:coord][:lng].near(@radius * n_lng, @radius * (n_lng + 1))
     }
 
-    @cost = params[:cost] || 1000
+    @cost = params[:cost] || -1
     @only_free = params[:only_free].nil? ? true : params[:only_free]
     @can_book = params[:can_book] || false
     @with_disabled = params[:with_disabled] || false
