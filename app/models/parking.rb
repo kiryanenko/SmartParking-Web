@@ -13,7 +13,7 @@ class Parking < ApplicationRecord
   scope :find_for_user, ->(id, user) { find_by! id: id, user: user }
   scope :user_parkings, ->(user) { where(user: user).order(:id) }
 
-  scope :parkings_at_location, ->(coord, radius, cost = 0, params = {}) do
+  scope :parkings_at_location, ->(coord, radius, cost = -1, params = {}) do
     res = where("ST_Intersects(ST_GeographyFromText('SRID=4326;POLYGON((
                 :area_lat1 :area_lng1,
                 :area_lat2 :area_lng2,
@@ -25,7 +25,7 @@ class Parking < ApplicationRecord
               area_lat3: coord[:lat] + radius, area_lng3: coord[:lng] + radius,
               area_lat4: coord[:lat] + radius, area_lng4: coord[:lng] - radius,
     )
-    res = res.where('cost <= ?', cost) if cost > 0
+    res = res.where('cost <= ?', cost) if cost > -1
     res = res.joins(:parking_places).where(parking_places: params).distinct if params.any?
     res
   end
