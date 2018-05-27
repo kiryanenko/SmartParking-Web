@@ -344,3 +344,4 @@ en:
   order_id: "Order ID"
   payment_terminal: "Payment terminal"
   remove: "Remove"
+  control_panel_description: "In this section, car park owners can add and change their parking lots, view the orders of users, and add sensors for registration of free parking places and to control them."
