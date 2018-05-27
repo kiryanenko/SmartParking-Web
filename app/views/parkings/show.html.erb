@@ -63,7 +63,7 @@
     </thead>
 
     <tbody>
-    <% @parking.parking_places.each do |place| %>
+    <% @parking.parking_places.order(:id).each do |place| %>
       <tr onclick="window.location.href='<%= parking_place_path(place) %>'; return false">
         <td><b><%= place.id %></b></td>
         <td><%= link_to place.sensor.id, place.sensor %></td>
