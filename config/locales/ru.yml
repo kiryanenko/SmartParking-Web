@@ -351,7 +351,7 @@ ru:
   amount_to_pay: "Сумма к оплате"
   user: "Пользователь"
   entered_amount: "Внесенная сумма"
-  cancel: "Отммена"
+  cancel: "Отмена"
   change: "Сдача"
   order: "Заказ"
   created_at: "Время создания"
