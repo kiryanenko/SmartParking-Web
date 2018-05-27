@@ -27,7 +27,7 @@
             <%= parking.start_time.strftime("%R") %> — <%= parking.end_time.strftime("%R") %>
           <% end %>
         </td>
-        <td>123</td>
+        <td><%= parking.parking_places_count %></td>
       </tr>
     <% end %>
     </tbody>
