@@ -18,7 +18,7 @@
     </p>
   <% end %>
 
-  <h6><strong><%= t :cost_per_hour %>:</strong> <%= parking_place.parking.cost %> <%= t :currency %></h6>
+  <h6><strong><%= t :cost_per_hour %>:</strong> <%= '%.2f' % parking_place.parking.cost %> <%= t :currency %></h6>
 
   <%= form.select :booked_time, [
       ["1 #{t :min}", 1.minute],

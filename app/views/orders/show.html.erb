@@ -27,11 +27,11 @@
 </p>
 
 <p>
-  <strong><%= t :amount_to_pay %>:</strong> <%= @order.cost %> <%= t :currency %>
+  <strong><%= t :amount_to_pay %>:</strong> <%= '%.2f' % @order.cost %> <%= t :currency %>
   <br>
-  <strong><%= t :entered_amount %>:</strong> <%= @order.payment %> <%= t :currency %>
+  <strong><%= t :entered_amount %>:</strong> <%= '%.2f' % @order.payment %> <%= t :currency %>
   <br>
-  <strong><%= t :change %>:</strong> <%= @order.payment - @order.cost %> <%= t :currency %>
+  <strong><%= t :change %>:</strong> <%= '%.2f' % (@order.payment - @order.cost) %> <%= t :currency %>
 </p>
 
 <div id="map"></div>

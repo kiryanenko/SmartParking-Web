@@ -16,7 +16,7 @@
 
 <p>
   <strong><%= t :cost %>:</strong>
-  <%= @parking.cost %> <%= t :currency %>
+  <%= '%.2f' % @parking.cost %> <%= t :currency %>
 </p>
 
 <p>

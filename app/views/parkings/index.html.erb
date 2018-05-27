@@ -19,7 +19,7 @@
       <tr onclick="window.location.href='<%= parking_url(parking) %>'; return false">
         <td><%= parking.title %></td>
         <td><%= parking.description %></td>
-        <td><%= parking.cost %></td>
+        <td><%= '%.2f' % parking.cost %> <%= t :currency %></td>
         <td>
           <% if parking.start_time.nil? %>
             —

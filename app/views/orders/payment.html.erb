@@ -1,5 +1,5 @@
 <h1 class="mb-3"><%= t :payment %></h1>
-<h4 class="mb-3"><b><%= t :amount_to_pay %>:</b> <%= @order.cost %> <%= t :currency %></h4>
+<h4 class="mb-3"><b><%= t :amount_to_pay %>:</b> <%= '%.2f' % @order.cost %> <%= t :currency %></h4>
 <%= bootstrap_form_with(model: [@parking_place, @order], local: true) do |f| %>
   <%= render 'components/form_errors', resource: @order %>
 

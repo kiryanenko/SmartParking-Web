@@ -33,9 +33,9 @@
           <b><%= t :parking_place %> №</b> <%= order.parking_place.title %></a>
       </td>
       <td><%= order.booked_time / 1.minute %> <%= t :min %></td>
-      <td><%= order.cost %> <%= t :currency %></td>
-      <td><%= order.payment %> <%= t :currency %></td>
-      <td><%= order.payment - order.cost %> <%= t :currency %></td>
+      <td><%= '%.2f' % order.cost %> <%= t :currency %></td>
+      <td><%= '%.2f' % order.payment %> <%= t :currency %></td>
+      <td><%= '%.2f' % (order.payment - order.cost) %> <%= t :currency %></td>
     </tr>
   <% end %>
   </tbody>
