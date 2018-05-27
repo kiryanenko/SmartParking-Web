@@ -23,8 +23,8 @@
         <td><b><%= sensor.id %></b></td>
         <td><%= sensor.sampling_period %> <%= t :ms %></td>
         <td><%= sensor.sending_period %> <%= t :ms %></td>
-        <td><%= sensor.day_cost %></td>
-        <td><%= sensor.night_cost %></td>
+        <td><%= sensor.day_cost %> <%= t :currency %></td>
+        <td><%= sensor.night_cost %> <%= t :currency %></td>
         <td><%= sensor.get_day_start_time.strftime "%R" %></td>
         <td><%= sensor.get_night_start_time.strftime "%R" %></td>
         <td><%= link_to t(:edit), edit_sensor_path(sensor) %></td>
