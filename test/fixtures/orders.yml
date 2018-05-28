@@ -4,6 +4,7 @@ one:
   user: one
   parking_place: one
   booked_time: 3600
+  end_time: 2018-05-28 17:49:34
   cost: 1
   payment: 2.5
 
@@ -11,6 +12,7 @@ two:
   user: two
   parking_place: two
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
   cost: 2
   payment: 2.5
 
@@ -18,31 +20,37 @@ order_without_payment:
   user: one
   parking_place: free_parking
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
 
 not_free_parking:
   user: one
   parking_place: not_free_parking
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
 
 booked_parking:
   user: one
   parking_place: booked_parking
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
 
 disconnected_parking:
   user: one
   parking_place: disconnected_parking
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
 
 terminal_payment:
   user: NULL
   parking_place: not_free_parking
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
 
 not_enough_money:
   user: one
   parking_place: one
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
   cost: 2
   payment: 1.5
 
@@ -50,5 +58,6 @@ need_payment:
   user: one
   parking_place: one
   booked_time: 1
+  end_time: 2018-05-28 17:49:34
   cost: 2
   payment: 0

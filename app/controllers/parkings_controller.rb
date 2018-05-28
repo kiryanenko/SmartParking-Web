@@ -1,5 +1,5 @@
 class ParkingsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:parkings_at_location]
   before_action :set_parking, only: [:show, :edit, :update, :destroy]
 
   layout 'control_panel'
@@ -8,6 +8,17 @@ class ParkingsController < ApplicationController
   # GET /parkings.json
   def index
     @parkings = Parking.user_parkings current_user
+  end
+
+  # GET /parkings.json
+  def parkings_at_location
+    render json: MapSquare.new({
+                                   radius: params[:radius].to_f,
+                                   coord: {
+                                       lat: params[:coord][:lat].to_f,
+                                       lng: params[:coord][:lng].to_f
+                                   }
+                               }).parkings_cache
   end
 
   # GET /parkings/1

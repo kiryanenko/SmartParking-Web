@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     devise_for :users
     root 'main#index'
     get 'main/index'
+
+    scope 'api' do
+      get '/parkings', to: 'parkings#parkings_at_location'
+    end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

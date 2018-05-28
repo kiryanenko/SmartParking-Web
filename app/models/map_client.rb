@@ -1,5 +1,3 @@
-require './app/utils/numeric'
-
 class MapClient
   attr_reader :id, :square
 
@@ -10,9 +8,7 @@ class MapClient
   end
 
   def send_parkings
-    parkings = Rails.cache.fetch(@square.stream, expires_in: Rails.configuration.min_map_sending_period) do
-      @square.parkings
-    end
+    parkings = @square.parkings_cache
     ActionCable.server.broadcast stream, parkings
     @last_send = Time.now
   end

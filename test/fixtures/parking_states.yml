@@ -2,7 +2,7 @@
 
 last_state:
   parking_place: one
-  free: false
+  free: true
 
 two:
   parking_place: two

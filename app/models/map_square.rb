@@ -1,3 +1,5 @@
+require './app/utils/numeric'
+
 # Для оптимизации карта была поделена на пересекающиеся квадраты.
 # Таким образом, было ограничено количество запросов к БД.
 class MapSquare
@@ -37,6 +39,12 @@ class MapSquare
     params[:for_disabled] = false unless @with_disabled
 
     Parking.response_parkings_at_location @coord, @radius, @cost, params
+  end
+
+  def parkings_cache
+    Rails.cache.fetch(stream, expires_in: Rails.configuration.min_map_sending_period) do
+      parkings
+    end
   end
 
   def broadcast
