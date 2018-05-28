@@ -10,7 +10,7 @@ class ParkingsController < ApplicationController
     @parkings = Parking.user_parkings current_user
   end
 
-  # GET /parkings.json
+  # GET /api/parkings?radius=1.5&coord[lat]=55.1&coord[lng]=37.1
   def parkings_at_location
     render json: MapSquare.new({
                                    radius: params[:radius].to_f,
