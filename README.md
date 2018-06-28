@@ -575,7 +575,7 @@ Docker и инструмент Docker-compose.
 разворачиванию Docker-контейнера веб-приложения Ruby on Rails:
 
 Листинг 3 -- Файл «Dockerfile»
-```docker
+```dockerfile
 FROM ruby:2.3
 MAINTAINER Kiryanenko Alexander <KiryanenkoAV@gmail.com>
 
@@ -718,8 +718,7 @@ HttpUpstreamModule. С помощью облачной платформы Google
 
 Рисунок -- Принципиальная схема сети
 
-Ниже (Листинг 5) показан конфигурационный файл Nginx для балансировщика
-нагрузки:
+Ниже (Листинг 5) показан конфигурационный файл Nginx для балансировщика нагрузки:
 
 Листинг 5 -- Файл «nginx-balancer.conf»
 ```
