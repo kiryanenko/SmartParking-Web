@@ -415,7 +415,7 @@ Maps APIs. Данное API очень удобное, имеет хорошую
 подключается к каналу `MapChannel` и для выдачи парковочных мест в
 заданной области передаёт следующие параметры запроса: координаты
 местоположения, радиус и список фильтров поиска. Сервер нового клиента
-подписывает на соответствующий поток (stream), по которому периодически
+подписывает на соответствующий поток (`stream`), по которому периодически
 высылаются состояния парковочных в заданной области.
 
 В БД для оптимизации поиска в таблицах на всех полях, по которым
@@ -429,55 +429,33 @@ Maps APIs. Данное API очень удобное, имеет хорошую
 определяются, исходя из масштаба, определяемого по переданному радиусу.
 Таким образом, количество таких квадратов ограничено и, следовательно,
 исчезает уникальность в запросах пользователей, клиентов можно
-подписывать на общие потоки и появляется возможность кэширования
-запросов.
+подписывать на общие потоки и появляется возможность кэширования запросов.
 
-Масштаб $s$ вычисляется по формуле:
+Масштаб `s` вычисляется по формуле:
 
-  -- -------------------------------------------------------------------------------- -----
-     $$s = \text{ceil}\left( \operatorname{}\frac{2*r_{исх}}{a_{\min}} \right)\ ,$$   (1)
-  -- -------------------------------------------------------------------------------- -----
+![](https://latex.codecogs.com/gif.latex?$$s&space;=&space;ceil(log_2{\frac{2*r_{src}}{a_{min}}})$$)
 
-где, $r_{исх}$ - радиус из параметра запроса:
+где, `r_src` - радиус из параметра запроса:
 
-$a_{\min}$ - константа, минимальная сторона квадрата, равная 0,01.
+`a_min` - константа, минимальная сторона квадрата, равная 0,01.
 
-Сторона квадрата $a$ определяется формулой:
+Сторона квадрата `a` определяется формулой:
 
-  -- --------------------------- -----
-     $$a = a_{\min}*2^{s}\ ,$$   (2)
-  -- --------------------------- -----
+![](https://latex.codecogs.com/gif.latex?$$a=a_{min}*2^{s}$$)
 
 Для расчета координат центра квадрата потребуются промежуточное
-вычисление $x_{a}$ и $y_{a}$ - координаты с шагом равным стороне:
+вычисление `x_a` и `y_a` - координаты с шагом равным стороне:
 
-  -- ------------------------------------------------------------- -----
-     $$\left\{ \begin{matrix}                                      (3)
-     x_{a} = \text{floor}\left( \frac{x_{исх}}{0,5*a} \right) \\   
-     y_{a} = \text{floor}\left( \frac{y_{исх}}{0,5*a} \right) \\   
-     \end{matrix}\ , \right.\ $$                                   
-  -- ------------------------------------------------------------- -----
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$\left\{\begin{matrix}&space;x_{a}&space;=&space;floor(\frac{x_{src}}{0,5*a})\\&space;y_{a}&space;=&space;floor(\frac{y_{src}}{0,5*a})\\&space;\end{matrix}\right.$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$\left\{\begin{matrix}&space;x_{a}&space;=&space;floor(\frac{x_{src}}{0,5*a})\\&space;y_{a}&space;=&space;floor(\frac{y_{src}}{0,5*a})\\&space;\end{matrix}\right.$$" title="$$\left\{\begin{matrix} x_{a} = floor(\frac{x_{src}}{0,5*a})\\ y_{a} = floor(\frac{y_{src}}{0,5*a})\\ \end{matrix}\right.$$" /></a>
 
-где, $x_{исх}$ и $y_{исх}$ - координаты местоположения из параметра
-запроса$.$
+где, `x_src` и `y_src` - координаты местоположения из параметра запроса.
 
-Далее находятся координаты четырёх квадратов $x_{кв}$, $x_{кв}^{'}$ и
-$y_{кв}$, $y_{кв}^{'}$ вокруг исходных координат $x_{исх}$ и $y_{исх}$.
-И требуется определить координаты $x$ и $y$ квадрата ближайшего к
+Далее находятся координаты четырёх квадратов `x_sq`, `x_sq'` и
+`y_sq`, `y_sq'` вокруг исходных координат `x_src` и `y_src`.
+И требуется определить координаты `x` и `y` квадрата ближайшего к
 исходным координатам:
 
-  -- ------------------------------------------- -----
-     $$\left\{ \begin{matrix}                    (4)
-     x = \left\lbrack \begin{matrix}             
-     x_{кв} = \frac{a*x_{a}}{2} \\               
-     x_{кв}^{'} = \frac{a*{(x}_{a} + 1)}{2} \\   
-     \end{matrix} \right.\  \\                   
-     y = \left\lbrack \begin{matrix}             
-     y_{кв} = \frac{a*y_{a}}{2} \\               
-     y_{кв}^{'} = \frac{a*{(y}_{a} + 1)}{2} \\   
-     \end{matrix} \right.\  \\                   
-     \end{matrix} \right.\ \ $$                  
-  -- ------------------------------------------- -----
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$\left\{&space;\begin{matrix}&space;x&space;=&space;\left\lbrack&space;\begin{matrix}&space;x_{sq}&space;=&space;\frac{a*x_{a}}{2}&space;\\&space;x_{sq}'&space;=&space;\frac{a*{(x}_{a}&space;&plus;&space;1)}{2}&space;\\&space;\end{matrix}&space;\right.\&space;\\&space;y&space;=&space;\left\lbrack&space;\begin{matrix}&space;y_{sq}&space;=&space;\frac{a*y_{a}}{2}&space;\\&space;y_{sq}'&space;=&space;\frac{a*{(y}_{a}&space;&plus;&space;1)}{2}&space;\\&space;\end{matrix}&space;\right.\&space;\\&space;\end{matrix}&space;\right.$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$\left\{&space;\begin{matrix}&space;x&space;=&space;\left\lbrack&space;\begin{matrix}&space;x_{sq}&space;=&space;\frac{a*x_{a}}{2}&space;\\&space;x_{sq}'&space;=&space;\frac{a*{(x}_{a}&space;&plus;&space;1)}{2}&space;\\&space;\end{matrix}&space;\right.\&space;\\&space;y&space;=&space;\left\lbrack&space;\begin{matrix}&space;y_{sq}&space;=&space;\frac{a*y_{a}}{2}&space;\\&space;y_{sq}'&space;=&space;\frac{a*{(y}_{a}&space;&plus;&space;1)}{2}&space;\\&space;\end{matrix}&space;\right.\&space;\\&space;\end{matrix}&space;\right.$$" title="$$\left\{ \begin{matrix} x = \left\lbrack \begin{matrix} x_{sq} = \frac{a*x_{a}}{2} \\ x_{sq}' = \frac{a*{(x}_{a} + 1)}{2} \\ \end{matrix} \right.\ \\ y = \left\lbrack \begin{matrix} y_{sq} = \frac{a*y_{a}}{2} \\ y_{sq}' = \frac{a*{(y}_{a} + 1)}{2} \\ \end{matrix} \right.\ \\ \end{matrix} \right.$$" /></a>
 
 На рисунке 26 приводится схема алгоритма подключения нового
 клиента к каналу `MapChannel` для периодической выдачи в реальном
