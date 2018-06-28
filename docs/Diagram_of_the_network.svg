@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Создано Microsoft Visio, экспорт SVG Diagram_of_the_network.svg Страница-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="12.0475in" height="10.1358in"
+		viewBox="0 0 867.419 729.778" xml:space="preserve" color-interpolation-filters="sRGB" class="st25">
+	<v:documentProperties v:langID="1049" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvConvertTheme"/>
+			<v:ud v:nameU="Ifc__CustomPropsLevel" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisAecDocument" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisAecVersion" v:val="VT0(15):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ff00ff;fill-opacity:0;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;stroke-width:0.72}
+		.st2 {fill:url(#grad0-7)}
+		.st3 {stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.36}
+		.st4 {fill:url(#grad11-12)}
+		.st5 {fill:url(#grad12-19);stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.36}
+		.st6 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1}
+		.st7 {fill:url(#grad12-28);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.36}
+		.st8 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.6}
+		.st9 {fill:#000000;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.36}
+		.st10 {fill:url(#grad8-44);stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.12}
+		.st11 {fill:url(#grad10-49);stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.12}
+		.st12 {fill:#000000;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st13 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.36}
+		.st14 {fill:url(#grad0-67);stroke:#4e8ec2;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st15 {fill:url(#grad0-71);stroke:#4e8ec2;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st16 {fill:#000000;font-family:GOST Common;font-size:1.5em;font-style:italic}
+		.st17 {fill:url(#grad7-126)}
+		.st18 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72;visibility:hidden}
+		.st19 {fill:#00ff00;fill-opacity:0.7}
+		.st20 {fill:#000000;visibility:hidden}
+		.st21 {font-size:1em}
+		.st22 {fill:url(#grad0-185)}
+		.st23 {stroke:#e7e4cd;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.36}
+		.st24 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st25 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad0-7" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#e1d8c1" stop-opacity="1"/>
+		</linearGradient>
+		<pattern id="grad11-12" x="0" y="0" width="1" height="1" patternContentUnits="objectBoundingBox">
+			<path d="M 0 1 L 0 0 L 1 0 z" style="fill:url(#grad0-13)"/>
+			<path d="M 0 1 L 1 1 L 1 0 z" style="fill:url(#grad0-14)"/>
+		</pattern>
+		<linearGradient id="grad0-13" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(180 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#c9ba96" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="grad0-14" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(90 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#c9ba96" stop-opacity="1"/>
+		</linearGradient>
+		<pattern id="grad12-19" x="0" y="0" width="1" height="1" patternContentUnits="objectBoundingBox">
+			<path d="M 0 0 L 0 1 L 1 1 z" style="fill:url(#grad0-20)"/>
+			<path d="M 0 0 L 1 0 L 1 1 z" style="fill:url(#grad0-21)"/>
+		</pattern>
+		<linearGradient id="grad0-20" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(90 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#b6a06d" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="grad0-21" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(360 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#b6a06d" stop-opacity="1"/>
+		</linearGradient>
+		<pattern id="grad12-28" x="0" y="0" width="1" height="1" patternContentUnits="objectBoundingBox">
+			<path d="M 0 0 L 0 1 L 1 1 z" style="fill:url(#grad0-29)"/>
+			<path d="M 0 0 L 1 0 L 1 1 z" style="fill:url(#grad0-30)"/>
+		</pattern>
+		<linearGradient id="grad0-29" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(90 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#339966" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="grad0-30" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(360 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#339966" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="grad0-34" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#e7e4cd" stop-opacity="1"/>
+		</linearGradient>
+		<pattern id="grad8-44" x="0" y="0" width="1" height="1" patternContentUnits="objectBoundingBox">
+			<path d="M 0 0 L 1 0 L 1 1 z" style="fill:url(#grad0-34)"/>
+			<path d="M 0 0 L 0 1 L 1 1 z" style="fill:url(#grad0-45)"/>
+		</pattern>
+		<linearGradient id="grad0-45" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(180 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#e7e4cd" stop-opacity="1"/>
+		</linearGradient>
+		<pattern id="grad10-49" x="0" y="0" width="1" height="1" patternContentUnits="objectBoundingBox">
+			<path d="M 0.5 0.5 L 0 0 L 0 1 z" style="fill:url(#grad0-50)"/>
+			<path d="M 0.5 0.5 L 1 0 L 1 1 z" style="fill:url(#grad0-51)"/>
+			<path d="M 0.5 0.5 L 0 0 L 1 0 z" style="fill:url(#grad0-52)"/>
+			<path d="M 0.5 0.5 L 0 1 L 1 1 z" style="fill:url(#grad0-53)"/>
+		</pattern>
+		<linearGradient id="grad0-50" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(180 0.5 0.5)">
+			<stop offset="0" stop-color="#000000" stop-opacity="0.4"/>
+			<stop offset="1" stop-color="#e7e4cd" stop-opacity="0.4"/>
+		</linearGradient>
+		<linearGradient id="grad0-51" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(360 0.5 0.5)">
+			<stop offset="0" stop-color="#000000" stop-opacity="0.4"/>
+			<stop offset="1" stop-color="#e7e4cd" stop-opacity="0.4"/>
+		</linearGradient>
+		<linearGradient id="grad0-52" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#000000" stop-opacity="0.4"/>
+			<stop offset="1" stop-color="#e7e4cd" stop-opacity="0.4"/>
+		</linearGradient>
+		<linearGradient id="grad0-53" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(90 0.5 0.5)">
+			<stop offset="0" stop-color="#000000" stop-opacity="0.4"/>
+			<stop offset="1" stop-color="#e7e4cd" stop-opacity="0.4"/>
+		</linearGradient>
+		<linearGradient id="grad0-67" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(270 0.5 0.5)">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#4e8ec2" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="grad0-71" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(180 0.5 0.5)">
+			<stop offset="0.01" stop-color="#4e8ec2" stop-opacity="1"/>
+			<stop offset="0.5" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#4e8ec2" stop-opacity="1"/>
+		</linearGradient>
+		<radialGradient id="grad7-126" cx="0" cy="0" r="1.4">
+			<stop offset="0" stop-color="#ffffff" stop-opacity="1"/>
+			<stop offset="1" stop-color="#0000ff" stop-opacity="1"/>
+		</radialGradient>
+		<linearGradient id="grad0-185" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(180 0.5 0.5)">
+			<stop offset="0.01" stop-color="#ff6600" stop-opacity="1"/>
+			<stop offset="0.5" stop-color="#e7e4cd" stop-opacity="1"/>
+			<stop offset="1" stop-color="#ff6600" stop-opacity="1"/>
+		</linearGradient>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:custProps>
+			<v:cp v:nameU="VisDoorFrameWidth" v:lbl="Ширина дверной коробки" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorFrameDepth" v:lbl="Толщина дверной коробки" v:type="4"
+					v:format="Как у стены;100 мм;150 мм;200 мм;250 мм;300 мм" v:sortKey="" v:invis="true" v:langID="1049" v:cal="0"
+					v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorStopWidth" v:lbl="Ширина ограничителя двери" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(20 мм)"/>
+			<v:cp v:nameU="VisDoorStopDepth" v:lbl="Толщина ограничителя двери" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorThresDepthIn" v:lbl="Внутренняя ширина порога двери" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorThresWidthIn" v:lbl="Внутренняя толщина порога двери" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorThresDepthOut" v:lbl="Наружная толщина порога двери" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorThresWidthOut" v:lbl="Наружная ширина порога двери" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisDoorPanelThickness" v:lbl="Толщина филенки" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwFrameDepth" v:lbl="Толщина оконной рамы" v:type="4"
+					v:format="Как у стены;100 мм;150 мм;200 мм;250 мм;300 мм" v:sortKey="" v:invis="true" v:langID="1049" v:cal="0"
+					v:val="VT4(200 мм)"/>
+			<v:cp v:nameU="VisWndwFrameWidth" v:lbl="Ширина оконной рамы" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwSashDepth" v:lbl="Толщина оконного переплета" v:type="4"
+					v:format="10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwSashWidth" v:lbl="Ширина оконного переплета" v:type="4"
+					v:format="5 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwSillDepthIn" v:lbl="Внутренняя толщина подоконника" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwSillWidthIn" v:lbl="Внутренняя ширина подоконника" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwSillDepthOut" v:lbl="Наружная толщина подоконника" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+			<v:cp v:nameU="VisWndwSillWidthOut" v:lbl="Наружная ширина подоконника" v:type="4"
+					v:format="0 мм;10 мм;20 мм;30 мм;40 мм;50 мм;60 мм;70 мм;80 мм;90 мм;100 мм" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(50 мм)"/>
+		</v:custProps>
+		<v:userDefs>
+			<v:ud v:nameU="VisAecPage" v:val="VT0(1):26"/>
+			<v:ud v:nameU="LineStyleIndex" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorPanelsClosed" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowHeader" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowPanel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowSwing" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowThreshold" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowThresIn" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowThresOut" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorFrameToWall" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorSwingAs" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowFrame" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowStop" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowFrame" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowSash" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwFrameToWall" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowHeader" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisWndwShowSill" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisWndwShowSillIn" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowSillOut" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceUnits" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpacePrecision" v:val="VT0(0):26"/>
+			<v:ud v:nameU="visSpaceLabel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceNameLabel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceUseLabel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceBoundary" v:val="VT0(0):26"/>
+			<v:ud v:nameU="SpaceLabelDisabled" v:prompt="Отключенная подпись" v:val="VT4()"/>
+			<v:ud v:nameU="DisplayField1" v:prompt="Подпись места 1" v:val="VT4(Prop.Use)"/>
+			<v:ud v:nameU="DisplayField2" v:prompt="Подпись места 2" v:val="VT4(Prop.Name)"/>
+			<v:ud v:nameU="DisplayField3" v:prompt="Подпись места 3" v:val="VT4(User.visFMAreaDisplay)"/>
+			<v:ud v:nameU="DisplayField4" v:prompt="Подпись места 4" v:val="VT4(User.DisplayFieldDisabled)"/>
+			<v:ud v:nameU="IFCPropsInvisible" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Страница-1</title>
+		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="9"
+				v:shadowOffsetY="-9" v:shadowType="1"/>
+		<v:layer v:name="Соединительная линия" v:index="0"/>
+		<g id="group93-1" transform="translate(765.478,-416.698)" v:mID="93" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(База данных)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(16):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Сервер баз данных</title>
+			<desc>Memcached</desc>
+			<g id="shape94-2" v:mID="94" v:groupContext="shape">
+				<title>Лист.94</title>
+				<path d="M73.1 707.84 L85.7 701.04 L85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54
+							 729.78 L43.97 723.53 A14.7246 6.78046 -180 0 0 73.09 722.51 L73.1 707.84 ZM14.63 650.97 A57.2684 53.4811
+							 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97 Z" class="st1"/>
+			</g>
+			<g id="shape95-4" v:mID="95" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.95</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape96-9" v:mID="96" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.96</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape97-16" v:mID="97" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.97</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape98-22" v:mID="98" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.98</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape99-25" v:mID="99" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.99</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape100-31" v:mID="100" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.100</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group101-38" transform="translate(4.39505,-51.3076)" v:mID="101" v:groupContext="group">
+				<title>Лист.101</title>
+				<g id="shape102-39" v:mID="102" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.102</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape103-41" v:mID="103" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.103</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape104-46" v:mID="104" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.104</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape105-54" v:mID="105" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.105</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape106-56" v:mID="106" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.106</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape107-59" v:mID="107" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.107</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group108-63" transform="translate(42.8518,0)" v:mID="108" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.108</title>
+				<g id="shape109-64" v:mID="109" v:groupContext="shape" transform="translate(0.818597,-26.8784)">
+					<title>Лист.109</title>
+					<ellipse cx="14.717" cy="723.058" rx="14.717" ry="6.71959" class="st14"/>
+				</g>
+				<g id="shape110-68" v:mID="110" v:groupContext="shape" transform="translate(0.81735,-0.840171)">
+					<title>Лист.110</title>
+					<path d="M0 697.02 L0 723.24 A14.7246 6.78046 -180 0 0 29.42 723.35 L29.43 697.02 A14.7176 6.77724 0 1 1 0 697.02
+								 Z" class="st15"/>
+				</g>
+				<g id="shape111-72" v:mID="111" v:groupContext="shape" transform="translate(0.889779,-0.924054)">
+					<title>Лист.111</title>
+					<path d="M29.18 697.02 A14.5924 6.71959 -180 1 0 0 697.08 L0 723.24 A14.5993 6.78046 -180 0 0 29.17 723.35 L29.18
+								 697.02" class="st6"/>
+				</g>
+			</g>
+			<g id="shape93-75" v:mID="93" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="744.58" width="99.11" height="29.6036"/>
+				<text x="-0.49" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Memcached</text>			</g>
+		</g>
+		<g id="group112-77" transform="translate(361.32,-551.986)" v:mID="112" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Веб)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(74):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Веб-сервер</title>
+			<desc>Backend 1 Nginx + Ruby on Rails</desc>
+			<g id="shape113-78" v:mID="113" v:groupContext="shape">
+				<title>Лист.113</title>
+				<path d="M76.32 710.27 A10.8129 10.2251 -178.74 0 0 76.03 707.68 A16.727 16.2623 -180 0 0 75.73 706.42 L85.7 701.04
+							 L85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L47.29 721.74
+							 A16.727 16.2623 -180 0 0 72.6 720.97 A16.727 16.2623 -180 0 0 74.34 718.43 A16.4426 15.5489 -1.36 0
+							 0 76.32 710.27 ZM14.63 650.97 A57.2684 53.4811 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97
+							 Z" class="st1"/>
+			</g>
+			<g id="shape114-80" v:mID="114" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.114</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape115-84" v:mID="115" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.115</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape116-88" v:mID="116" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.116</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape117-91" v:mID="117" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.117</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape118-94" v:mID="118" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.118</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape119-97" v:mID="119" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.119</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group120-103" transform="translate(4.39505,-51.3076)" v:mID="120" v:groupContext="group">
+				<title>Лист.120</title>
+				<g id="shape121-104" v:mID="121" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.121</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape122-106" v:mID="122" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.122</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape123-109" v:mID="123" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.123</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape124-112" v:mID="124" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.124</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape125-114" v:mID="125" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.125</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape126-117" v:mID="126" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.126</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group127-121" transform="translate(42.8779,-2.77346)" v:mID="127" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.127</title>
+				<g id="group128-122" transform="translate(0,-0.00862844)" v:mID="128" v:groupContext="group">
+					<title>Лист.128</title>
+					<g id="shape129-123" v:mID="129" v:groupContext="shape">
+						<title>Лист.129</title>
+						<ellipse cx="16.727" cy="713.516" rx="16.727" ry="16.2623" class="st17"/>
+						<ellipse cx="16.727" cy="713.516" rx="16.727" ry="16.2623" class="st18"/>
+					</g>
+					<g id="shape130-128" v:mID="130" v:groupContext="shape" transform="translate(1.39132,-0.364851)">
+						<title>Лист.130</title>
+						<path d="M13.26 729.78 L15.19 724.8 A8.81849 8.34312 -3.94 0 0 18.37 719.7 A4.05809 3.83727 -180 0 0 15.26
+									 716.64 A4.37687 4.13871 -180 0 0 12.13 718.45 L11.36 717.25 A3.31979 3.22757 -180 0 0 13.58
+									 714.73 A6.224 5.88533 0 0 1 11.07 712.88 L13.84 710.68 L14.55 707.74 L12.47 706.42 L13.78 704.84
+									 L11.32 703.15 L11.99 701.29 L15.85 702.36 L15.7 705.43 L17.22 705.88 L19.28 704.94 L20.93 706.25
+									 L22.92 710.73 L22.31 713.2 L20.91 714.1 L21.51 715.77 A2.81197 2.65896 -180 0 0 25.73 717.48
+									 A3.22299 3.04761 0 0 1 27.57 720.31 L28.29 724.07 A16.4426 15.5489 -1.36 0 0 32.06 713.42 A10.8129
+									 10.2251 -178.74 0 0 30.22 707.48 A11.7765 11.1357 -180 0 0 27.36 703.44 A3.20996 3.03529 -180
+									 0 0 25.01 705.62 L25.71 707.8 A2.13206 2.01604 0 0 1 23.14 707.67 L22.79 710.91 A26.0385 24.6216
+									 -180 0 0 21.04 706.67 L23.21 705.83 L22.4 704.63 L20.93 704.31 L20.98 703.33 L21.67 699.55 L18.05
+									 698.55 L16.25 699.5 L15.05 698.28 L12.94 698.08 L8.39 700.53 L10.5 701.8 L8.96 704.13 A2.23252
+									 2.11104 0 0 1 10.91 706.55 a0.842307 0.796473 0 0 1 -1.17745 0.913784 A1.3313 1.25886 0 0 1
+									 7.91 706.11 L8.53 703.55 L7.8 701.06 L4.55 701.56 L4.63 703.13 L3.89 703.8 L2.35 703.65 A13.1397
+									 12.7747 -180 0 0 0 707.45 L1.81 708.12 A6.2727 5.93138 0 0 1 3.18 712.36 A5.84917 5.53089 -180
+									 0 0 8.77 715.29 A4.17627 3.94902 0 0 1 11.65 718.92 A2.2732 2.14951 -180 0 0 11.22 721.7 L13.21
+									 722.65 A2.6588 2.51412 0 0 1 12.14 724.94 A7.21456 6.82198 -180 0 0 13.26 729.78 Z"
+								class="st19"/>
+					</g>
+				</g>
+				<g id="shape131-131" v:mID="131" v:groupContext="shape" transform="translate(0.00451141,-1.13687E-013)">
+					<title>Лист.131</title>
+					<ellipse cx="16.7275" cy="713.518" rx="16.7275" ry="16.2599" class="st20"/>
+					<ellipse cx="16.7275" cy="713.518" rx="16.7275" ry="16.2599" class="st6"/>
+				</g>
+			</g>
+			<g id="shape112-134" v:mID="112" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="755.38" width="178.13" height="51.2036"/>
+				<text x="4.64" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Backend 1<v:newlineChar/><tspan
+							x="-40" dy="1.2em" class="st21">Nginx </tspan>+ Ruby on Rails</text>			</g>
+		</g>
+		<g id="group132-137" transform="translate(27.3641,-337.727)" v:mID="132" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Прокси)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(56):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Прокси-сервер</title>
+			<desc>Балансировщик Nginx</desc>
+			<g id="shape133-138" v:mID="133" v:groupContext="shape" transform="translate(0,5.31496)">
+				<title>Лист.133</title>
+				<path d="M70.23 700.45 L85.7 692.12 L85.7 619.47 L52.74 601.82 L0 630.55 L0.02 704.35 A55.4916 51.8217 -180 0 0 32.54
+							 720.85 L39.79 716.85 L39.79 717.01 L63.1 729.78 L70.4 725.75 L70.4 700.55 L70.23 700.45 ZM14.63 642.04
+							 A57.2684 53.4811 -180 0 0 32.54 648.41 A56.6288 52.8837 0 0 1 14.63 642.04 Z" class="st1"/>
+			</g>
+			<g id="shape134-140" v:mID="134" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.134</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape135-144" v:mID="135" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.135</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape136-148" v:mID="136" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.136</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape137-151" v:mID="137" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.137</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape138-154" v:mID="138" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.138</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape139-157" v:mID="139" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.139</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group140-163" transform="translate(4.39505,-51.3076)" v:mID="140" v:groupContext="group">
+				<title>Лист.140</title>
+				<g id="shape141-164" v:mID="141" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.141</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape142-166" v:mID="142" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.142</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape143-169" v:mID="143" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.143</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape144-172" v:mID="144" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.144</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape145-174" v:mID="145" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.145</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape146-177" v:mID="146" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.146</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group147-181" transform="translate(39.7909,8.92745)" v:mID="147" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.147</title>
+				<g id="shape148-182" v:mID="148" v:groupContext="shape">
+					<title>Лист.148</title>
+					<path d="M0 717.01 L23.31 729.78 L30.61 725.75 L30.61 700.55 L7.83 688.12 L0 692.48 L0 717.01 Z" class="st22"/>
+				</g>
+				<g id="shape149-187" v:mID="149" v:groupContext="shape" transform="translate(1.77956,-1.74709)">
+					<title>Лист.149</title>
+					<path d="M0 695.24 L21.53 707 L27.05 703.97" class="st23"/>
+					<path d="M21.53 707 L21.53 729.78" class="st23"/>
+					<path d="M0 698.93 L21.53 710.69" class="st23"/>
+					<path d="M0 702.88 L21.53 714.64" class="st23"/>
+					<path d="M0 706.83 L21.53 718.59" class="st23"/>
+					<path d="M0 710.78 L21.53 722.54" class="st23"/>
+					<path d="M0 714.73 L21.53 726.49" class="st23"/>
+					<path d="M11.03 721.11 L11.03 723.8" class="st23"/>
+					<path d="M3.2 716.74 L3.2 719.43" class="st23"/>
+					<path d="M7.12 715.06 L7.12 717.75" class="st23"/>
+					<path d="M11.03 713.38 L11.03 716.07" class="st23"/>
+					<path d="M3.2 709.01 L3.2 711.7" class="st23"/>
+					<path d="M7.12 707.33 L7.12 710.02" class="st23"/>
+					<path d="M3.2 701.29 L3.2 703.97" class="st23"/>
+				</g>
+				<g id="shape150-203" v:mID="150" v:groupContext="shape">
+					<title>Лист.150</title>
+					<path d="M0 717.01 L23.31 729.78 L30.61 725.75 L30.61 700.55 L7.83 688.12 L0 692.48 L0 717.01" class="st6"/>
+				</g>
+			</g>
+			<g id="shape132-206" v:mID="132" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="755.38" width="140.44" height="51.2036"/>
+				<text x="-21.15" y="749.98" class="st16" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Балансировщик<v:newlineChar/><v:paragraph
+							v:horizAlign="1"/><tspan x="21.52" dy="1.2em" class="st21" v:langID="1033">Nginx</tspan></text>			</g>
+		</g>
+		<g id="group151-209" transform="translate(361.32,-337.727)" v:mID="151" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Веб)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(74):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Веб-сервер.229</title>
+			<desc>Backend 2 Nginx + Ruby on Rails</desc>
+			<g id="shape152-210" v:mID="152" v:groupContext="shape">
+				<title>Лист.152</title>
+				<path d="M76.32 710.27 A10.8129 10.2251 -178.74 0 0 76.03 707.68 A16.727 16.2623 -180 0 0 75.73 706.42 L85.7 701.04
+							 L85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L47.29 721.74
+							 A16.727 16.2623 -180 0 0 72.6 720.97 A16.727 16.2623 -180 0 0 74.34 718.43 A16.4426 15.5489 -1.36 0
+							 0 76.32 710.27 ZM14.63 650.97 A57.2684 53.4811 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97
+							 Z" class="st1"/>
+			</g>
+			<g id="shape153-212" v:mID="153" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.153</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape154-216" v:mID="154" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.154</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape155-220" v:mID="155" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.155</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape156-223" v:mID="156" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.156</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape157-226" v:mID="157" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.157</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape158-229" v:mID="158" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.158</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group159-235" transform="translate(4.39505,-51.3076)" v:mID="159" v:groupContext="group">
+				<title>Лист.159</title>
+				<g id="shape160-236" v:mID="160" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.160</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape161-238" v:mID="161" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.161</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape162-241" v:mID="162" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.162</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape163-244" v:mID="163" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.163</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape164-246" v:mID="164" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.164</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape165-249" v:mID="165" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.165</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group166-253" transform="translate(42.8779,-2.77346)" v:mID="166" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.166</title>
+				<g id="group167-254" transform="translate(0,-0.00862844)" v:mID="167" v:groupContext="group">
+					<title>Лист.167</title>
+					<g id="shape168-255" v:mID="168" v:groupContext="shape">
+						<title>Лист.168</title>
+						<ellipse cx="16.727" cy="713.516" rx="16.727" ry="16.2623" class="st17"/>
+						<ellipse cx="16.727" cy="713.516" rx="16.727" ry="16.2623" class="st18"/>
+					</g>
+					<g id="shape169-259" v:mID="169" v:groupContext="shape" transform="translate(1.39132,-0.364851)">
+						<title>Лист.169</title>
+						<path d="M13.26 729.78 L15.19 724.8 A8.81849 8.34312 -3.94 0 0 18.37 719.7 A4.05809 3.83727 -180 0 0 15.26
+									 716.64 A4.37687 4.13871 -180 0 0 12.13 718.45 L11.36 717.25 A3.31979 3.22757 -180 0 0 13.58
+									 714.73 A6.224 5.88533 0 0 1 11.07 712.88 L13.84 710.68 L14.55 707.74 L12.47 706.42 L13.78 704.84
+									 L11.32 703.15 L11.99 701.29 L15.85 702.36 L15.7 705.43 L17.22 705.88 L19.28 704.94 L20.93 706.25
+									 L22.92 710.73 L22.31 713.2 L20.91 714.1 L21.51 715.77 A2.81197 2.65896 -180 0 0 25.73 717.48
+									 A3.22299 3.04761 0 0 1 27.57 720.31 L28.29 724.07 A16.4426 15.5489 -1.36 0 0 32.06 713.42 A10.8129
+									 10.2251 -178.74 0 0 30.22 707.48 A11.7765 11.1357 -180 0 0 27.36 703.44 A3.20996 3.03529 -180
+									 0 0 25.01 705.62 L25.71 707.8 A2.13206 2.01604 0 0 1 23.14 707.67 L22.79 710.91 A26.0385 24.6216
+									 -180 0 0 21.04 706.67 L23.21 705.83 L22.4 704.63 L20.93 704.31 L20.98 703.33 L21.67 699.55 L18.05
+									 698.55 L16.25 699.5 L15.05 698.28 L12.94 698.08 L8.39 700.53 L10.5 701.8 L8.96 704.13 A2.23252
+									 2.11104 0 0 1 10.91 706.55 a0.842307 0.796473 0 0 1 -1.17745 0.913784 A1.3313 1.25886 0 0 1
+									 7.91 706.11 L8.53 703.55 L7.8 701.06 L4.55 701.56 L4.63 703.13 L3.89 703.8 L2.35 703.65 A13.1397
+									 12.7747 -180 0 0 0 707.45 L1.81 708.12 A6.2727 5.93138 0 0 1 3.18 712.36 A5.84917 5.53089 -180
+									 0 0 8.77 715.29 A4.17627 3.94902 0 0 1 11.65 718.92 A2.2732 2.14951 -180 0 0 11.22 721.7 L13.21
+									 722.65 A2.6588 2.51412 0 0 1 12.14 724.94 A7.21456 6.82198 -180 0 0 13.26 729.78 Z"
+								class="st19"/>
+					</g>
+				</g>
+				<g id="shape170-262" v:mID="170" v:groupContext="shape" transform="translate(0.00451141,-1.13687E-013)">
+					<title>Лист.170</title>
+					<ellipse cx="16.7275" cy="713.518" rx="16.7275" ry="16.2599" class="st20"/>
+					<ellipse cx="16.7275" cy="713.518" rx="16.7275" ry="16.2599" class="st6"/>
+				</g>
+			</g>
+			<g id="shape151-265" v:mID="151" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="755.38" width="178.13" height="51.2036"/>
+				<text x="3.3" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Backend 2<v:newlineChar/><tspan
+							x="-40" dy="1.2em" class="st21">Nginx </tspan>+ Ruby on Rails</text>			</g>
+		</g>
+		<g id="group171-268" transform="translate(361.32,-123.468)" v:mID="171" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Веб)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(74):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Веб-сервер.249</title>
+			<desc>Backend 3 Nginx + Ruby on Rails</desc>
+			<g id="shape172-269" v:mID="172" v:groupContext="shape">
+				<title>Лист.172</title>
+				<path d="M76.32 710.27 A10.8129 10.2251 -178.74 0 0 76.03 707.68 A16.727 16.2623 -180 0 0 75.73 706.42 L85.7 701.04
+							 L85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L47.29 721.74
+							 A16.727 16.2623 -180 0 0 72.6 720.97 A16.727 16.2623 -180 0 0 74.34 718.43 A16.4426 15.5489 -1.36 0
+							 0 76.32 710.27 ZM14.63 650.97 A57.2684 53.4811 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97
+							 Z" class="st1"/>
+			</g>
+			<g id="shape173-271" v:mID="173" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.173</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape174-275" v:mID="174" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.174</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape175-279" v:mID="175" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.175</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape176-282" v:mID="176" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.176</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape177-285" v:mID="177" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.177</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape178-288" v:mID="178" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.178</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group179-294" transform="translate(4.39505,-51.3076)" v:mID="179" v:groupContext="group">
+				<title>Лист.179</title>
+				<g id="shape180-295" v:mID="180" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.180</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape181-297" v:mID="181" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.181</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape182-300" v:mID="182" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.182</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape183-303" v:mID="183" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.183</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape184-305" v:mID="184" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.184</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape185-308" v:mID="185" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.185</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group186-312" transform="translate(42.8779,-2.77346)" v:mID="186" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.186</title>
+				<g id="group187-313" transform="translate(0,-0.00862844)" v:mID="187" v:groupContext="group">
+					<title>Лист.187</title>
+					<g id="shape188-314" v:mID="188" v:groupContext="shape">
+						<title>Лист.188</title>
+						<ellipse cx="16.727" cy="713.516" rx="16.727" ry="16.2623" class="st17"/>
+						<ellipse cx="16.727" cy="713.516" rx="16.727" ry="16.2623" class="st18"/>
+					</g>
+					<g id="shape189-318" v:mID="189" v:groupContext="shape" transform="translate(1.39132,-0.364851)">
+						<title>Лист.189</title>
+						<path d="M13.26 729.78 L15.19 724.8 A8.81849 8.34312 -3.94 0 0 18.37 719.7 A4.05809 3.83727 -180 0 0 15.26
+									 716.64 A4.37687 4.13871 -180 0 0 12.13 718.45 L11.36 717.25 A3.31979 3.22757 -180 0 0 13.58
+									 714.73 A6.224 5.88533 0 0 1 11.07 712.88 L13.84 710.68 L14.55 707.74 L12.47 706.42 L13.78 704.84
+									 L11.32 703.15 L11.99 701.29 L15.85 702.36 L15.7 705.43 L17.22 705.88 L19.28 704.94 L20.93 706.25
+									 L22.92 710.73 L22.31 713.2 L20.91 714.1 L21.51 715.77 A2.81197 2.65896 -180 0 0 25.73 717.48
+									 A3.22299 3.04761 0 0 1 27.57 720.31 L28.29 724.07 A16.4426 15.5489 -1.36 0 0 32.06 713.42 A10.8129
+									 10.2251 -178.74 0 0 30.22 707.48 A11.7765 11.1357 -180 0 0 27.36 703.44 A3.20996 3.03529 -180
+									 0 0 25.01 705.62 L25.71 707.8 A2.13206 2.01604 0 0 1 23.14 707.67 L22.79 710.91 A26.0385 24.6216
+									 -180 0 0 21.04 706.67 L23.21 705.83 L22.4 704.63 L20.93 704.31 L20.98 703.33 L21.67 699.55 L18.05
+									 698.55 L16.25 699.5 L15.05 698.28 L12.94 698.08 L8.39 700.53 L10.5 701.8 L8.96 704.13 A2.23252
+									 2.11104 0 0 1 10.91 706.55 a0.842307 0.796473 0 0 1 -1.17745 0.913784 A1.3313 1.25886 0 0 1
+									 7.91 706.11 L8.53 703.55 L7.8 701.06 L4.55 701.56 L4.63 703.13 L3.89 703.8 L2.35 703.65 A13.1397
+									 12.7747 -180 0 0 0 707.45 L1.81 708.12 A6.2727 5.93138 0 0 1 3.18 712.36 A5.84917 5.53089 -180
+									 0 0 8.77 715.29 A4.17627 3.94902 0 0 1 11.65 718.92 A2.2732 2.14951 -180 0 0 11.22 721.7 L13.21
+									 722.65 A2.6588 2.51412 0 0 1 12.14 724.94 A7.21456 6.82198 -180 0 0 13.26 729.78 Z"
+								class="st19"/>
+					</g>
+				</g>
+				<g id="shape190-321" v:mID="190" v:groupContext="shape" transform="translate(0.00451141,-1.13687E-013)">
+					<title>Лист.190</title>
+					<ellipse cx="16.7275" cy="713.518" rx="16.7275" ry="16.2599" class="st20"/>
+					<ellipse cx="16.7275" cy="713.518" rx="16.7275" ry="16.2599" class="st6"/>
+				</g>
+			</g>
+			<g id="shape171-324" v:mID="171" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="755.38" width="178.13" height="51.2036"/>
+				<text x="3.3" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Backend 3<v:newlineChar/><tspan
+							x="-40" dy="1.2em" class="st21">Nginx </tspan>+ Ruby on Rails</text>			</g>
+		</g>
+		<g id="group191-327" transform="translate(765.478,-223.151)" v:mID="191" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(База данных)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(16):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Сервер баз данных.269</title>
+			<desc>PostgreSQL</desc>
+			<g id="shape192-328" v:mID="192" v:groupContext="shape">
+				<title>Лист.192</title>
+				<path d="M73.1 707.84 L85.7 701.04 L85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54
+							 729.78 L43.97 723.53 A14.7246 6.78046 -180 0 0 73.09 722.51 L73.1 707.84 ZM14.63 650.97 A57.2684 53.4811
+							 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97 Z" class="st1"/>
+			</g>
+			<g id="shape193-330" v:mID="193" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.193</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape194-334" v:mID="194" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.194</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape195-338" v:mID="195" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.195</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape196-341" v:mID="196" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.196</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape197-344" v:mID="197" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.197</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape198-347" v:mID="198" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.198</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group199-353" transform="translate(4.39505,-51.3076)" v:mID="199" v:groupContext="group">
+				<title>Лист.199</title>
+				<g id="shape200-354" v:mID="200" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.200</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape201-356" v:mID="201" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.201</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape202-359" v:mID="202" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.202</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape203-362" v:mID="203" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.203</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape204-364" v:mID="204" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.204</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape205-367" v:mID="205" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.205</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group206-371" transform="translate(42.8518,0)" v:mID="206" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.206</title>
+				<g id="shape207-372" v:mID="207" v:groupContext="shape" transform="translate(0.818597,-26.8784)">
+					<title>Лист.207</title>
+					<ellipse cx="14.717" cy="723.058" rx="14.717" ry="6.71959" class="st14"/>
+				</g>
+				<g id="shape208-375" v:mID="208" v:groupContext="shape" transform="translate(0.81735,-0.840171)">
+					<title>Лист.208</title>
+					<path d="M0 697.02 L0 723.24 A14.7246 6.78046 -180 0 0 29.42 723.35 L29.43 697.02 A14.7176 6.77724 0 1 1 0 697.02
+								 Z" class="st15"/>
+				</g>
+				<g id="shape209-378" v:mID="209" v:groupContext="shape" transform="translate(0.889779,-0.924054)">
+					<title>Лист.209</title>
+					<path d="M29.18 697.02 A14.5924 6.71959 -180 1 0 0 697.08 L0 723.24 A14.5993 6.78046 -180 0 0 29.17 723.35 L29.18
+								 697.02" class="st6"/>
+				</g>
+			</g>
+			<g id="shape191-381" v:mID="191" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="744.58" width="107.1" height="29.6036"/>
+				<text x="-4.48" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>PostgreSQL</text>			</g>
+		</g>
+		<g id="group210-383" transform="translate(765.478,-29.6036)" v:mID="210" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="SubShapeType" v:lbl="SubShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(База данных)"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="SubShapeType" v:val="VT0(16):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Сервер баз данных.288</title>
+			<desc>Redis</desc>
+			<g id="shape211-384" v:mID="211" v:groupContext="shape">
+				<title>Лист.211</title>
+				<path d="M73.1 707.84 L85.7 701.04 L85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54
+							 729.78 L43.97 723.53 A14.7246 6.78046 -180 0 0 73.09 722.51 L73.1 707.84 ZM14.63 650.97 A57.2684 53.4811
+							 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97 Z" class="st1"/>
+			</g>
+			<g id="shape212-386" v:mID="212" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.212</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape213-390" v:mID="213" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.213</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape214-394" v:mID="214" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.214</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape215-397" v:mID="215" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.215</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape216-400" v:mID="216" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.216</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape217-403" v:mID="217" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.217</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group218-409" transform="translate(4.39505,-51.3076)" v:mID="218" v:groupContext="group">
+				<title>Лист.218</title>
+				<g id="shape219-410" v:mID="219" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.219</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape220-412" v:mID="220" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.220</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape221-415" v:mID="221" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.221</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape222-418" v:mID="222" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.222</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape223-420" v:mID="223" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.223</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape224-423" v:mID="224" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.224</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="group225-427" transform="translate(42.8518,0)" v:mID="225" v:groupContext="group">
+				<v:userDefs>
+					<v:ud v:nameU="IsVisable" v:val="VT0(1):5"/>
+				</v:userDefs>
+				<title>Лист.225</title>
+				<g id="shape226-428" v:mID="226" v:groupContext="shape" transform="translate(0.818597,-26.8784)">
+					<title>Лист.226</title>
+					<ellipse cx="14.717" cy="723.058" rx="14.717" ry="6.71959" class="st14"/>
+				</g>
+				<g id="shape227-431" v:mID="227" v:groupContext="shape" transform="translate(0.81735,-0.840171)">
+					<title>Лист.227</title>
+					<path d="M0 697.02 L0 723.24 A14.7246 6.78046 -180 0 0 29.42 723.35 L29.43 697.02 A14.7176 6.77724 0 1 1 0 697.02
+								 Z" class="st15"/>
+				</g>
+				<g id="shape228-434" v:mID="228" v:groupContext="shape" transform="translate(0.889779,-0.924054)">
+					<title>Лист.228</title>
+					<path d="M29.18 697.02 A14.5924 6.71959 -180 1 0 0 697.08 L0 723.24 A14.5993 6.78046 -180 0 0 29.17 723.35 L29.18
+								 697.02" class="st6"/>
+				</g>
+			</g>
+			<g id="shape210-437" v:mID="210" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="744.58" width="55.1" height="29.6036"/>
+				<text x="21.52" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Redis</text>			</g>
+		</g>
+		<g id="shape229-439" v:mID="229" v:groupContext="shape" v:layerMember="0" transform="translate(113.068,-390.157)">
+			<title>Динамическая соединительная линия</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 722.69 L248.26 722.69" class="st24"/>
+		</g>
+		<g id="shape230-442" v:mID="230" v:groupContext="shape" v:layerMember="0" transform="translate(113.068,-424.736)">
+			<title>Динамическая соединительная линия.330</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L248.27 570.49" class="st24"/>
+		</g>
+		<g id="shape231-445" v:mID="231" v:groupContext="shape" v:layerMember="0" transform="translate(113.068,-369.75)">
+			<title>Динамическая соединительная линия.331</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L248.25 889.05" class="st24"/>
+		</g>
+		<g id="shape232-448" v:mID="232" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-173.032)">
+			<title>Динамическая соединительная линия.333</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L318.46 803.74" class="st24"/>
+		</g>
+		<g id="shape233-451" v:mID="233" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-193.553)">
+			<title>Динамическая соединительная линия.334</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L167.2 688.54 A2.3622 2.3622 0 1 1 171.78 687.41 L233.26 672.24 A2.3622 2.3622 0 1 1 237.85 671.11
+						 L318.47 651.23" class="st24"/>
+		</g>
+		<g id="shape234-454" v:mID="234" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-214.075)">
+			<title>Динамическая соединительная линия.335</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L99.24 657.78 A2.3622 2.3622 0 1 1 103.06 655 L167.58 608.19 A2.3622 2.3622 0 1 1 171.4 605.42 L233.65
+						 560.26 A2.3622 2.3622 0 1 1 237.47 557.49 L318.47 498.72" class="st24"/>
+		</g>
+		<g id="shape235-457" v:mID="235" v:groupContext="shape" v:layerMember="0" transform="translate(445.574,-365.679)">
+			<title>Динамическая соединительная линия.338</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L65.66 779.83 A2.3622 2.3622 0 0 1 69.41 782.7 L321.35 974.77" class="st24"/>
+		</g>
+		<g id="shape236-460" v:mID="236" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-385.095)">
+			<title>Динамическая соединительная линия.339</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L98.87 757.81 A2.3622 2.3622 0 0 1 103.42 759.1 L167.22 777.18 A2.3622 2.3622 0 0 1 171.76 778.47
+						 L318.46 820.06" class="st24"/>
+		</g>
+		<g id="shape237-463" v:mID="237" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-405.616)">
+			<title>Динамическая соединительная линия.340</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L98.83 710.47 A2.3622 2.3622 0 1 1 103.47 709.56 L167.17 697.11 A2.3622 2.3622 0 0 1 171.81 696.21
+						 L318.46 667.55" class="st24"/>
+		</g>
+		<g id="shape238-466" v:mID="238" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-597.158)">
+			<title>Динамическая соединительная линия.343</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L167.25 785.76 A2.3622 2.3622 0 0 1 171.73 787.26 L233.32 807.88 A2.3622 2.3622 0 0 1 237.8 809.38
+						 L318.46 836.38" class="st24"/>
+		</g>
+		<g id="shape239-469" v:mID="239" v:groupContext="shape" v:layerMember="0" transform="translate(444.007,-579.091)">
+			<title>Динамическая соединительная линия.344</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L170.67 868.64 A2.3622 2.3622 0 1 1 174.34 871.63 L324.47 993.78" class="st24"/>
+		</g>
+		<g id="shape240-472" v:mID="240" v:groupContext="shape" v:layerMember="0" transform="translate(437.478,-568.453)">
+			<title>Динамическая соединительная линия.347</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L341.39 1171.03" class="st24"/>
+		</g>
+		<g id="group241-475" transform="translate(765.478,-610.245)" v:mID="241" v:groupContext="group">
+			<v:custProps>
+				<v:cp v:nameU="Manufacturer" v:lbl="Изготовитель" v:type="0" v:sortKey="Equipment" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="ProductNumber" v:lbl="Номер товара" v:type="0" v:sortKey="Equipment" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="PartNumber" v:lbl="Код позиции" v:type="0" v:sortKey="Equipment" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="ProductDescription" v:lbl="Описание товара" v:type="0" v:sortKey="Equipment" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="AssetNumber" v:lbl="Инвентарный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SerialNumber" v:lbl="Серийный номер" v:type="0" v:sortKey="Asset" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="Location" v:lbl="Расположение" v:type="0" v:sortKey="Asset" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="Building" v:lbl="Здание" v:type="0" v:sortKey="Asset" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Room" v:lbl="Комната" v:type="0" v:sortKey="Asset" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Department" v:lbl="Отдел" v:type="0" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkName" v:lbl="Сетевое имя" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="IPAddress" v:lbl="IP-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="SubnetMask" v:lbl="Маска подсети" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="AdminInterface" v:lbl="Интерфейс администратора" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NumberofPorts" v:lbl="Число портов" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="CommunityString" v:lbl="Строка сообщества" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="NetworkDescription" v:lbl="Сетевое описание" v:type="0" v:sortKey="Network" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="CPU" v:lbl="ЦП" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="Memory" v:lbl="Память" v:type="0" v:sortKey="Workstation" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="OperatingSystem" v:lbl="Операционная система" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="BelongsTo" v:lbl="Владелец" v:type="0" v:invis="true" v:ask="false" v:langID="1049"/>
+				<v:cp v:nameU="ShapeClass" v:lbl="ShapeClass" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Оборудование)"/>
+				<v:cp v:nameU="ShapeType" v:lbl="ShapeType" v:type="0" v:invis="true" v:ask="false" v:langID="1049"
+						v:val="VT4(Сервер)"/>
+				<v:cp v:nameU="MACAddress" v:lbl="MAC-адрес" v:type="0" v:sortKey="Network" v:invis="false" v:ask="false"
+						v:langID="1049"/>
+				<v:cp v:nameU="HardDriveSize" v:lbl="Емкость жесткого диска" v:type="0" v:sortKey="Workstation" v:invis="false"
+						v:ask="false" v:langID="1049"/>
+			</v:custProps>
+			<v:userDefs>
+				<v:ud v:nameU="HasText" v:val="VT0(0):5"/>
+				<v:ud v:nameU="SolSH" v:val="VT15({BF0433D9-CD73-4EB5-8390-8653BE590246}):41"/>
+				<v:ud v:nameU="ShapeClass" v:val="VT0(5):26"/>
+				<v:ud v:nameU="ShapeType" v:val="VT0(24):26"/>
+				<v:ud v:nameU="visLegendShape" v:val="VT0(2):26"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="HasText" v:prompt="" v:val="VT0(1):5"/>
+			</v:userDefs>
+			<title>Сервер</title>
+			<desc>MQTT Брокер Mosquitto</desc>
+			<g id="shape242-476" v:mID="242" v:groupContext="shape">
+				<title>Лист.242</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4 ZM14.63 650.97 A57.2684 53.4811 -180 0 0 32.54 657.33 A56.6288 52.8837 0 0 1 14.63 650.97 Z"
+						class="st1"/>
+			</g>
+			<g id="shape243-478" v:mID="243" v:groupContext="shape" transform="translate(0,-72.4439)">
+				<title>Лист.243</title>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78 L32.52 729.78 Z"
+						class="st2"/>
+				<path d="M32.52 729.78 L85.7 700.84 L52.74 683.19 L0 711.92 A57.2684 53.4811 -180 0 0 32.54 729.78" class="st3"/>
+			</g>
+			<g id="shape244-482" v:mID="244" v:groupContext="shape" transform="translate(0.0194738,-5.68434E-013)">
+				<title>Лист.244</title>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33
+							 L32.52 657.33 Z" class="st4"/>
+				<path d="M32.52 657.33 A56.6288 52.8837 0 0 1 -0 639.4 L0 713.28 A55.4916 51.8217 -180 0 0 32.52 729.78 L32.5 657.33"
+						class="st3"/>
+			</g>
+			<g id="shape245-486" v:mID="245" v:groupContext="shape" transform="translate(32.5234,-0.0818774)">
+				<title>Лист.245</title>
+				<path d="M0 657.41 L0 729.78 L53.18 701.13 L53.18 628.48 L0 657.41 Z" class="st5"/>
+			</g>
+			<g id="shape246-489" v:mID="246" v:groupContext="shape" transform="translate(0,-0.00262389)">
+				<title>Лист.246</title>
+				<path d="M85.7 628.4 L52.74 610.75 L0 639.48 L0.02 713.28 A55.4916 51.8217 -180 0 0 32.54 729.78 L85.7 701.04 L85.7
+							 628.4" class="st6"/>
+			</g>
+			<g id="shape247-492" v:mID="247" v:groupContext="shape" transform="translate(-235.813,5.74576) rotate(-20)">
+				<title>Лист.247</title>
+				<ellipse cx="2.48945" cy="726.388" rx="2.48945" ry="3.38986" class="st7"/>
+			</g>
+			<g id="shape248-495" v:mID="248" v:groupContext="shape" transform="translate(5.27406,-10.4688)">
+				<title>Лист.248</title>
+				<path d="M0 709.67 A63.5264 58.0206 -96.44 0 0 21.98 720.95" class="st8"/>
+				<path d="M0 714.08 A63.5264 58.0206 -96.44 0 0 21.98 725.37" class="st8"/>
+				<path d="M0 718.49 A63.5264 58.0206 -96.44 0 0 21.98 729.78" class="st8"/>
+			</g>
+			<g id="group249-501" transform="translate(4.39505,-51.3076)" v:mID="249" v:groupContext="group">
+				<title>Лист.249</title>
+				<g id="shape250-502" v:mID="250" v:groupContext="shape" transform="translate(0,-11.8747)">
+					<title>Лист.250</title>
+					<path d="M0.78 718.49 A55.4264 51.7609 -180 0 0 22.76 729.78 A1.12623 1.05175 -180 0 0 22.76 727.73 A53.9184
+								 50.3526 0 0 1 1.22 716.77 a0.729633 0.68138 -180 0 0 -1.21811 0.579253 A1.5902 1.48504 -180 0 0
+								 0.78 718.49 Z" class="st9"/>
+				</g>
+				<g id="shape251-504" v:mID="251" v:groupContext="shape" transform="translate(6.98885,-14.4615)">
+					<title>Лист.251</title>
+					<path d="M6.76 729.69 A8.23563 5.01353 -90.9 0 0 0.17 726.41 A5.41864 2.70155 -180 0 0 6.76 729.69 Z"
+							class="st10"/>
+				</g>
+				<g id="shape252-507" v:mID="252" v:groupContext="shape" transform="translate(0.879011,-0.10261)">
+					<title>Лист.252</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74
+								 Z" class="st11"/>
+				</g>
+				<g id="shape253-510" v:mID="253" v:groupContext="shape" transform="translate(0.879011,-3.28352)">
+					<title>Лист.253</title>
+					<path d="M0 718.49 A53.9647 50.3959 -180 0 0 21.98 729.78 L21.98 728.34 A59.646 55.7014 0 0 1 0 717.05 L0 718.49
+								 Z" class="st12"/>
+				</g>
+				<g id="shape254-512" v:mID="254" v:groupContext="shape" transform="translate(0.879011,-0.20522)">
+					<title>Лист.254</title>
+					<path d="M0 712.74 L0 718.49 A59.622 55.679 -180 0 0 21.98 729.78" class="st3"/>
+				</g>
+				<g id="shape255-515" v:mID="255" v:groupContext="shape" transform="translate(0.879011,1.13687E-013)">
+					<title>Лист.255</title>
+					<path d="M21.98 729.78 L21.98 724.03 A61.5733 57.5013 0 0 1 0 712.74" class="st13"/>
+				</g>
+			</g>
+			<g id="shape241-519" v:mID="241" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="42.8518" cy="755.38" width="118.18" height="51.2036"/>
+				<text x="-10.03" y="749.98" class="st16" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>MQTT <tspan
+							class="st21" v:langID="1049">Брокер<v:newlineChar/><v:paragraph v:horizAlign="1"/></tspan><tspan
+							x="3.51" dy="1.2em" class="st21">Mosquitto</tspan></text>			</g>
+		</g>
+		<g id="shape256-523" v:mID="256" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-617.679)">
+			<title>Динамическая соединительная линия.364</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L318.46 683.87" class="st24"/>
+		</g>
+		<g id="shape257-526" v:mID="257" v:groupContext="shape" v:layerMember="0" transform="translate(447.023,-426.138)">
+			<title>Динамическая соединительная линия.365</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L64.13 686.54 A2.3622 2.3622 0 1 1 68.04 683.9 L99.19 662.9 A2.3622 2.3622 0 1 1 103.11 660.25 L318.47
+						 515.04" class="st24"/>
+		</g>
+		<g id="shape258-529" v:mID="258" v:groupContext="shape" v:layerMember="0" transform="translate(769.503,-622.998)">
+			<title>Динамическая соединительная линия.366</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 729.78 L-192.21 961.27 A2.3622 2.3622 -180 0 0 -195.22 964.91 L-328.08 1124.93" class="st24"/>
+		</g>
+	</g>
+</svg>

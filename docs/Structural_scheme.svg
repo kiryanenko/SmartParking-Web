@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Создано Microsoft Visio, экспорт SVG Structural_scheme.svg Страница-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="17.575in" height="12.0395in"
+		viewBox="0 0 1265.4 866.842" xml:space="preserve" color-interpolation-filters="sRGB" class="st12">
+	<v:documentProperties v:langID="1049" v:metric="true" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvConvertTheme"/>
+			<v:ud v:nameU="Ifc__CustomPropsLevel" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisAecDocument" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisAecVersion" v:val="VT0(15):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:#ffffff;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.24}
+		.st2 {fill:#000000;font-family:GOST Common;font-size:2.50001em;font-style:italic}
+		.st3 {fill:#000000;font-family:GOST Common;font-size:1.99999em;font-style:italic}
+		.st4 {font-size:1em}
+		.st5 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st6 {fill:#595959;stroke:none;stroke-linecap:butt;stroke-width:0.75}
+		.st7 {marker-end:url(#mrkr4-35);marker-start:url(#mrkr4-33);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.25}
+		.st8 {fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:0.027027027027027}
+		.st9 {stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st10 {fill:#000000;font-family:Arial;font-size:4.00001em}
+		.st11 {stroke:#000000;stroke-dasharray:2.16,2.16;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.72}
+		.st12 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none"/>
+		</g>
+		<marker id="mrkr4-33" class="st8" v:arrowType="4" v:arrowSize="5" v:setback="72.56" refX="72.56" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(37) "/>
+		</marker>
+		<marker id="mrkr4-35" class="st8" v:arrowType="4" v:arrowSize="5" v:setback="74" refX="-74" orient="auto"
+				markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-37,-37) "/>
+		</marker>
+	</defs>
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<v:custProps>
+			<v:cp v:nameU="VisDoorFrameWidth" v:lbl="Ширина дверной коробки" v:type="4"
+					v:format="0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true" v:langID="1049"
+					v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisDoorFrameDepth" v:lbl="Толщина дверной коробки" v:type="4"
+					v:format="Как у стены;2 дюйма;3 дюйма;4 дюйма;5 дюймов;6 дюймов;7 дюймов;8 дюймов" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisDoorStopWidth" v:lbl="Ширина ограничителя двери" v:type="4"
+					v:format="0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true" v:langID="1049"
+					v:cal="0" v:val="VT4(0.5 in.)"/>
+			<v:cp v:nameU="VisDoorStopDepth" v:lbl="Толщина ограничителя двери" v:type="4"
+					v:format="0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true" v:langID="1049"
+					v:cal="0" v:val="VT4(1.5 in.)"/>
+			<v:cp v:nameU="VisDoorThresDepthIn" v:lbl="Внутренняя ширина порога двери" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisDoorThresWidthIn" v:lbl="Внутренняя толщина порога двери" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisDoorThresDepthOut" v:lbl="Наружная толщина порога двери" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisDoorThresWidthOut" v:lbl="Наружная ширина порога двери" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisDoorPanelThickness" v:lbl="Толщина филенки" v:type="4"
+					v:format="0.5 in.;1 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true" v:langID="1049"
+					v:cal="0" v:val="VT4(1.5 in.)"/>
+			<v:cp v:nameU="VisWndwFrameDepth" v:lbl="Толщина оконной рамы" v:type="4"
+					v:format="Как у стены;2 дюйма;3 дюйма;4 дюйма;5 дюймов;6 дюймов;7 дюймов;8 дюймов" v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(4 in.)"/>
+			<v:cp v:nameU="VisWndwFrameWidth" v:lbl="Ширина оконной рамы" v:type="4"
+					v:format="0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true" v:langID="1049"
+					v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisWndwSashDepth" v:lbl="Толщина оконного переплета" v:type="4"
+					v:format="0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true" v:langID="1049"
+					v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisWndwSashWidth" v:lbl="Ширина оконного переплета" v:type="4"
+					v:format="0.25 in.;0.375 in.;0.5 in.;0.625 in.;0.75 in.;1 in.;1.5 in.;2 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisWndwSillDepthIn" v:lbl="Внутренняя толщина подоконника" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisWndwSillWidthIn" v:lbl="Внутренняя ширина подоконника" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisWndwSillDepthOut" v:lbl="Наружная толщина подоконника" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+			<v:cp v:nameU="VisWndwSillWidthOut" v:lbl="Наружная ширина подоконника" v:type="4"
+					v:format="0 in.;0.5 in.;1 in.;1.5 in.;2 in.;2.5 in.;3 in.;3.5 in.;4 in." v:sortKey="" v:invis="true"
+					v:langID="1049" v:cal="0" v:val="VT4(2 in.)"/>
+		</v:custProps>
+		<v:userDefs>
+			<v:ud v:nameU="VisAecPage" v:val="VT0(1):26"/>
+			<v:ud v:nameU="LineStyleIndex" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorPanelsClosed" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowHeader" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowPanel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowSwing" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowThreshold" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowThresIn" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowThresOut" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorFrameToWall" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorSwingAs" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisDoorShowFrame" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisDoorShowStop" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowFrame" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowSash" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwFrameToWall" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowHeader" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisWndwShowSill" v:val="VT0(0):26"/>
+			<v:ud v:nameU="VisWndwShowSillIn" v:val="VT0(1):26"/>
+			<v:ud v:nameU="VisWndwShowSillOut" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceUnits" v:val="VT0(0):26"/>
+			<v:ud v:nameU="visSpacePrecision" v:val="VT0(0):26"/>
+			<v:ud v:nameU="visSpaceLabel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceNameLabel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceUseLabel" v:val="VT0(1):26"/>
+			<v:ud v:nameU="visSpaceBoundary" v:val="VT0(0):26"/>
+			<v:ud v:nameU="SpaceLabelDisabled" v:prompt="Отключенная подпись" v:val="VT4()"/>
+			<v:ud v:nameU="DisplayField1" v:prompt="Подпись места 1" v:val="VT4(Prop.Use)"/>
+			<v:ud v:nameU="DisplayField2" v:prompt="Подпись места 2" v:val="VT4(Prop.Name)"/>
+			<v:ud v:nameU="DisplayField3" v:prompt="Подпись места 3" v:val="VT4(User.visFMAreaDisplay)"/>
+			<v:ud v:nameU="DisplayField4" v:prompt="Подпись места 4" v:val="VT4(User.DisplayFieldDisabled)"/>
+			<v:ud v:nameU="IFCPropsInvisible" v:val="VT0(0):26"/>
+		</v:userDefs>
+		<title>Страница-1</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"
+				v:shadowType="1"/>
+		<v:layer v:name="Connector" v:index="0"/>
+		<g id="shape414-1" v:mID="414" v:groupContext="shape" transform="translate(250.013,-784.183)">
+			<title>Прямоугольник со скругленными углами</title>
+			<desc>Мобильное приложение</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="178.11" cy="825.573" width="356.23" height="82.5394"/>
+			<path d="M35.62 866.84 L320.6 866.84 A35.6215 35.6215 -180 0 0 356.22 831.22 L356.22 819.93 A35.6215 35.6215 -180 0 0
+						 320.6 784.3 L35.62 784.3 A35.6215 35.6215 -180 0 0 0 819.93 L0 831.22 A35.6215 35.6215 -180 0 0 35.62 866.84
+						 Z" class="st1"/>
+			<text x="22.16" y="834.57" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Мобильное приложение</text>		</g>
+		<g id="shape417-4" v:mID="417" v:groupContext="shape" transform="translate(662.927,-784.183)">
+			<title>Прямоугольник со скругленными углами.417</title>
+			<desc>Веб-клиент</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="178.11" cy="825.573" width="356.23" height="82.5394"/>
+			<path d="M35.62 866.84 L320.6 866.84 A35.6215 35.6215 -180 0 0 356.22 831.22 L356.22 819.93 A35.6215 35.6215 -180 0 0
+						 320.6 784.3 L35.62 784.3 A35.6215 35.6215 -180 0 0 0 819.93 L0 831.22 A35.6215 35.6215 -180 0 0 35.62 866.84
+						 Z" class="st1"/>
+			<text x="96.98" y="834.57" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Веб-клиент</text>		</g>
+		<g id="shape418-7" v:mID="418" v:groupContext="shape" transform="translate(425.69,-480.699)">
+			<title>Прямоугольник со скругленными углами.418</title>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.55388779527559):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.55388779527559):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.55388779527559):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.55388779527559):1"/>
+			</v:userDefs>
+			<path d="M39.88 866.84 L358.92 866.84 A39.8793 39.8793 -180 0 0 398.8 826.96 L398.8 679.95 A39.8793 39.8793 -180 0 0
+						 358.92 640.07 L39.88 640.07 A39.8793 39.8793 -180 0 0 -0 679.95 L0 826.96 A39.8793 39.8793 -180 0 0 39.88
+						 866.84 Z" class="st1"/>
+		</g>
+		<g id="group419-9" transform="translate(461.832,-503.376)" v:mID="419" v:groupContext="group">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<title>Цилиндр</title>
+			<desc>База данных</desc>
+			<g id="shape420-10" v:mID="420" v:groupContext="shape">
+				<title>Лист.420</title>
+				<v:userDefs>
+					<v:ud v:nameU="ControlHalfHeight" v:prompt="" v:val="VT0(0.11811023622047):24"/>
+					<v:ud v:nameU="FillForegnd" v:prompt="" v:val="VT0(1):26"/>
+					<v:ud v:nameU="ControlHalfHeight" v:prompt="" v:val="VT0(0.17115048118985):1"/>
+				</v:userDefs>
+				<path d="M0 854.52 A63.7795 12.3228 -180 0 0 127.56 854.52 L127.56 755.94 L0 755.94 L0 854.52 Z" class="st1"/>
+			</g>
+			<g id="shape419-12" v:mID="419" v:groupContext="groupContent">
+				<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+				<v:textRect cx="63.7795" cy="805.228" width="127.56" height="123.228"/>
+				<ellipse cx="63.7795" cy="755.937" rx="63.7795" ry="12.3228" class="st1"/>
+				<text x="36.68" y="798.03" class="st3" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>База<v:newlineChar/><tspan
+							x="24.66" dy="1.2em" class="st4">данных</tspan></text>			</g>
+		</g>
+		<g id="shape421-16" v:mID="421" v:groupContext="shape" transform="translate(425.69,-656.447)">
+			<title>Лист.421</title>
+			<desc>Сервер</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="199.4" cy="852.669" width="398.8" height="28.3465"/>
+			<rect x="0" y="838.496" width="398.799" height="28.3465" class="st5"/>
+			<text x="152.72" y="861.67" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Сервер</text>		</g>
+		<g id="shape423-19" v:mID="423" v:groupContext="shape" transform="translate(680.596,-578.415)">
+			<title>Настройка</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Icon)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M44.2 848.89 C43.27 848.5 40.28 847.24 40.28 847.24 L40.47 844.75 L40.63 842.67 L40.37 838.68 L42.33 837.54
+						 C42.33 837.54 43.33 837.13 44.26 836.75 C43.59 835.12 43.31 834.44 42.64 832.81 C41.7 833.2 38.62 834.47
+						 38.62 834.47 L37.09 832.56 C36.35 831.63 35.43 830.75 34.29 829.86 L32.47 828.46 L33.21 826.24 C33.21 826.24
+						 33.64 825.2 34.05 824.2 C32.42 823.53 31.74 823.25 30.12 822.58 C29.69 823.62 28.4 826.77 28.4 826.77 L26
+						 826.54 C24.78 826.41 23.51 826.44 22.24 826.61 L19.96 826.92 L18.9 824.82 C18.9 824.82 18.43 823.71 17.97
+						 822.64 C16.35 823.32 15.68 823.6 14.06 824.29 C14.54 825.43 15.9 828.66 15.9 828.66 L14.05 830.2 C13.18
+						 830.93 12.36 831.79 11.55 832.84 L10.16 834.65 L7.94 833.93 C7.94 833.93 6.73 833.45 5.54 832.97 C4.88 834.61
+						 4.61 835.29 3.96 836.92 C5.17 837.41 8.39 838.7 8.39 838.7 C8.39 838.7 8.19 842.36 8.17 842.66 C8.19 842.92
+						 8.24 843.74 8.24 843.75 C8.24 843.76 8.43 845.69 8.43 845.69 L7.27 846.74 C6.92 847.1 6.79 847.19 3.9 848.33
+						 C4.54 849.98 4.8 850.66 5.44 852.3 C6.65 851.83 10.02 850.52 10.02 850.52 L11.77 852.9 C12.3 853.56 13.05
+						 854.31 13.96 855.09 L15.67 856.53 L14.92 858.67 C14.92 858.67 14.4 859.88 13.88 861.07 C15.5 861.77 16.17
+						 862.06 17.79 862.76 C18.26 861.65 19.66 858.41 19.66 858.41 L22.11 858.75 C23.27 858.92 24.51 858.94 25.81
+						 858.83 L28.04 858.63 L29.03 860.69 C29.03 860.69 29.48 861.82 29.92 862.93 C31.56 862.27 32.23 862 33.87
+						 861.34 C33.46 860.33 32.16 857.09 32.16 857.09 L34.61 855.32 C35.31 854.76 36.1 853.96 36.92 852.96 L38.35
+						 851.22 L40.53 851.97 C40.53 851.97 41.57 852.4 42.55 852.82 C43.23 851.19 43.52 850.52 44.2 848.89 ZM43.46
+						 845.14 C43.46 845.14 43.45 845.22 43.44 845.3 C43.85 845.48 48.14 847.29 48.14 847.29 L44.15 856.76 C44.15
+						 856.76 39.76 854.91 39.35 854.74 C39.3 854.8 39.25 854.87 39.25 854.87 C38.3 856.03 37.36 856.97 36.37 857.76
+						 C36.37 857.76 36.05 858 35.84 858.15 C36.01 858.59 37.78 863.02 37.78 863.02 L28.24 866.84 C28.24 866.84
+						 26.4 862.23 26.23 861.81 C26.15 861.82 26.07 861.83 26.07 861.83 C24.54 861.96 23.06 861.93 21.69 861.73
+						 C21.69 861.73 21.6 861.72 21.52 861.71 C21.34 862.13 19.36 866.72 19.36 866.72 L9.93 862.64 C9.93 862.64
+						 11.97 857.91 12.15 857.5 C12.08 857.44 12.02 857.39 12.02 857.39 C10.95 856.49 10.07 855.6 9.34 854.68 C9.34
+						 854.68 9.11 854.37 8.96 854.16 C8.53 854.33 3.73 856.2 3.73 856.2 L0 846.62 C0 846.62 5.14 844.62 5.14 844.61
+						 C5.14 844.61 5.22 844.58 5.3 844.55 C5.27 844.3 5.24 843.95 5.24 843.95 L5.16 842.67 C5.16 842.67 5.24 841.07
+						 5.26 840.69 C4.86 840.53 0.04 838.6 0.04 838.6 L3.86 829.05 C3.86 829.05 8.64 830.97 9.06 831.14 C9.11 831.07
+						 9.16 831 9.16 831 C10.1 829.78 11.07 828.76 12.13 827.88 C12.13 827.88 12.2 827.83 12.26 827.77 C12.08 827.36
+						 10.12 822.68 10.12 822.68 L19.58 818.69 C19.58 818.69 21.49 823.22 21.67 823.64 C21.75 823.63 21.84 823.62
+						 21.84 823.62 C23.35 823.42 24.84 823.39 26.3 823.54 C26.3 823.54 26.38 823.54 26.46 823.55 C26.63 823.14
+						 28.47 818.65 28.47 818.65 L37.97 822.56 C37.97 822.56 36.17 826.96 36 827.38 C36.06 827.43 36.13 827.48
+						 36.13 827.48 C37.47 828.52 38.55 829.56 39.42 830.66 C39.42 830.66 39.49 830.74 39.56 830.82 C39.97 830.65
+						 44.28 828.88 44.28 828.88 L48.19 838.39 C48.19 838.39 43.9 840.16 43.48 840.33 C43.49 840.41 43.5 840.49
+						 43.5 840.49 C43.59 841.33 43.64 842.02 43.64 842.67 C43.64 843.4 43.58 844.19 43.46 845.14 ZM28.44 847.75
+						 C31.23 845.51 31.68 841.44 29.45 838.65 C27.22 835.86 23.15 835.4 20.36 837.63 C17.57 839.87 17.12 843.94
+						 19.35 846.73 C21.58 849.53 25.65 849.98 28.44 847.75 ZM25.44 833.26 C27.96 833.54 30.22 834.79 31.8 836.76
+						 C35.07 840.85 34.4 846.83 30.32 850.1 C28.34 851.68 25.87 852.4 23.35 852.12 C20.83 851.84 18.57 850.59
+						 16.99 848.61 C15.6 846.87 14.92 844.78 14.92 842.7 C14.92 839.91 16.14 837.15 18.48 835.28 C20.45 833.7
+						 22.93 832.98 25.44 833.26 Z" class="st6"/>
+		</g>
+		<g id="shape424-21" v:mID="424" v:groupContext="shape" transform="translate(716.11,-542.009)">
+			<title>Настройка.424</title>
+			<v:userDefs>
+				<v:ud v:nameU="msvShapeCategories" v:prompt="" v:val="VT4(Icon)"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M55.57 844.28 C54.39 843.78 50.64 842.2 50.64 842.2 L50.88 839.07 L51.07 836.45 L50.75 831.44 L53.22 830.01
+						 C53.22 830.01 54.47 829.49 55.64 829.01 C54.8 826.96 54.45 826.11 53.61 824.06 C52.43 824.54 48.55 826.14
+						 48.55 826.14 L46.62 823.74 C45.69 822.57 44.55 821.47 43.1 820.35 L40.83 818.59 L41.75 815.8 C41.75 815.8
+						 42.29 814.49 42.8 813.23 C40.75 812.39 39.91 812.05 37.86 811.2 C37.32 812.51 35.7 816.47 35.7 816.47 L32.68
+						 816.17 C31.15 816.02 29.56 816.05 27.96 816.26 L25.09 816.65 L23.75 814.01 C23.75 814.01 23.17 812.62 22.6
+						 811.27 C20.56 812.13 19.71 812.49 17.67 813.35 C18.28 814.79 19.99 818.84 19.99 818.84 L17.67 820.78 C16.56
+						 821.69 15.53 822.78 14.52 824.09 L12.77 826.37 L9.98 825.47 C9.98 825.47 8.46 824.86 6.96 824.26 C6.14 826.32
+						 5.8 827.17 4.97 829.23 C6.49 829.84 10.55 831.47 10.55 831.47 C10.55 831.47 10.3 836.07 10.28 836.44 C10.3
+						 836.77 10.36 837.8 10.36 837.82 C10.36 837.82 10.6 840.25 10.6 840.25 L9.14 841.58 C8.69 842.03 8.54 842.14
+						 4.9 843.57 C5.7 845.64 6.04 846.5 6.84 848.56 C8.36 847.97 12.6 846.32 12.6 846.32 L14.79 849.32 C15.47
+						 850.15 16.4 851.09 17.55 852.06 L19.7 853.88 L18.75 856.57 C18.75 856.57 18.1 858.09 17.45 859.58 C19.49
+						 860.46 20.32 860.83 22.36 861.7 C22.96 860.32 24.72 856.24 24.72 856.24 L27.8 856.67 C29.25 856.88 30.81
+						 856.91 32.44 856.77 L35.24 856.52 L36.49 859.11 C36.49 859.11 37.06 860.53 37.62 861.92 C39.67 861.09 40.52
+						 860.75 42.58 859.93 C42.07 858.65 40.44 854.58 40.44 854.58 L43.51 852.36 C44.39 851.66 45.39 850.65 46.42
+						 849.39 L48.21 847.21 L50.96 848.14 C50.96 848.14 52.25 848.69 53.49 849.21 C54.35 847.17 54.71 846.32 55.57
+						 844.28 ZM54.63 839.55 C54.63 839.55 54.62 839.66 54.61 839.76 C55.13 839.98 60.52 842.26 60.52 842.26 L55.51
+						 854.17 C55.51 854.17 49.99 851.85 49.47 851.63 C49.41 851.7 49.34 851.79 49.34 851.79 C48.15 853.25 46.97
+						 854.44 45.73 855.43 C45.73 855.43 45.32 855.72 45.05 855.92 C45.27 856.47 47.5 862.03 47.5 862.03 L35.51
+						 866.84 C35.51 866.84 33.19 861.04 32.98 860.52 C32.88 860.53 32.77 860.54 32.77 860.54 C30.85 860.71 28.99
+						 860.67 27.26 860.42 C27.26 860.42 27.15 860.4 27.05 860.39 C26.82 860.92 24.33 866.69 24.33 866.69 L12.48
+						 861.56 C12.48 861.56 15.05 855.61 15.27 855.09 C15.19 855.03 15.11 854.96 15.11 854.96 C13.77 853.82 12.66
+						 852.71 11.74 851.55 C11.74 851.55 11.46 851.17 11.27 850.9 C10.72 851.11 4.69 853.47 4.69 853.47 L0 841.43
+						 C0 841.43 6.46 838.9 6.47 838.9 C6.47 838.9 6.57 838.86 6.66 838.82 C6.63 838.51 6.59 838.07 6.59 838.07
+						 L6.48 836.46 C6.48 836.46 6.59 834.44 6.62 833.97 C6.11 833.77 0.05 831.34 0.05 831.34 L4.85 819.34 C4.85
+						 819.34 10.86 821.74 11.39 821.96 C11.45 821.88 11.52 821.79 11.52 821.79 C12.7 820.25 13.92 818.96 15.25
+						 817.86 C15.25 817.86 15.33 817.79 15.41 817.73 C15.19 817.21 12.72 811.33 12.72 811.33 L24.62 806.3 C24.62
+						 806.3 27.02 812.01 27.24 812.54 C27.34 812.52 27.46 812.51 27.46 812.51 C29.35 812.26 31.23 812.22 33.06
+						 812.4 C33.06 812.4 33.16 812.41 33.26 812.42 C33.48 811.9 35.79 806.26 35.79 806.26 L47.74 811.17 C47.74
+						 811.17 45.47 816.7 45.25 817.23 C45.33 817.3 45.42 817.36 45.42 817.36 C47.1 818.67 48.46 819.97 49.56 821.36
+						 C49.56 821.36 49.65 821.46 49.73 821.56 C50.25 821.35 55.67 819.12 55.67 819.12 L60.58 831.07 C60.58 831.07
+						 55.18 833.29 54.66 833.51 C54.67 833.61 54.68 833.72 54.68 833.72 C54.8 834.77 54.86 835.63 54.86 836.45
+						 C54.86 837.38 54.79 838.36 54.63 839.55 ZM35.75 842.84 C39.26 840.03 39.83 834.91 37.02 831.4 C34.22 827.89
+						 29.1 827.32 25.59 830.12 C22.09 832.93 21.52 838.05 24.32 841.56 C27.12 845.08 32.24 845.65 35.75 842.84
+						 ZM31.99 824.63 C35.15 824.98 37.99 826.54 39.98 829.03 C44.08 834.17 43.25 841.69 38.11 845.79 C35.63 847.78
+						 32.52 848.69 29.35 848.33 C26.19 847.98 23.35 846.41 21.36 843.92 C19.61 841.73 18.76 839.1 18.76 836.49
+						 C18.76 832.99 20.29 829.52 23.23 827.17 C25.71 825.18 28.82 824.28 31.99 824.63 Z" class="st6"/>
+		</g>
+		<g id="shape425-23" v:mID="425" v:groupContext="shape" transform="translate(626.62,-509.045)">
+			<title>Лист.425</title>
+			<desc>API-сервисы</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="106.535" cy="852.669" width="213.08" height="28.3465"/>
+			<rect x="0" y="838.496" width="213.071" height="28.3465" class="st5"/>
+			<text x="39.87" y="859.87" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>API-<tspan
+						class="st4" v:langID="1049">сервисы</tspan></text>		</g>
+		<g id="shape426-27" v:mID="426" v:groupContext="shape" v:layerMember="0" transform="translate(428.123,-784.183)">
+			<title>Dynamic connector</title>
+			<path d="M13.05 879.44 L13.31 879.69 L66.17 930.71" class="st7"/>
+		</g>
+		<g id="shape427-36" v:mID="427" v:groupContext="shape" v:layerMember="0" transform="translate(730.918,-707.47)">
+			<title>Dynamic connector.427</title>
+			<path d="M12.38 853.58 L12.62 853.32 L58.98 803.65" class="st7"/>
+		</g>
+		<g id="shape428-43" v:mID="428" v:groupContext="shape" transform="translate(131.419,-255.081)">
+			<title>Прямоугольник со скругленными углами.428</title>
+			<desc>Вычислительный хаб</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="178.11" cy="825.573" width="356.23" height="82.5394"/>
+			<path d="M35.62 866.84 L320.6 866.84 A35.6215 35.6215 -180 0 0 356.22 831.22 L356.22 819.93 A35.6215 35.6215 -180 0 0
+						 320.6 784.3 L35.62 784.3 A35.6215 35.6215 -180 0 0 0 819.93 L0 831.22 A35.6215 35.6215 -180 0 0 35.62 866.84
+						 Z" class="st1"/>
+			<text x="36.63" y="834.57" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Вычислительный хаб</text>		</g>
+		<g id="shape429-46" v:mID="429" v:groupContext="shape" transform="translate(774.931,-255.081)">
+			<title>Прямоугольник со скругленными углами.429</title>
+			<desc>Вычислительный хаб</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.49475065616798):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="178.11" cy="825.573" width="356.23" height="82.5394"/>
+			<path d="M35.62 866.84 L320.6 866.84 A35.6215 35.6215 -180 0 0 356.22 831.22 L356.22 819.93 A35.6215 35.6215 -180 0 0
+						 320.6 784.3 L35.62 784.3 A35.6215 35.6215 -180 0 0 0 819.93 L0 831.22 A35.6215 35.6215 -180 0 0 35.62 866.84
+						 Z" class="st1"/>
+			<text x="36.63" y="834.57" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>Вычислительный хаб</text>		</g>
+		<g id="shape430-49" v:mID="430" v:groupContext="shape" transform="translate(287.041,-409.655)">
+			<title>Лист.430</title>
+			<path d="M0 866.84 L693.75 866.84" class="st9"/>
+		</g>
+		<g id="shape436-52" v:mID="436" v:groupContext="shape" v:layerMember="0" transform="translate(623.69,-480.699)">
+			<title>Dynamic connector.436</title>
+			<path d="M9 884.98 L9 885.34 L9 918.94" class="st7"/>
+		</g>
+		<g id="shape437-59" v:mID="437" v:groupContext="shape" v:layerMember="0" transform="translate(305.041,-409.558)">
+			<title>Dynamic connector.437</title>
+			<path d="M9 884.98 L9 885.34 L9 918.94" class="st7"/>
+		</g>
+		<g id="shape438-66" v:mID="438" v:groupContext="shape" v:layerMember="0" transform="translate(944.49,-408.058)">
+			<title>Dynamic connector.438</title>
+			<path d="M9 884.98 L9 885.34 L9 918.94" class="st7"/>
+		</g>
+		<g id="shape439-73" v:mID="439" v:groupContext="shape" transform="translate(0.119552,-0.12)">
+			<title>Прямоугольник со скругленными углами.439</title>
+			<desc>МК-подсистема регистрации свободных парковочных мест</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="136.898" cy="782.529" width="273.8" height="168.626"/>
+			<path d="M27.38 866.84 L246.42 866.84 A27.3791 27.3791 -180 0 0 273.8 839.46 L273.8 725.6 A27.3791 27.3791 -180 0 0 246.42
+						 698.22 L27.38 698.22 A27.3791 27.3791 -180 0 0 0 725.6 L0 839.46 A27.3791 27.3791 -180 0 0 27.38 866.84
+						 Z" class="st1"/>
+			<text x="30.22" y="737.53" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>МК-подсистема <tspan
+						x="48" dy="1.2em" class="st4">регистрации </tspan><tspan x="66.89" dy="1.2em" class="st4">свободных </tspan><tspan
+						x="12.09" dy="1.2em" class="st4">парковочных мест</tspan></text>		</g>
+		<g id="shape440-79" v:mID="440" v:groupContext="shape" transform="translate(344.722,-0.12)">
+			<title>Прямоугольник со скругленными углами.440</title>
+			<desc>МК-подсистема регистрации свободных парковочных мест</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="136.898" cy="782.529" width="273.8" height="168.626"/>
+			<path d="M27.38 866.84 L246.42 866.84 A27.3791 27.3791 -180 0 0 273.8 839.46 L273.8 725.6 A27.3791 27.3791 -180 0 0 246.42
+						 698.22 L27.38 698.22 A27.3791 27.3791 -180 0 0 0 725.6 L0 839.46 A27.3791 27.3791 -180 0 0 27.38 866.84
+						 Z" class="st1"/>
+			<text x="30.22" y="737.53" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>МК-подсистема <tspan
+						x="48" dy="1.2em" class="st4">регистрации </tspan><tspan x="66.89" dy="1.2em" class="st4">свободных </tspan><tspan
+						x="12.09" dy="1.2em" class="st4">парковочных мест</tspan></text>		</g>
+		<g id="shape441-85" v:mID="441" v:groupContext="shape" transform="translate(273.915,-74.433)">
+			<title>Лист.441</title>
+			<desc>...</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.4035" cy="856.842" width="70.81" height="20"/>
+			<rect x="0" y="846.842" width="70.8071" height="20" class="st5"/>
+			<text x="15.4" y="871.24" class="st10" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>...</text>		</g>
+		<g id="shape445-88" v:mID="445" v:groupContext="shape" transform="translate(646.879,-1.18299)">
+			<title>Прямоугольник со скругленными углами.445</title>
+			<desc>МК-подсистема регистрации свободных парковочных мест</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="136.898" cy="782.529" width="273.8" height="168.626"/>
+			<path d="M27.38 866.84 L246.42 866.84 A27.3791 27.3791 -180 0 0 273.8 839.46 L273.8 725.6 A27.3791 27.3791 -180 0 0 246.42
+						 698.22 L27.38 698.22 A27.3791 27.3791 -180 0 0 0 725.6 L0 839.46 A27.3791 27.3791 -180 0 0 27.38 866.84
+						 Z" class="st1"/>
+			<text x="30.22" y="737.53" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>МК-подсистема <tspan
+						x="48" dy="1.2em" class="st4">регистрации </tspan><tspan x="66.89" dy="1.2em" class="st4">свободных </tspan><tspan
+						x="12.09" dy="1.2em" class="st4">парковочных мест</tspan></text>		</g>
+		<g id="shape446-94" v:mID="446" v:groupContext="shape" transform="translate(991.482,-1.18299)">
+			<title>Прямоугольник со скругленными углами.446</title>
+			<desc>МК-подсистема регистрации свободных парковочных мест</desc>
+			<v:userDefs>
+				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeTopRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotLeftSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CTypeBotRightSnip" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockHoriz" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockVert" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="CornerLockDiag" v:prompt="" v:val="VT0(0):5"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.15748031496063):24"/>
+				<v:ud v:nameU="visVersion" v:prompt="" v:val="VT0(15):26"/>
+				<v:ud v:nameU="TopLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="TopRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotLeftOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+				<v:ud v:nameU="BotRightOffset" v:prompt="" v:val="VT0(0.38027121609799):1"/>
+			</v:userDefs>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="136.898" cy="782.529" width="273.8" height="168.626"/>
+			<path d="M27.38 866.84 L246.42 866.84 A27.3791 27.3791 -180 0 0 273.8 839.46 L273.8 725.6 A27.3791 27.3791 -180 0 0 246.42
+						 698.22 L27.38 698.22 A27.3791 27.3791 -180 0 0 0 725.6 L0 839.46 A27.3791 27.3791 -180 0 0 27.38 866.84
+						 Z" class="st1"/>
+			<text x="30.22" y="737.53" class="st2" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>МК-подсистема <tspan
+						x="48" dy="1.2em" class="st4">регистрации </tspan><tspan x="66.89" dy="1.2em" class="st4">свободных </tspan><tspan
+						x="12.09" dy="1.2em" class="st4">парковочных мест</tspan></text>		</g>
+		<g id="shape447-100" v:mID="447" v:groupContext="shape" transform="translate(920.675,-75.496)">
+			<title>Лист.447</title>
+			<desc>...</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="35.4035" cy="856.842" width="70.81" height="20"/>
+			<rect x="0" y="846.842" width="70.8071" height="20" class="st5"/>
+			<text x="15.4" y="871.24" class="st10" v:langID="1049"><v:paragraph v:horizAlign="1"/><v:tabList/>...</text>		</g>
+		<g id="group451-103" transform="translate(159.765,-178.703)" v:mID="451" v:groupContext="group">
+			<title>Лист.451</title>
+			<g id="shape448-104" v:mID="448" v:groupContext="shape" transform="translate(-612.95,253.892) rotate(-45)">
+				<title>Лист.448</title>
+				<path d="M0 866.84 L67.22 866.84" class="st11"/>
+			</g>
+			<g id="shape449-107" v:mID="449" v:groupContext="shape" transform="translate(883.43,589.767) rotate(74.6447)">
+				<title>Лист.449</title>
+				<path d="M0 866.84 L34.59 866.84" class="st11"/>
+			</g>
+			<g id="shape450-110" v:mID="450" v:groupContext="shape" transform="translate(-556.257,239.719) rotate(-45)">
+				<title>Лист.450</title>
+				<path d="M0 866.84 L74.36 866.84" class="st11"/>
+			</g>
+		</g>
+		<g id="group452-113" transform="translate(471.541,-177.144) scale(-1,1)" v:mID="452" v:groupContext="group">
+			<title>Лист.452</title>
+			<g id="shape453-114" v:mID="453" v:groupContext="shape" transform="translate(-612.95,253.892) rotate(-45)">
+				<title>Лист.453</title>
+				<path d="M0 866.84 L67.22 866.84" class="st11"/>
+			</g>
+			<g id="shape454-117" v:mID="454" v:groupContext="shape" transform="translate(883.43,589.767) rotate(74.6447)">
+				<title>Лист.454</title>
+				<path d="M0 866.84 L34.59 866.84" class="st11"/>
+			</g>
+			<g id="shape455-120" v:mID="455" v:groupContext="shape" transform="translate(-556.257,239.719) rotate(-45)">
+				<title>Лист.455</title>
+				<path d="M0 866.84 L74.36 866.84" class="st11"/>
+			</g>
+		</g>
+		<g id="group456-123" transform="translate(801.653,-177.073)" v:mID="456" v:groupContext="group">
+			<title>Лист.456</title>
+			<g id="shape457-124" v:mID="457" v:groupContext="shape" transform="translate(-612.95,253.892) rotate(-45)">
+				<title>Лист.457</title>
+				<path d="M0 866.84 L67.22 866.84" class="st11"/>
+			</g>
+			<g id="shape458-127" v:mID="458" v:groupContext="shape" transform="translate(883.43,589.767) rotate(74.6447)">
+				<title>Лист.458</title>
+				<path d="M0 866.84 L34.59 866.84" class="st11"/>
+			</g>
+			<g id="shape459-130" v:mID="459" v:groupContext="shape" transform="translate(-556.257,239.719) rotate(-45)">
+				<title>Лист.459</title>
+				<path d="M0 866.84 L74.36 866.84" class="st11"/>
+			</g>
+		</g>
+		<g id="group460-133" transform="translate(1113.43,-175.514) scale(-1,1)" v:mID="460" v:groupContext="group">
+			<title>Лист.460</title>
+			<g id="shape461-134" v:mID="461" v:groupContext="shape" transform="translate(-612.95,253.892) rotate(-45)">
+				<title>Лист.461</title>
+				<path d="M0 866.84 L67.22 866.84" class="st11"/>
+			</g>
+			<g id="shape462-137" v:mID="462" v:groupContext="shape" transform="translate(883.43,589.767) rotate(74.6447)">
+				<title>Лист.462</title>
+				<path d="M0 866.84 L34.59 866.84" class="st11"/>
+			</g>
+			<g id="shape463-140" v:mID="463" v:groupContext="shape" transform="translate(-556.257,239.719) rotate(-45)">
+				<title>Лист.463</title>
+				<path d="M0 866.84 L74.36 866.84" class="st11"/>
+			</g>
+		</g>
+	</g>
+</svg>
